@@ -1,0 +1,16 @@
+[
+  {"descriptor": "POS DEBIT 0123 GREEN VALLEY MARKET #0412 SPRINGFIELD IL", "processor": "POS", "name": "GREEN VALLEY MARKET", "key": "GREENVALLEYMARKE"},
+  {"descriptor": "DEBIT CARD PURCHASE - GREEN VALLEY MARKET SPRINGFIELD IL CARD 9921", "processor": "DEBITCARD", "name": "GREEN VALLEY MARKET", "key": "GREENVALLEYMARKE"},
+  {"descriptor": "SQ *BLUE BOTTLE COF SAN FRANCISCO CA", "processor": "SQ", "name": "BLUE BOTTLE COF", "key": "BLUEBOTTLECOF"},
+  {"descriptor": "TST* GOLDEN & CO 4471", "processor": "TST", "name": "GOLDEN & CO", "key": "GOLDENCO"},
+  {"descriptor": "SQ *GOLDEN & CO SALEM OR", "processor": "SQ", "name": "GOLDEN & CO", "key": "GOLDENCO"},
+  {"descriptor": "PAYPAL *STREAMFLIX 4029357733", "processor": "PAYPAL", "name": "STREAMFLIX", "key": "STREAMFLIX"},
+  {"descriptor": "STREAMFLIX.COM 866-555-0142 CA", "processor": "WEB", "name": "STREAMFLIX", "key": "STREAMFLIX"},
+  {"descriptor": "RECURRING PMT TRI-COUNTY POWER REF554120", "processor": "RECURRING", "name": "TRICOUNTY POWER", "key": "TRICOUNTYPOWER"},
+  {"descriptor": "ACH CREDIT ACME CORP PAYROLL 77120045", "processor": "ACH", "name": "ACME CORP", "key": "ACMECORP"},
+  {"descriptor": "ACH CREDIT ACME CORP DIR DEP 10293847", "processor": "ACH", "name": "ACME CORP", "key": "ACMECORP"},
+  {"descriptor": "pos debit 1231   main street outfitte #77   salt lake city ut", "processor": "POS", "name": "MAIN STREET OUTFITTE", "key": "MAINSTREETOUTFIT"},
+  {"descriptor": "PAYPAL *MAINSTREETOUTFITTER 1111111111", "processor": "PAYPAL", "name": "MAINSTREETOUTFITTER", "key": "MAINSTREETOUTFIT"},
+  {"descriptor": "CORNER DELI", "processor": "OTHER", "name": "CORNER DELI", "key": "CORNERDELI"},
+  {"descriptor": "12345 #99", "processor": "OTHER", "name": "", "key": "UNKNOWN"}
+]

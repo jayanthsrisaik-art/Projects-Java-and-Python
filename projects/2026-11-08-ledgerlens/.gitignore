@@ -1,0 +1,6 @@
+data/
+artifacts/
+reports/
+*.db
+__pycache__/
+.pytest_cache/

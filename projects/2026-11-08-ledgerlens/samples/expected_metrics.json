@@ -1,0 +1,260 @@
+{
+  "rows": 14701,
+  "merchants": 234,
+  "seed": 0,
+  "folds": 5,
+  "normalization": {
+    "normalized_key": {
+      "merchants": 234,
+      "keys": 234,
+      "mean_keys_per_merchant": 1.0,
+      "merchants_with_one_key": 234,
+      "keys_with_collisions": 0
+    },
+    "raw_descriptor": {
+      "merchants": 234,
+      "keys": 11126,
+      "mean_keys_per_merchant": 47.547,
+      "merchants_with_one_key": 34,
+      "keys_with_collisions": 0
+    }
+  },
+  "categorization": {
+    "grouped_kfold": {
+      "models": {
+        "majority": {
+          "vs_user_labels": {
+            "accuracy": {
+              "mean": 0.2114,
+              "std": 0.0798
+            },
+            "macro_f1": {
+              "mean": 0.0341,
+              "std": 0.0112
+            }
+          },
+          "vs_true_labels": {
+            "accuracy": {
+              "mean": 0.2134,
+              "std": 0.0812
+            },
+            "macro_f1": {
+              "mean": 0.0344,
+              "std": 0.0114
+            }
+          }
+        },
+        "keyword_rules": {
+          "vs_user_labels": {
+            "accuracy": {
+              "mean": 0.536,
+              "std": 0.0498
+            },
+            "macro_f1": {
+              "mean": 0.4846,
+              "std": 0.083
+            }
+          },
+          "vs_true_labels": {
+            "accuracy": {
+              "mean": 0.5434,
+              "std": 0.0502
+            },
+            "macro_f1": {
+              "mean": 0.4996,
+              "std": 0.0837
+            }
+          }
+        },
+        "merchant_lookup": {
+          "vs_user_labels": {
+            "accuracy": {
+              "mean": 0.2114,
+              "std": 0.0798
+            },
+            "macro_f1": {
+              "mean": 0.0341,
+              "std": 0.0112
+            }
+          },
+          "vs_true_labels": {
+            "accuracy": {
+              "mean": 0.2134,
+              "std": 0.0812
+            },
+            "macro_f1": {
+              "mean": 0.0344,
+              "std": 0.0114
+            }
+          }
+        },
+        "logreg": {
+          "vs_user_labels": {
+            "accuracy": {
+              "mean": 0.7636,
+              "std": 0.0806
+            },
+            "macro_f1": {
+              "mean": 0.7428,
+              "std": 0.0514
+            }
+          },
+          "vs_true_labels": {
+            "accuracy": {
+              "mean": 0.774,
+              "std": 0.0811
+            },
+            "macro_f1": {
+              "mean": 0.7617,
+              "std": 0.0508
+            }
+          }
+        }
+      },
+      "logreg_per_class_f1_vs_true_pooled": {
+        "groceries": 0.7473,
+        "dining": 0.808,
+        "fuel": 0.6079,
+        "transport": 0.7575,
+        "utilities": 0.8033,
+        "subscriptions": 0.97,
+        "shopping": 0.7572,
+        "health": 0.6394,
+        "travel": 0.7339,
+        "income": 1.0
+      },
+      "selective": {
+        "target_precision_on_oof_train": 0.95,
+        "threshold": {
+          "mean": 0.8347,
+          "std": 0.0614
+        },
+        "coverage": {
+          "mean": 0.5596,
+          "std": 0.0819
+        },
+        "accepted_acc_user": {
+          "mean": 0.9361,
+          "std": 0.0636
+        },
+        "accepted_acc_true": {
+          "mean": 0.9504,
+          "std": 0.0642
+        },
+        "rejected_acc_true": {
+          "mean": 0.536,
+          "std": 0.1396
+        }
+      }
+    },
+    "random_kfold_LEAKY": {
+      "models": {
+        "majority": {
+          "vs_user_labels": {
+            "accuracy": {
+              "mean": 0.2554,
+              "std": 0.007
+            },
+            "macro_f1": {
+              "mean": 0.0407,
+              "std": 0.0009
+            }
+          },
+          "vs_true_labels": {
+            "accuracy": {
+              "mean": 0.2583,
+              "std": 0.0075
+            },
+            "macro_f1": {
+              "mean": 0.0411,
+              "std": 0.001
+            }
+          }
+        },
+        "keyword_rules": {
+          "vs_user_labels": {
+            "accuracy": {
+              "mean": 0.5366,
+              "std": 0.0053
+            },
+            "macro_f1": {
+              "mean": 0.5122,
+              "std": 0.0129
+            }
+          },
+          "vs_true_labels": {
+            "accuracy": {
+              "mean": 0.5444,
+              "std": 0.0056
+            },
+            "macro_f1": {
+              "mean": 0.5278,
+              "std": 0.0167
+            }
+          }
+        },
+        "merchant_lookup": {
+          "vs_user_labels": {
+            "accuracy": {
+              "mean": 0.986,
+              "std": 0.0024
+            },
+            "macro_f1": {
+              "mean": 0.9746,
+              "std": 0.005
+            }
+          },
+          "vs_true_labels": {
+            "accuracy": {
+              "mean": 0.9997,
+              "std": 0.0004
+            },
+            "macro_f1": {
+              "mean": 0.9979,
+              "std": 0.0031
+            }
+          }
+        },
+        "logreg": {
+          "vs_user_labels": {
+            "accuracy": {
+              "mean": 0.9859,
+              "std": 0.0024
+            },
+            "macro_f1": {
+              "mean": 0.9738,
+              "std": 0.0057
+            }
+          },
+          "vs_true_labels": {
+            "accuracy": {
+              "mean": 0.9996,
+              "std": 0.0003
+            },
+            "macro_f1": {
+              "mean": 0.9971,
+              "std": 0.0031
+            }
+          }
+        }
+      }
+    }
+  },
+  "recurring": {
+    "true_recurring_series": 322,
+    "weekly_fixed_day_variable_amount_series": 20,
+    "of_which_flagged_recurring": 0,
+    "normalized_key": {
+      "detected": 319,
+      "true_positives": 319,
+      "precision": 1.0,
+      "recall": 0.9907
+    },
+    "raw_descriptor_baseline": {
+      "detected": 95,
+      "true_positives": 95,
+      "precision": 1.0,
+      "recall": 0.295
+    }
+  }
+}
