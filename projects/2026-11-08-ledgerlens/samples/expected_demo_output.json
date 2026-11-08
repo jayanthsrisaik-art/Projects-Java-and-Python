@@ -1,0 +1,1580 @@
+{
+  "first_ingest": {
+    "received": 155,
+    "inserted": 154,
+    "duplicates": 1
+  },
+  "redelivery": {
+    "received": 155,
+    "inserted": 0,
+    "duplicates": 155
+  },
+  "correction": {
+    "txn_id": "t000009",
+    "merchant_key": "RAPIDCAB",
+    "category": "transport",
+    "rule_created": true,
+    "other_transactions_updated": 15
+  },
+  "source_counts": {
+    "user": 1,
+    "rule": 15,
+    "model": 79,
+    "review": 59
+  },
+  "transactions": [
+    {
+      "txn_id": "t000006",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.975,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000009",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.6541,
+      "category": "transport",
+      "source": "user"
+    },
+    {
+      "txn_id": "t000017",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.9845,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000018",
+      "merchant_key": "GOLDENGRILL",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9616,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000022",
+      "merchant_key": "URBANSTORE",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.8503,
+      "category": "shopping",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000023",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.988,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000024",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5548,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000027",
+      "merchant_key": "TAVOZEN",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.4307,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000028",
+      "merchant_key": "VALLEYENERGY",
+      "processor": "WEB",
+      "suggested": "utilities",
+      "confidence": 0.9864,
+      "category": "utilities",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000032",
+      "merchant_key": "CONTOSOLLC",
+      "processor": "ACH",
+      "suggested": "income",
+      "confidence": 0.994,
+      "category": "income",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000033",
+      "merchant_key": "GOLDENGRILL",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.951,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000039",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9092,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000043",
+      "merchant_key": "TAVOZEN",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.4873,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000044",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.9868,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000049",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7779,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000051",
+      "merchant_key": "MIGUTORZENVO",
+      "processor": "WEB",
+      "suggested": "subscriptions",
+      "confidence": 0.8953,
+      "category": "subscriptions",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000052",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5548,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000053",
+      "merchant_key": "LITTLECO",
+      "processor": "SQ",
+      "suggested": "dining",
+      "confidence": 0.8104,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000054",
+      "merchant_key": "ZENZEMON",
+      "processor": "SQ",
+      "suggested": "health",
+      "confidence": 0.5239,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000055",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7237,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000056",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.7228,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000065",
+      "merchant_key": "ZENZEMON",
+      "processor": "SQ",
+      "suggested": "subscriptions",
+      "confidence": 0.489,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000066",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.7537,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000070",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5782,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000071",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9949,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000072",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.7228,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000073",
+      "merchant_key": "URBANSUPPLY",
+      "processor": "WEB",
+      "suggested": "shopping",
+      "confidence": 0.6357,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000077",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7237,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000079",
+      "merchant_key": "TAVOZEN",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.4873,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000080",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.7651,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000089",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9092,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000093",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9116,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000096",
+      "merchant_key": "SAZEBELLOQUAGU",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.4269,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000097",
+      "merchant_key": "STYLEDEPOT",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.5268,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000100",
+      "merchant_key": "CONTOSOLLC",
+      "processor": "ACH",
+      "suggested": "income",
+      "confidence": 0.994,
+      "category": "income",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000101",
+      "merchant_key": "GOLDENGRILL",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9621,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000102",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.9892,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000110",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.9845,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000111",
+      "merchant_key": "URBANSTORE",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.7416,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000112",
+      "merchant_key": "RIVERSIDEENERGY",
+      "processor": "WEB",
+      "suggested": "utilities",
+      "confidence": 0.9024,
+      "category": "utilities",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000113",
+      "merchant_key": "LITTLECO",
+      "processor": "SQ",
+      "suggested": "dining",
+      "confidence": 0.8246,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000116",
+      "merchant_key": "LITTLECO",
+      "processor": "SQ",
+      "suggested": "dining",
+      "confidence": 0.8104,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000117",
+      "merchant_key": "TAVOZEN",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.4873,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000121",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9092,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000122",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.4972,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000124",
+      "merchant_key": "TAVOZEN",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.4307,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000125",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9116,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000126",
+      "merchant_key": "URBANSUPPLY",
+      "processor": "POS",
+      "suggested": "shopping",
+      "confidence": 0.8973,
+      "category": "shopping",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000129",
+      "merchant_key": "ZENZEMON",
+      "processor": "SQ",
+      "suggested": "health",
+      "confidence": 0.4696,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000130",
+      "merchant_key": "LITTLECO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9478,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000132",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5782,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000133",
+      "merchant_key": "LITTLECO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9507,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000137",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "POS",
+      "suggested": "dining",
+      "confidence": 0.9369,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000138",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7237,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000141",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.9916,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000142",
+      "merchant_key": "RANTORKATORVI",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.6752,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000143",
+      "merchant_key": "SAZEBELLOQUAGU",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.4269,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000144",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5548,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000145",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9969,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000150",
+      "merchant_key": "VALLEYENERGY",
+      "processor": "WEB",
+      "suggested": "utilities",
+      "confidence": 0.9864,
+      "category": "utilities",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000158",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.9888,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000159",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.4373,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000162",
+      "merchant_key": "CONTOSOLLC",
+      "processor": "ACH",
+      "suggested": "income",
+      "confidence": 0.994,
+      "category": "income",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000167",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.988,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000168",
+      "merchant_key": "LITTLECO",
+      "processor": "SQ",
+      "suggested": "dining",
+      "confidence": 0.7913,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000170",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.9845,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000171",
+      "merchant_key": "RANTORKATORVI",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.6831,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000175",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5777,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000176",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.4373,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000177",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9967,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000178",
+      "merchant_key": "URBANSUPPLY",
+      "processor": "WEB",
+      "suggested": "shopping",
+      "confidence": 0.7894,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000184",
+      "merchant_key": "URBANSUPPLY",
+      "processor": "POS",
+      "suggested": "shopping",
+      "confidence": 0.9524,
+      "category": "shopping",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000188",
+      "merchant_key": "SAZEBELLOQUAGU",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.4269,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000191",
+      "merchant_key": "MIGUTORZENVO",
+      "processor": "PAYPAL",
+      "suggested": "subscriptions",
+      "confidence": 0.9461,
+      "category": "subscriptions",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000192",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7779,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000193",
+      "merchant_key": "LITTLECO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9507,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000195",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7237,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000203",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7779,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000204",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.7651,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000205",
+      "merchant_key": "URBANSUPPLY",
+      "processor": "WEB",
+      "suggested": "shopping",
+      "confidence": 0.6357,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000211",
+      "merchant_key": "TAVOZEN",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.4307,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000212",
+      "merchant_key": "LITTLECO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9478,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000217",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "POS",
+      "suggested": "dining",
+      "confidence": 0.9458,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000218",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.4373,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000224",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.4373,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000229",
+      "merchant_key": "CONTOSOLLC",
+      "processor": "ACH",
+      "suggested": "income",
+      "confidence": 0.994,
+      "category": "income",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000231",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.975,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000234",
+      "merchant_key": "RIVERSIDEENERGY",
+      "processor": "RECURRING",
+      "suggested": "utilities",
+      "confidence": 0.9884,
+      "category": "utilities",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000235",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9969,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000236",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.9697,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000240",
+      "merchant_key": "STYLEDEPOT",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.6295,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000241",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9092,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000242",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9694,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000247",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9694,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000253",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5777,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000254",
+      "merchant_key": "URBANSUPPLY",
+      "processor": "WEB",
+      "suggested": "shopping",
+      "confidence": 0.701,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000258",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9116,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000262",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9076,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000265",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9116,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000266",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7779,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000267",
+      "merchant_key": "GOLDENGRILL",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9616,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000269",
+      "merchant_key": "STYLEDEPOT",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.6295,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000273",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9694,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000274",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7779,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000275",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "POS",
+      "suggested": "dining",
+      "confidence": 0.9717,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000276",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5548,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000277",
+      "merchant_key": "VALLEYENERGY",
+      "processor": "WEB",
+      "suggested": "utilities",
+      "confidence": 0.9864,
+      "category": "utilities",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000279",
+      "merchant_key": "CONTOSOLLC",
+      "processor": "ACH",
+      "suggested": "income",
+      "confidence": 0.994,
+      "category": "income",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000281",
+      "merchant_key": "RANTORKATORVI",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.6273,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000282",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7779,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000285",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9694,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000289",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.988,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000290",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.9697,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000291",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5548,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000292",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7237,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000299",
+      "merchant_key": "TAVOZEN",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.4873,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000300",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.988,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000301",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "POS",
+      "suggested": "dining",
+      "confidence": 0.9458,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000302",
+      "merchant_key": "ZENZEMON",
+      "processor": "SQ",
+      "suggested": "dining",
+      "confidence": 0.3628,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000303",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.6332,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000315",
+      "merchant_key": "MIGUTORZENVO",
+      "processor": "WEB",
+      "suggested": "subscriptions",
+      "confidence": 0.8953,
+      "category": "subscriptions",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000316",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "POS",
+      "suggested": "dining",
+      "confidence": 0.9369,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000319",
+      "merchant_key": "STYLEDEPOT",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.4572,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000320",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5782,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000321",
+      "merchant_key": "LITTLECO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9399,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000328",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.6541,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000335",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5782,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000336",
+      "merchant_key": "ZENZEMON",
+      "processor": "SQ",
+      "suggested": "health",
+      "confidence": 0.3157,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000343",
+      "merchant_key": "TAVOZEN",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.5782,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000344",
+      "merchant_key": "LITTLECO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9478,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000347",
+      "merchant_key": "CONTOSOLLC",
+      "processor": "ACH",
+      "suggested": "income",
+      "confidence": 0.994,
+      "category": "income",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000348",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.7237,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000353",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9377,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000354",
+      "merchant_key": "LITTLECO",
+      "processor": "SQ",
+      "suggested": "dining",
+      "confidence": 0.7913,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000359",
+      "merchant_key": "URBANSTORE",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.7916,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000360",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.9868,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000364",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.975,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000365",
+      "merchant_key": "URBANSTORE",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.7416,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000366",
+      "merchant_key": "RIVERSIDEENERGY",
+      "processor": "RECURRING",
+      "suggested": "utilities",
+      "confidence": 0.9891,
+      "category": "utilities",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000367",
+      "merchant_key": "GOLDENGRILL",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9621,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000372",
+      "merchant_key": "TAVOZEN",
+      "processor": "DEBITCARD",
+      "suggested": "groceries",
+      "confidence": 0.525,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000373",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.4373,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000377",
+      "merchant_key": "ROYALINN",
+      "processor": "WEB",
+      "suggested": "travel",
+      "confidence": 0.9474,
+      "category": "travel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000382",
+      "merchant_key": "STYLEDEPOT",
+      "processor": "PAYPAL",
+      "suggested": "shopping",
+      "confidence": 0.6295,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000383",
+      "merchant_key": "GOLDENCOFFEE",
+      "processor": "POS",
+      "suggested": "dining",
+      "confidence": 0.9369,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000384",
+      "merchant_key": "METROENERGY",
+      "processor": "POS",
+      "suggested": "fuel",
+      "confidence": 0.9076,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000392",
+      "merchant_key": "TAZENQUATORDRO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.7651,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000399",
+      "merchant_key": "FRESHEXPRESS",
+      "processor": "POS",
+      "suggested": "groceries",
+      "confidence": 0.9873,
+      "category": "groceries",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000402",
+      "merchant_key": "SUMMITEXPRESS",
+      "processor": "DEBITCARD",
+      "suggested": "fuel",
+      "confidence": 0.975,
+      "category": "fuel",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000403",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.8236,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000404",
+      "merchant_key": "LITTLECO",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9478,
+      "category": "dining",
+      "source": "model"
+    },
+    {
+      "txn_id": "t000405",
+      "merchant_key": "URBANSUPPLY",
+      "processor": "WEB",
+      "suggested": "shopping",
+      "confidence": 0.6602,
+      "category": null,
+      "source": "review"
+    },
+    {
+      "txn_id": "t000407",
+      "merchant_key": "RAPIDCAB",
+      "processor": "WEB",
+      "suggested": "transport",
+      "confidence": 0.6541,
+      "category": "transport",
+      "source": "rule"
+    },
+    {
+      "txn_id": "t000408",
+      "merchant_key": "GOLDENGRILL",
+      "processor": "TST",
+      "suggested": "dining",
+      "confidence": 0.9616,
+      "category": "dining",
+      "source": "model"
+    }
+  ],
+  "monthly_summary": {
+    "2026-01": [
+      {
+        "category": "needs_review",
+        "spend": 1272.18,
+        "n": 21
+      },
+      {
+        "category": "dining",
+        "spend": 465.86,
+        "n": 10
+      },
+      {
+        "category": "groceries",
+        "spend": 383.63,
+        "n": 5
+      },
+      {
+        "category": "utilities",
+        "spend": 332.67,
+        "n": 2
+      },
+      {
+        "category": "fuel",
+        "spend": 328.95,
+        "n": 6
+      },
+      {
+        "category": "transport",
+        "spend": 136.73,
+        "n": 5
+      },
+      {
+        "category": "shopping",
+        "spend": 115.89,
+        "n": 2
+      },
+      {
+        "category": "subscriptions",
+        "spend": 19.99,
+        "n": 1
+      }
+    ],
+    "2026-02": [
+      {
+        "category": "needs_review",
+        "spend": 1068.89,
+        "n": 18
+      },
+      {
+        "category": "fuel",
+        "spend": 406.91,
+        "n": 8
+      },
+      {
+        "category": "utilities",
+        "spend": 304.6,
+        "n": 2
+      },
+      {
+        "category": "dining",
+        "spend": 270.5,
+        "n": 7
+      },
+      {
+        "category": "groceries",
+        "spend": 248.81,
+        "n": 4
+      },
+      {
+        "category": "transport",
+        "spend": 115.18,
+        "n": 4
+      },
+      {
+        "category": "shopping",
+        "spend": 92.49,
+        "n": 1
+      },
+      {
+        "category": "subscriptions",
+        "spend": 19.99,
+        "n": 1
+      }
+    ],
+    "2026-03": [
+      {
+        "category": "needs_review",
+        "spend": 1131.6,
+        "n": 20
+      },
+      {
+        "category": "travel",
+        "spend": 839.57,
+        "n": 1
+      },
+      {
+        "category": "dining",
+        "spend": 432.2,
+        "n": 9
+      },
+      {
+        "category": "groceries",
+        "spend": 323.84,
+        "n": 4
+      },
+      {
+        "category": "fuel",
+        "spend": 311.32,
+        "n": 7
+      },
+      {
+        "category": "utilities",
+        "spend": 283.7,
+        "n": 2
+      },
+      {
+        "category": "transport",
+        "spend": 118.87,
+        "n": 7
+      },
+      {
+        "category": "subscriptions",
+        "spend": 19.99,
+        "n": 1
+      }
+    ]
+  },
+  "subscriptions": [
+    {
+      "account_id": "acct001",
+      "merchant_key": "CONTOSOLLC",
+      "cadence": "biweekly",
+      "occurrences": 6,
+      "typical_amount": 2203.34,
+      "last_date": "2026-03-18",
+      "next_expected": "2026-04-01"
+    },
+    {
+      "account_id": "acct001",
+      "merchant_key": "MIGUTORZENVO",
+      "cadence": "monthly",
+      "occurrences": 3,
+      "typical_amount": -19.99,
+      "last_date": "2026-03-11",
+      "next_expected": "2026-04-10"
+    },
+    {
+      "account_id": "acct001",
+      "merchant_key": "RIVERSIDEENERGY",
+      "cadence": "monthly",
+      "occurrences": 3,
+      "typical_amount": -130.86,
+      "last_date": "2026-03-21",
+      "next_expected": "2026-04-20"
+    },
+    {
+      "account_id": "acct001",
+      "merchant_key": "VALLEYENERGY",
+      "cadence": "monthly",
+      "occurrences": 3,
+      "typical_amount": -173.74,
+      "last_date": "2026-03-03",
+      "next_expected": "2026-04-02"
+    }
+  ],
+  "threshold": 0.8094
+}
