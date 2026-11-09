@@ -1,0 +1,8 @@
+encoding : utf-8 (decodes as strict UTF-8)
+delimiter: ,   header: True
+decimal  : '.' (default)   date order: MDY (default)
+columns  :
+  event                string    nulls=0   <- 'event'
+  day                  date      format=%m/%d/%Y by=default nulls=0   <- 'day'
+  count                integer   dec='.' by=irrelevant nulls=0   <- 'count'
+warning  : day: day/month order ambiguous (DMY/MDY); used MDY (default)

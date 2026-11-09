@@ -1,0 +1,16 @@
+[
+  {
+    "line": 10,
+    "raw": "Schäfer GmbH;15.115,86;#REF!;12.04.2024;nein;",
+    "reasons": [
+      "menge: '#REF!' is not a valid integer"
+    ]
+  },
+  {
+    "line": 25,
+    "raw": "Kaputte Zeile;1,00",
+    "reasons": [
+      "expected 6 fields, got 2"
+    ]
+  }
+]

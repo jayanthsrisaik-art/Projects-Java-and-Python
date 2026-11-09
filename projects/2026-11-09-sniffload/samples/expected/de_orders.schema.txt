@@ -1,0 +1,12 @@
+encoding : cp1252 (not valid UTF-8; decodes as cp1252)
+delimiter: ;   header: True
+decimal  : ',' (file)   date order: DMY (file)
+columns  :
+  kunde                string    nulls=0   <- 'Kunde'
+  betrag               decimal   dec=',' scale=2 by=data nulls=1   <- 'Betrag'
+  menge                integer   dec=',' by=file nulls=0 bad=1   <- 'Menge'
+  bestelldatum         date      format=%d.%m.%Y by=data nulls=0   <- 'Bestelldatum'
+  bezahlt              boolean   nulls=0   <- 'Bezahlt'
+  notiz                string    nulls=10   <- 'Notiz'
+warning  : 1 record(s) do not have 6 fields
+warning  : menge: decimal separator ambiguous in this column (e.g. '1.000'); used ',' (file)

@@ -1,0 +1,9 @@
+encoding : utf-8 (decodes as strict UTF-8)
+delimiter: |   header: False
+decimal  : '.' (file)   date order: MDY (default)
+columns  :
+  col_1                integer   dec='.' by=irrelevant nulls=0   <- 'col_1'
+  col_2                datetime  format=iso by=data nulls=0   <- 'col_2'
+  col_3                string    nulls=0   <- 'col_3'
+  col_4                decimal   dec='.' scale=3 by=data nulls=1   <- 'col_4'
+  col_5                boolean   nulls=0   <- 'col_5'

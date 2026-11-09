@@ -1,0 +1,5 @@
+# Runtime: Python 3.11 standard library only (tested on 3.11.18): csv, sqlite3, decimal, datetime, codecs.
+# Tests:
+pytest>=7.4,<10
+# Optional, only for the pandas baselines in `python -m sniffload bench` (skipped if missing):
+pandas>=2.0,<3.1
