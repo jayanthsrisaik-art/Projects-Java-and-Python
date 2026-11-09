@@ -1,0 +1,183 @@
+{
+  "n_files": 300,
+  "seed": 0,
+  "systems": {
+    "sniffload": {
+      "files": 300,
+      "delimiter_acc": 1.0,
+      "header_acc": 1.0,
+      "decode_acc": 1.0,
+      "column_type_acc": 0.994,
+      "good_cell_acc": 0.995,
+      "bad_cell_catch": 0.9794,
+      "good_rows_rejected": 0,
+      "errors": 0
+    },
+    "sniffload-no-file-level": {
+      "files": 300,
+      "delimiter_acc": 1.0,
+      "header_acc": 1.0,
+      "decode_acc": 1.0,
+      "column_type_acc": 0.9788,
+      "good_cell_acc": 0.9901,
+      "bad_cell_catch": 0.9794,
+      "good_rows_rejected": 0,
+      "errors": 0
+    },
+    "csv.Sniffer": {
+      "files": 300,
+      "delimiter_acc": 0.9833,
+      "header_acc": 0.9167,
+      "decode_acc": 1.0,
+      "column_type_acc": null,
+      "good_cell_acc": null,
+      "bad_cell_catch": null,
+      "good_rows_rejected": 0,
+      "errors": 0
+    },
+    "pandas-default (oracle dialect)": {
+      "files": 300,
+      "delimiter_acc": 1.0,
+      "header_acc": 1.0,
+      "decode_acc": 1.0,
+      "column_type_acc": 0.512,
+      "good_cell_acc": 0.53,
+      "bad_cell_catch": 0.0,
+      "good_rows_rejected": 0,
+      "errors": 0
+    },
+    "pandas-oracle-locale": {
+      "files": 300,
+      "delimiter_acc": 1.0,
+      "header_acc": 1.0,
+      "decode_acc": 1.0,
+      "column_type_acc": 0.5647,
+      "good_cell_acc": 0.5521,
+      "bad_cell_catch": 0.0,
+      "good_rows_rejected": 0,
+      "errors": 0
+    }
+  },
+  "sniffload_by_locale": {
+    "de": {
+      "sniffload": {
+        "files": 55,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 0.9825,
+        "good_cell_acc": 0.9917,
+        "bad_cell_catch": 1.0,
+        "good_rows_rejected": 0,
+        "errors": 0
+      },
+      "sniffload-no-file-level": {
+        "files": 55,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 0.9006,
+        "good_cell_acc": 0.9669,
+        "bad_cell_catch": 1.0,
+        "good_rows_rejected": 0,
+        "errors": 0
+      }
+    },
+    "fr": {
+      "sniffload": {
+        "files": 63,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 0.9947,
+        "good_cell_acc": 0.995,
+        "bad_cell_catch": 0.9556,
+        "good_rows_rejected": 0,
+        "errors": 0
+      },
+      "sniffload-no-file-level": {
+        "files": 63,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 0.9947,
+        "good_cell_acc": 0.995,
+        "bad_cell_catch": 0.9556,
+        "good_rows_rejected": 0,
+        "errors": 0
+      }
+    },
+    "iso": {
+      "sniffload": {
+        "files": 60,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 0.9972,
+        "good_cell_acc": 0.9973,
+        "bad_cell_catch": 1.0,
+        "good_rows_rejected": 0,
+        "errors": 0
+      },
+      "sniffload-no-file-level": {
+        "files": 60,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 0.9972,
+        "good_cell_acc": 0.9973,
+        "bad_cell_catch": 1.0,
+        "good_rows_rejected": 0,
+        "errors": 0
+      }
+    },
+    "uk": {
+      "sniffload": {
+        "files": 59,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 0.9946,
+        "good_cell_acc": 0.9947,
+        "bad_cell_catch": 0.9565,
+        "good_rows_rejected": 0,
+        "errors": 0
+      },
+      "sniffload-no-file-level": {
+        "files": 59,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 0.9946,
+        "good_cell_acc": 0.9947,
+        "bad_cell_catch": 0.9565,
+        "good_rows_rejected": 0,
+        "errors": 0
+      }
+    },
+    "us": {
+      "sniffload": {
+        "files": 63,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 1.0,
+        "good_cell_acc": 0.9962,
+        "bad_cell_catch": 1.0,
+        "good_rows_rejected": 0,
+        "errors": 0
+      },
+      "sniffload-no-file-level": {
+        "files": 63,
+        "delimiter_acc": 1.0,
+        "header_acc": 1.0,
+        "decode_acc": 1.0,
+        "column_type_acc": 1.0,
+        "good_cell_acc": 0.9962,
+        "bad_cell_catch": 1.0,
+        "good_rows_rejected": 0,
+        "errors": 0
+      }
+    }
+  }
+}

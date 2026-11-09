@@ -1,0 +1,11 @@
+encoding : utf-8-sig (UTF-8 byte-order mark)
+delimiter: ,   header: True
+decimal  : '.' (file)   date order: MDY (file)
+columns  :
+  payee                string    nulls=0   <- 'Payee'
+  amount               decimal   dec='.' scale=2 by=data nulls=1   <- 'Amount'
+  paid_on              date      format=%m/%d/%Y by=data nulls=0   <- 'Paid On'
+  approved             boolean   nulls=0   <- 'Approved'
+  zip                  string    nulls=0   <- 'ZIP'
+  memo                 string    nulls=1   <- 'Memo'
+warning  : zip: numeric-looking values with leading zeros kept as string identifiers

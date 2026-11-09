@@ -1,0 +1,25 @@
+Kunde;Betrag;Menge;Bestelldatum;Bezahlt;Notiz
+Müller GmbH;13.532,53;1.000;11.01.2024;ja;
+Bäckerei Köhler;15.288,10;597;01.02.2024;nein;Prüfen
+Özdemir & Söhne;2.879,94;600;01.10.2024;ja;
+Straße 12 AG;NA;643;10.10.2024;ja;Prüfen
+Weiß KG;9.222,84;48;05.07.2024;ja;ok
+Größe & Co;23.895,85;316;02.10.2024;ja;-
+Jäger OHG;15.569,48;100;10.01.2024;ja;-
+Löwe Handel;20.771,13;3.500;06.08.2024;nein;-
+Schäfer GmbH;15.115,86;#REF!;12.04.2024;nein;
+Fuß Logistik;21.978,33;2.200;05.10.2024;ja;
+Müller GmbH;21.422,01;1.100;03.08.2024;ja;Prüfen
+Bäckerei Köhler;27.977,00;3.600;06.12.2024;nein;"Lieferung; verspätet"
+Özdemir & Söhne;24.272,56;817;02.05.2024;ja;Prüfen
+Straße 12 AG;2.494,66;2.000;05.12.2024;nein;Prüfen
+Nachtrag AG;250,00;3;31.12.2024;nein;Jahresende
+Weiß KG;896,35;3.000;03.10.2024;nein;
+Größe & Co;2.422,72;224;12.04.2024;nein;Prüfen
+Jäger OHG;38.404,05;893;03.08.2024;nein;Prüfen
+Löwe Handel;37.001,80;2.800;12.07.2024;nein;"Lieferung; verspätet"
+Schäfer GmbH;9.628,41;155;03.04.2024;ja;ok
+Fuß Logistik;20.290,81;852;05.05.2024;ja;
+Müller GmbH;17.521,88;2.400;03.12.2024;ja;-
+Bäckerei Köhler;19.103,02;3.600;07.07.2024;ja;Prüfen
+Kaputte Zeile;1,00

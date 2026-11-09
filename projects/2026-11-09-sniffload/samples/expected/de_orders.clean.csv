@@ -1,0 +1,23 @@
+kunde,betrag,menge,bestelldatum,bezahlt,notiz
+Müller GmbH,13532.53,1000,2024-01-11,true,
+Bäckerei Köhler,15288.10,597,2024-02-01,false,Prüfen
+Özdemir & Söhne,2879.94,600,2024-10-01,true,
+Straße 12 AG,,643,2024-10-10,true,Prüfen
+Weiß KG,9222.84,48,2024-07-05,true,ok
+Größe & Co,23895.85,316,2024-10-02,true,
+Jäger OHG,15569.48,100,2024-01-10,true,
+Löwe Handel,20771.13,3500,2024-08-06,false,
+Fuß Logistik,21978.33,2200,2024-10-05,true,
+Müller GmbH,21422.01,1100,2024-08-03,true,Prüfen
+Bäckerei Köhler,27977.00,3600,2024-12-06,false,Lieferung; verspätet
+Özdemir & Söhne,24272.56,817,2024-05-02,true,Prüfen
+Straße 12 AG,2494.66,2000,2024-12-05,false,Prüfen
+Nachtrag AG,250.00,3,2024-12-31,false,Jahresende
+Weiß KG,896.35,3000,2024-10-03,false,
+Größe & Co,2422.72,224,2024-04-12,false,Prüfen
+Jäger OHG,38404.05,893,2024-08-03,false,Prüfen
+Löwe Handel,37001.80,2800,2024-07-12,false,Lieferung; verspätet
+Schäfer GmbH,9628.41,155,2024-04-03,true,ok
+Fuß Logistik,20290.81,852,2024-05-05,true,
+Müller GmbH,17521.88,2400,2024-12-03,true,
+Bäckerei Köhler,19103.02,3600,2024-07-07,true,Prüfen

@@ -1,0 +1,7 @@
+payee,amount,paid_on,approved,zip,memo
+Acme Corp,1250.00,2024-01-31,true,02134,Q1 retainer
+Bob's Diner,-45.10,2024-02-03,false,10001,"refund, partial"
+Café Zoë,980.5,2024-02-14,true,00501,"multi
+line memo"
+Delta LLC,12000,2024-03-01,false,94105,
+Echo Ltd,,2024-03-15,true,02134,pending
