@@ -7,7 +7,7 @@ build/
 # re-including inside an ignored directory does not work in git
 logs/
 !logs/important.txt
-# a ** that touches a literal prefix (git quirk: matches the directory "out" too)
+# ** glued to a literal prefix: ignores what is below out*/ (older git, e.g. 2.43, also ignored "out" itself)
 out**/**
 [Tt]emp/
 \#notes.md

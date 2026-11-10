@@ -157,10 +157,10 @@ def translate(pattern: bytes | str, pathname: bool = True, segment_start: int = 
     """Translate one wildmatch pattern to a regex usable with ``re.fullmatch``.
 
     ``pathname=True`` corresponds to git's ``WM_PATHNAME`` flag.
-    ``segment_start`` reproduces a quirk of git's ``match_pathname``: it
-    compares the literal prefix with ``strncmp`` and hands only the rest to
-    wildmatch, so a ``**`` directly after that prefix counts as being at the
-    start of the pattern (``a**/**`` matches the directory ``a``).
+    ``segment_start`` reproduces a quirk of older git's ``match_pathname``
+    (seen in 2.43.0, gone in 2.56.0): it compared the literal prefix with
+    ``strncmp`` and handed only the rest to wildmatch, so a ``**`` directly
+    after that prefix counted as segment-initial (``a**/**`` matched ``a``).
     """
     pat = pattern.encode("utf-8") if isinstance(pattern, str) else pattern
     out: list[bytes] = []

@@ -33,6 +33,17 @@ def git_available() -> bool:
     return shutil.which("git") is not None
 
 
+_QUIRK: bool | None = None
+
+
+def git_has_prefix_quirk() -> bool:
+    """Ask the installed git whether ``a**/**`` ignores the directory ``a`` (older git does)."""
+    global _QUIRK
+    if _QUIRK is None:
+        _QUIRK = git_check_ignore("a**/**\n", ["a/b"], ["a"])["a"][0]
+    return _QUIRK
+
+
 def random_tree(rng: random.Random, n_files: int) -> tuple[list[str], list[str]]:
     files: set[str] = set()
     while len(files) < n_files:
@@ -138,7 +149,11 @@ class DiffStats:
     first_mismatch: dict | None = None
 
 
-def run_differential(cases: int = 200, seed: int = 7, files_per_case: int = 18) -> DiffStats:
+def run_differential(cases: int = 200, seed: int = 7, files_per_case: int = 18,
+                     prefix_quirk: bool | None = None) -> DiffStats:
+    """Compare with the installed git; ``prefix_quirk=None`` probes git for its behaviour."""
+    if prefix_quirk is None:
+        prefix_quirk = git_has_prefix_quirk()
     rng = random.Random(seed)
     stats = DiffStats()
     for _ in range(cases):
@@ -146,7 +161,7 @@ def run_differential(cases: int = 200, seed: int = 7, files_per_case: int = 18) 
         gi = random_gitignore(rng)
         queries = files + dirs
         truth = git_check_ignore(gi, files, queries)
-        ours = GitIgnore(gi)
+        ours = GitIgnore(gi, prefix_quirk)
         dirset = set(dirs)
         stats.cases += 1
         naive_wrong_here = False

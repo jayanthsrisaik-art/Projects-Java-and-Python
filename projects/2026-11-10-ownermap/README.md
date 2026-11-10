@@ -36,7 +36,7 @@ wrong surprisingly often.
 ownermap/
   wildmatch.py    git wildmatch -> byte regex (brackets, POSIX classes, **, escapes, aborts)
   pathpattern.py  .gitignore line parsing + evaluator (negation, dir-only, anchoring,
-                  parent-directory exclusion, git's literal-prefix quirk)
+                  parent-directory exclusion, optional older-git prefix quirk)
   gitoracle.py    differential harness: random tree + random .gitignore -> git check-ignore
   codeowners.py   CODEOWNERS parser, owner validation, last-match-wins resolution,
                   directory-owns-subtree rule, whole-tree Resolution with caching
@@ -126,10 +126,19 @@ per file mixing `**`, brackets, classes, escapes, negation, anchoring, dir-only,
 | ownermap | **0** | **0** |
 | naive fnmatch (last match wins, basename if no `/`, dir-only, negation) | 1,423 (10.85%), in 248/400 cases | – |
 
-The differential run found one real discrepancy during development: git's `match_pathname`
-compares the literal prefix with `strncmp` and passes only the remainder to wildmatch, so in
-`a**/**` the `**` becomes segment-initial and the pattern matches the directory `a`. This
-quirk is now reproduced and covered by tests.
+**git versions differ.** While building this, the differential run against git 2.43.0 found
+that its `match_pathname` checked the literal prefix separately and passed only the rest to
+wildmatch. So in `a**/**` the `**` counted as segment-initial, and the pattern also matched the
+directory `a` (and `aa`, `ab`, …). CI runs git **2.56.0**, where `a**/**` does *not* match the
+directory `a`. The behaviour therefore depends on the version:
+
+* the default (`prefix_quirk=False`, CLI default) follows current git, matching CI's 2.56.0;
+* `GitIgnore(..., prefix_quirk=True)` / `check-ignore --legacy-prefix-quirk` emulates the
+  older behaviour seen in 2.43.0;
+* the differential tests ask the installed git which behaviour it has (`git_has_prefix_quirk()`)
+  and compare against the matching mode. `results/ignore_differential.json` records the git
+  version and the detected mode. The numbers above were measured on 2.43.0 (quirk detected).
+  On this benchmark seed the two modes differ on 15 of the 13,121 queries.
 
 **Reviewer planning, exact vs greedy** (`results/review_benchmark.json`): 500 synthetic PRs
 (8–30 people, 3–10 overlapping teams, 5–40 changed files, 40% of files with two owners):
@@ -146,13 +155,15 @@ with fewer, larger teams will usually show a smaller gap.
 ## Tests
 
 ```bash
-python -m pytest -q     # 135 tests
+python -m pytest -q     # 137 tests
 ```
 
 * `test_wildmatch.py` — git t3070-style cases: `**` placement, bracket parsing edge cases
   (`[]]`, `[[:]`, reversed ranges), unmatchable patterns, byte-wise `?`.
 * `test_gitignore.py` — parsing rules, parent-exclusion, plus differential tests against
-  real git (23 hand-picked quirky patterns and 80 random cases; skipped without git).
+  real git (23 hand-picked quirky patterns and 80 random cases, using whichever prefix-quirk
+  mode the installed git has; skipped without git), and a check that exactly one mode
+  agrees with the installed git.
 * `test_codeowners.py` — every behaviour from GitHub's CODEOWNERS example file, inline
   comments, invalid/unsupported lines, escaped spaces.
 * `test_lint.py`, `test_review.py` — each lint check; exact solver equals the brute-force
@@ -188,6 +199,10 @@ python -m pytest -q     # 135 tests
 
 ## Limitations
 
+* Only git 2.43.0 (locally) and 2.56.0 (CI) have been compared. Other versions may differ in
+  ways besides the prefix quirk. For 2.56.0, the CI failure confirmed only the first
+  differing answer (directory `a`); the others follow from the same change, but no git 2.56.0
+  differential run was available here.
 * The .gitignore evaluator handles a **single root-level** `.gitignore`; nested
   `.gitignore` files, `.git/info/exclude`, `core.excludesFile` and `core.ignorecase=true`
   are not modelled.

@@ -4,7 +4,7 @@ samples/sample.gitignore:4:!keep.log	keep.log
 ::	dist/
 samples/sample.gitignore:6:/dist/**	dist/x/y
 samples/sample.gitignore:8:logs/	logs/important.txt
-samples/sample.gitignore:11:out**/**	out/
+::	out/
 samples/sample.gitignore:12:[Tt]emp/	Temp/
 samples/sample.gitignore:13:\#notes.md	#notes.md
 ::	src/main.py
