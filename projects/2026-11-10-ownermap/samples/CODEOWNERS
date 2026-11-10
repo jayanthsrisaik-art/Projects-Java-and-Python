@@ -1,0 +1,31 @@
+# Sample CODEOWNERS for a small monorepo (intentionally contains mistakes for `lint`).
+*                       @acme/platform
+
+# Frontend
+/web/                   @acme/web
+*.css                   @dana
+/web/src/payments/      @acme/payments @erin
+
+# Backend services
+/services/api/          @acme/backend
+/services/api/billing/  @acme/payments
+/services/worker/       @frank
+/services/api/          @acme/backend   # re-declared: kills line 10 AND line 11
+
+# Docs: only top-level files in docs/, nested guides keep the default owner
+docs/*                  docs@example.com
+/Docs/legal/            @gail           # wrong case: the tree has docs/legal/
+
+# Infra
+/infra/                 @acme/sre
+/infra/terraform/       @acme/sre @heidi
+**/Dockerfile           @acme/sre
+
+# Generated code has no owner on purpose
+/web/src/generated/
+
+# Mistakes
+!/vendor/               @acme/platform
+/scripts/[ab]*.sh       @ivan
+/tools/                 @not_a_valid-handle!
+/legacy/                @acme/legacy

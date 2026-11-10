@@ -1,0 +1,5 @@
+docs/index.md: docs@example.com  [line 16: docs/*]  matched lines [2, 16]
+docs/guides/setup.md: @acme/platform  [line 2: *]  matched lines [2]
+services/worker/Dockerfile: @acme/sre  [line 22: **/Dockerfile]  matched lines [2, 12, 22]
+web/src/generated/api.ts: (unowned)  [line 25: /web/src/generated/]  matched lines [2, 5, 25]
+vendor/lib/x.js: @acme/platform  [line 2: *]  matched lines [2]

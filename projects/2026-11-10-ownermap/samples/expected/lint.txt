@@ -1,0 +1,11 @@
+samples/CODEOWNERS:10: warning: [shadowed] '/services/api/' matches 4 file(s) but later rules (line 13, 22) override all of them
+samples/CODEOWNERS:11: warning: [shadowed] '/services/api/billing/' matches 2 file(s) but later rules (line 13) override all of them
+samples/CODEOWNERS:13: warning: [duplicate-pattern] pattern '/services/api/' already appears on line 10; the earlier rule can never decide ownership
+samples/CODEOWNERS:17: warning: [no-match] '/Docs/legal/' matches no file in the tree (it would match if case were ignored: CODEOWNERS paths are case-sensitive)
+samples/CODEOWNERS:25: info: [no-owners] '/web/src/generated/' has no owners: matching files are explicitly unowned
+samples/CODEOWNERS:28: error: [unsupported-syntax] negation ('!/vendor/') is not supported in CODEOWNERS; line skipped
+samples/CODEOWNERS:29: error: [unsupported-syntax] character ranges ('/scripts/[ab]*.sh') are not supported in CODEOWNERS; line skipped
+samples/CODEOWNERS:30: error: [invalid-owner] '@not_a_valid-handle!' is not a @user, @org/team or e-mail; line skipped
+samples/CODEOWNERS:31: warning: [empty-team] team '@acme/legacy' has no members, nobody can approve for it
+samples/CODEOWNERS:31: warning: [no-match] '/legacy/' matches no file in the tree
+3 error(s), 6 warning(s), coverage 95.7% (22/23 files owned)

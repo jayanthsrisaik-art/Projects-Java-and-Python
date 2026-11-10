@@ -1,0 +1,12 @@
+{
+  "cases": 400,
+  "seed": 7,
+  "queries": 13121,
+  "ownermap_verdict_mismatches": 0,
+  "ownermap_deciding_line_mismatches": 0,
+  "naive_fnmatch_verdict_mismatches": 1423,
+  "naive_fnmatch_mismatch_pct": 10.85,
+  "cases_where_naive_wrong": 248,
+  "first_mismatch": null,
+  "seconds": 3.69
+}

@@ -1,0 +1,15 @@
+{
+  "instances": 500,
+  "seed": 11,
+  "greedy_worse_instances": 83,
+  "greedy_worse_pct": 16.6,
+  "greedy_extra_reviewers_total": 89,
+  "mean_reviewers_exact": 8.96,
+  "mean_reviewers_greedy": 9.138,
+  "exact_hit_budget": 0,
+  "max_search_nodes": 91,
+  "mean_ms_exact": 0.081,
+  "mean_ms_greedy": 0.028,
+  "oracle_checked": 146,
+  "oracle_mismatches": 0
+}
