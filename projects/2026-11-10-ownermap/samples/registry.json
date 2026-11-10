@@ -1,0 +1,12 @@
+{
+  "users": ["@dana", "@erin", "@frank", "@gail", "@heidi", "@ivan"],
+  "teams": {
+    "@acme/platform": ["@olga", "@pete"],
+    "@acme/web": ["@dana", "@wade", "@xena"],
+    "@acme/payments": ["@erin", "@paul"],
+    "@acme/backend": ["@bob", "@frank", "@paul"],
+    "@acme/sre": ["@heidi", "@sam"],
+    "@acme/legacy": []
+  },
+  "emails": {"docs@example.com": "@gail"}
+}

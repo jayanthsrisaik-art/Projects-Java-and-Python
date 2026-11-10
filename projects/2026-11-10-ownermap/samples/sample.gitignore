@@ -1,0 +1,13 @@
+# build output anywhere
+build/
+*.log
+!keep.log
+# only the top-level dist, and everything below it
+/dist/**
+# re-including inside an ignored directory does not work in git
+logs/
+!logs/important.txt
+# a ** that touches a literal prefix (git quirk: matches the directory "out" too)
+out**/**
+[Tt]emp/
+\#notes.md

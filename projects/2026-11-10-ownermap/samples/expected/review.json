@@ -1,0 +1,146 @@
+{
+  "reviewers": [
+    "@dana",
+    "@frank",
+    "@gail",
+    "@heidi",
+    "@paul"
+  ],
+  "optimal": true,
+  "greedy_reviewers": [
+    "@dana",
+    "@frank",
+    "@gail",
+    "@heidi",
+    "@paul"
+  ],
+  "covers": {
+    "@dana": [
+      "web/src/App.tsx"
+    ],
+    "@frank": [
+      "services/api/main.py",
+      "services/api/billing/invoice.py",
+      "services/worker/jobs.py"
+    ],
+    "@gail": [
+      "docs/index.md"
+    ],
+    "@heidi": [
+      "services/worker/Dockerfile"
+    ],
+    "@paul": [
+      "web/src/payments/Checkout.tsx",
+      "web/src/payments/checkout.css",
+      "services/api/main.py",
+      "services/api/billing/invoice.py"
+    ]
+  },
+  "files": [
+    {
+      "path": "web/src/App.tsx",
+      "rule_line": 5,
+      "owners": [
+        "@acme/web"
+      ],
+      "approvers": [
+        "@dana",
+        "@wade",
+        "@xena"
+      ],
+      "status": "required"
+    },
+    {
+      "path": "web/src/payments/Checkout.tsx",
+      "rule_line": 7,
+      "owners": [
+        "@acme/payments",
+        "@erin"
+      ],
+      "approvers": [
+        "@paul"
+      ],
+      "status": "required"
+    },
+    {
+      "path": "web/src/payments/checkout.css",
+      "rule_line": 7,
+      "owners": [
+        "@acme/payments",
+        "@erin"
+      ],
+      "approvers": [
+        "@paul"
+      ],
+      "status": "required"
+    },
+    {
+      "path": "services/api/main.py",
+      "rule_line": 13,
+      "owners": [
+        "@acme/backend"
+      ],
+      "approvers": [
+        "@bob",
+        "@frank",
+        "@paul"
+      ],
+      "status": "required"
+    },
+    {
+      "path": "services/api/billing/invoice.py",
+      "rule_line": 13,
+      "owners": [
+        "@acme/backend"
+      ],
+      "approvers": [
+        "@bob",
+        "@frank",
+        "@paul"
+      ],
+      "status": "required"
+    },
+    {
+      "path": "services/worker/jobs.py",
+      "rule_line": 12,
+      "owners": [
+        "@frank"
+      ],
+      "approvers": [
+        "@frank"
+      ],
+      "status": "required"
+    },
+    {
+      "path": "services/worker/Dockerfile",
+      "rule_line": 22,
+      "owners": [
+        "@acme/sre"
+      ],
+      "approvers": [
+        "@heidi",
+        "@sam"
+      ],
+      "status": "required"
+    },
+    {
+      "path": "docs/index.md",
+      "rule_line": 16,
+      "owners": [
+        "docs@example.com"
+      ],
+      "approvers": [
+        "@gail"
+      ],
+      "status": "required"
+    },
+    {
+      "path": "web/src/generated/api.ts",
+      "rule_line": 25,
+      "owners": [],
+      "approvers": [],
+      "status": "no-owners"
+    }
+  ],
+  "unsatisfiable": []
+}

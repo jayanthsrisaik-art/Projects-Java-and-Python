@@ -1,0 +1,9 @@
+web/src/App.tsx
+web/src/payments/Checkout.tsx
+web/src/payments/checkout.css
+services/api/main.py
+services/api/billing/invoice.py
+services/worker/jobs.py
+services/worker/Dockerfile
+docs/index.md
+web/src/generated/api.ts
