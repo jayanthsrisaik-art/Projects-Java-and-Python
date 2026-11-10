@@ -1,6 +1,6 @@
 import pytest
 
-from ownermap.gitoracle import git_available, git_check_ignore, run_differential
+from ownermap.gitoracle import git_available, git_check_ignore, git_has_prefix_quirk, run_differential
 from ownermap.pathpattern import GitIgnore, parse_gitignore, trim_trailing_spaces
 
 
@@ -39,6 +39,25 @@ def test_reinclude_pattern_that_works():
     assert gi.check("src", is_dir=True).pattern.negated
 
 
+def test_prefix_quirk_is_opt_in():
+    # Current git: "a**/**" needs something below a/ ; older git also matched the directory itself.
+    assert not GitIgnore("a**/**\n").check("a", is_dir=True).ignored
+    assert GitIgnore("a**/**\n", prefix_quirk=True).check("a", is_dir=True).ignored
+    for quirk in (False, True):
+        assert GitIgnore("a**/**\n", prefix_quirk=quirk).check("a/b").ignored
+
+
+def test_exactly_one_mode_matches_the_installed_git():
+    if not git_available():
+        pytest.skip("git not installed")
+    truth = git_check_ignore("a**/**\n", ["a/b"], ["a", "a/b"])
+    verdicts = {q: GitIgnore("a**/**\n", prefix_quirk=git_has_prefix_quirk()).check(q, q == "a").ignored
+                for q in truth}
+    assert verdicts == {q: v[0] for q, v in truth.items()}
+    other = GitIgnore("a**/**\n", prefix_quirk=not git_has_prefix_quirk()).check("a", is_dir=True).ignored
+    assert other != truth["a"][0]
+
+
 needs_git = pytest.mark.skipif(not git_available(), reason="git not installed")
 
 QUIRKS = [
@@ -54,7 +73,7 @@ def test_quirky_single_patterns_agree_with_git(pattern):
     dirs = sorted({"/".join(f.split("/")[:k]) for f in files for k in range(1, f.count("/") + 1)})
     gi_text = "*.none\n" + pattern + "\n!a/a\n"
     truth = git_check_ignore(gi_text, files, files + dirs)
-    ours = GitIgnore(gi_text)
+    ours = GitIgnore(gi_text, prefix_quirk=git_has_prefix_quirk())
     for q in files + dirs:
         r = ours.check(q, q in dirs)
         assert (r.ignored, r.pattern.line_no if r.pattern else 0) == truth[q], (pattern, q)

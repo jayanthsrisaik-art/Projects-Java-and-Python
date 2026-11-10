@@ -69,13 +69,19 @@ def bench_review(instances: int = 500, seed: int = 11, check_oracle: bool = True
 
 
 def bench_ignore(cases: int = 300, seed: int = 7) -> dict:
-    from .gitoracle import git_available, run_differential
+    import subprocess
+
+    from .gitoracle import git_available, git_has_prefix_quirk, run_differential
 
     if not git_available():
         return {"skipped": "git not found on PATH"}
     t0 = time.perf_counter()
-    s = run_differential(cases, seed)
+    quirk = git_has_prefix_quirk()
+    s = run_differential(cases, seed, prefix_quirk=quirk)
+    version = subprocess.run(["git", "--version"], capture_output=True, text=True).stdout.strip()
     return {
+        "git_version": version,
+        "prefix_quirk_detected": quirk,
         "cases": s.cases,
         "seed": seed,
         "queries": s.queries,

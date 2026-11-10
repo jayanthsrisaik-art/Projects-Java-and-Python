@@ -120,7 +120,7 @@ def cmd_review(args: argparse.Namespace) -> int:
 
 def cmd_check_ignore(args: argparse.Namespace) -> int:
     with open(args.gitignore, "rb") as fh:
-        gi = GitIgnore(fh.read())
+        gi = GitIgnore(fh.read(), prefix_quirk=args.legacy_prefix_quirk)
     any_ignored = False
     for q in args.paths:
         res = gi.check(q.rstrip("/"), is_dir=q.endswith("/"))
@@ -187,6 +187,8 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("check-ignore", help="git check-ignore for a root .gitignore (dirs end with /)")
     p.add_argument("--gitignore", required=True)
     p.add_argument("-v", "--verbose", action="store_true")
+    p.add_argument("--legacy-prefix-quirk", action="store_true",
+                   help="emulate older git (e.g. 2.43) where `a**/**` also matches the directory `a`")
     p.add_argument("paths", nargs="+")
     p.set_defaults(func=cmd_check_ignore)
 

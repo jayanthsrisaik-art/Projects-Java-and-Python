@@ -1,4 +1,6 @@
 {
+  "git_version": "git version 2.43.0",
+  "prefix_quirk_detected": true,
   "cases": 400,
   "seed": 7,
   "queries": 13121,
@@ -8,5 +10,5 @@
   "naive_fnmatch_mismatch_pct": 10.85,
   "cases_where_naive_wrong": 248,
   "first_mismatch": null,
-  "seconds": 3.69
+  "seconds": 3.48
 }
