@@ -1,0 +1,4 @@
+# Runtime: Python 3.10+ standard library only (tested on 3.11.18): re, argparse, json, subprocess.
+# Tests:
+pytest>=7.4,<10
+# Optional: `git` on PATH (tested with 2.43.0) enables the differential tests and `bench ignore`.

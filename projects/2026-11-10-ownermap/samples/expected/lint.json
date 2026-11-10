@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "errors": 3,
+    "warnings": 6,
+    "files": 23,
+    "owned": 22,
+    "explicitly_unowned": 1,
+    "coverage_pct": 95.7
+  },
+  "problems": [
+    {
+      "line": 10,
+      "code": "shadowed",
+      "message": "'/services/api/' matches 4 file(s) but later rules (line 13, 22) override all of them",
+      "severity": "warning"
+    },
+    {
+      "line": 11,
+      "code": "shadowed",
+      "message": "'/services/api/billing/' matches 2 file(s) but later rules (line 13) override all of them",
+      "severity": "warning"
+    },
+    {
+      "line": 13,
+      "code": "duplicate-pattern",
+      "message": "pattern '/services/api/' already appears on line 10; the earlier rule can never decide ownership",
+      "severity": "warning"
+    },
+    {
+      "line": 17,
+      "code": "no-match",
+      "message": "'/Docs/legal/' matches no file in the tree (it would match if case were ignored: CODEOWNERS paths are case-sensitive)",
+      "severity": "warning"
+    },
+    {
+      "line": 25,
+      "code": "no-owners",
+      "message": "'/web/src/generated/' has no owners: matching files are explicitly unowned",
+      "severity": "info"
+    },
+    {
+      "line": 28,
+      "code": "unsupported-syntax",
+      "message": "negation ('!/vendor/') is not supported in CODEOWNERS; line skipped",
+      "severity": "error"
+    },
+    {
+      "line": 29,
+      "code": "unsupported-syntax",
+      "message": "character ranges ('/scripts/[ab]*.sh') are not supported in CODEOWNERS; line skipped",
+      "severity": "error"
+    },
+    {
+      "line": 30,
+      "code": "invalid-owner",
+      "message": "'@not_a_valid-handle!' is not a @user, @org/team or e-mail; line skipped",
+      "severity": "error"
+    },
+    {
+      "line": 31,
+      "code": "empty-team",
+      "message": "team '@acme/legacy' has no members, nobody can approve for it",
+      "severity": "warning"
+    },
+    {
+      "line": 31,
+      "code": "no-match",
+      "message": "'/legacy/' matches no file in the tree",
+      "severity": "warning"
+    }
+  ],
+  "unowned_dirs": [
+    {
+      "dir": "web/",
+      "files": 1
+    }
+  ]
+}
