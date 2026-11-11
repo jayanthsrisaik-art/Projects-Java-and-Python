@@ -14,7 +14,21 @@ from churnclock import pipeline, synth
 from churnclock.survival import CoxPH
 
 
+REQUIRED_CUSTOMER_COLS = ("customer_id", "plan", "channel", "discount", "monthly_price")
+REQUIRED_USAGE_COLS = ("customer_id", "period", "logins", "tickets", "payment_failed")
+
+
+def _require(df: pd.DataFrame, cols, what: str) -> None:
+    missing = [c for c in cols if c not in df.columns]
+    if missing:
+        raise ValueError(f"{what} is missing required columns: {', '.join(missing)}")
+
+
 def predict_frame(model: CoxPH, customers: pd.DataFrame, usage: pd.DataFrame, horizons) -> pd.DataFrame:
+    _require(customers, REQUIRED_CUSTOMER_COLS, "customers file")
+    _require(usage, REQUIRED_USAGE_COLS, "usage file")
+    if not horizons or any(h <= 0 for h in horizons):
+        raise ValueError("horizons must be positive day counts, e.g. 90,180,365")
     feats = F.landmark_features(customers, usage)
     cols = model.feature_names
     X = feats[cols].to_numpy(float)
@@ -87,8 +101,12 @@ def main(argv=None) -> int:
     if a.cmd == "predict":
         model = CoxPH.from_dict(json.loads(a.model.read_text()))
         read = lambda path: pd.read_csv(path, dtype={"customer_id": str}, keep_default_na=False)
-        horizons = [int(h) for h in a.horizons.split(",")]
-        out = predict_frame(model, read(a.customers), read(a.usage), horizons)
+        try:
+            horizons = [int(h) for h in a.horizons.split(",")]
+            out = predict_frame(model, read(a.customers), read(a.usage), horizons)
+        except ValueError as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 2
         if a.out:
             out.to_csv(a.out, index=False)
         print(out.to_string(index=False))

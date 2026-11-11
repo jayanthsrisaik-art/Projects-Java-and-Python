@@ -1,6 +1,6 @@
 import pytest
 
-from ownermap.gitoracle import git_available, git_check_ignore, run_differential
+from ownermap.gitoracle import git_available, git_check_ignore, git_has_prefix_quirk, run_differential
 from ownermap.pathpattern import GitIgnore, parse_gitignore, trim_trailing_spaces
 
 
@@ -39,6 +39,19 @@ def test_reinclude_pattern_that_works():
     assert gi.check("src", is_dir=True).pattern.negated
 
 
+def test_prefix_quirk_follows_git_version():
+    # git 2.52+ (default): '**' right after a literal prefix is not segment-initial.
+    assert not GitIgnore("a**/**\n").check("a", is_dir=True).ignored
+    assert GitIgnore("a**/**\n").check("ab/c").ignored
+    # git < 2.52 stripped the whole prefix, so 'a**/**' also matched the directory 'a'.
+    assert GitIgnore("a**/**\n", legacy_prefix_quirk=True).check("a", is_dir=True).ignored
+    # patterns without the quirk shape are unaffected
+    for text in ("a/**\n", "**/a/**/b\n", "/a**\n"):
+        for q, d in (("a", True), ("a/b", False), ("ab", False), ("x/a/y/b", False)):
+            new, old = GitIgnore(text).check(q, d), GitIgnore(text, legacy_prefix_quirk=True).check(q, d)
+            assert (new.ignored, new.pattern and new.pattern.line_no) == (old.ignored, old.pattern and old.pattern.line_no)
+
+
 needs_git = pytest.mark.skipif(not git_available(), reason="git not installed")
 
 QUIRKS = [
@@ -54,7 +67,7 @@ def test_quirky_single_patterns_agree_with_git(pattern):
     dirs = sorted({"/".join(f.split("/")[:k]) for f in files for k in range(1, f.count("/") + 1)})
     gi_text = "*.none\n" + pattern + "\n!a/a\n"
     truth = git_check_ignore(gi_text, files, files + dirs)
-    ours = GitIgnore(gi_text)
+    ours = GitIgnore(gi_text, legacy_prefix_quirk=git_has_prefix_quirk())
     for q in files + dirs:
         r = ours.check(q, q in dirs)
         assert (r.ignored, r.pattern.line_no if r.pattern else 0) == truth[q], (pattern, q)

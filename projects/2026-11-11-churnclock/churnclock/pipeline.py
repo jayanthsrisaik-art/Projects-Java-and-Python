@@ -18,6 +18,7 @@ from churnclock.metrics import (
     calibration_table,
     censoring_km,
     concordance_index,
+    uno_c_index,
     brier_ipcw,
     integrated_brier,
 )
@@ -107,7 +108,10 @@ def _fit_predict(name, train, test, cols, truth=None) -> tuple[Predictions, obje
 
 def evaluate(pred: Predictions, test: pd.DataFrame, G) -> dict:
     T, E = test["duration"].to_numpy(float), test["event"].to_numpy(int)
-    out = {"c_index": round(concordance_index(T, E, pred.risk), 4)}
+    out = {
+        "c_index": round(concordance_index(T, E, pred.risk), 4),
+        "uno_c_365": round(uno_c_index(T, E, pred.risk, G, tau=365), 4),
+    }
     for k, h in enumerate(HORIZONS):
         out[f"brier_{h}"] = round(brier_ipcw(T, E, pred.surv_h[:, k], h, G), 4)
     out["ibs"] = round(integrated_brier(T, E, pred.surv_grid, IBS_GRID, G), 4)

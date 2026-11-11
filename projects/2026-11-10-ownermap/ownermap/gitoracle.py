@@ -14,6 +14,7 @@ import fnmatch
 import os
 import random
 import shutil
+import re
 import subprocess
 import tempfile
 from dataclasses import dataclass
@@ -31,6 +32,20 @@ SEGMENTS = [
 
 def git_available() -> bool:
     return shutil.which("git") is not None
+
+
+def git_version() -> tuple[int, int]:
+    """(major, minor) of the installed git, e.g. (2, 56)."""
+    out = subprocess.run(["git", "--version"], check=True, capture_output=True, text=True).stdout
+    m = re.search(r"(\d+)\.(\d+)", out)
+    if not m:
+        raise RuntimeError(f"cannot parse git version from {out!r}")
+    return int(m.group(1)), int(m.group(2))
+
+
+def git_has_prefix_quirk() -> bool:
+    """True when the installed git predates the 2.52 match_pathname change."""
+    return git_version() < (2, 52)
 
 
 def random_tree(rng: random.Random, n_files: int) -> tuple[list[str], list[str]]:
@@ -141,12 +156,13 @@ class DiffStats:
 def run_differential(cases: int = 200, seed: int = 7, files_per_case: int = 18) -> DiffStats:
     rng = random.Random(seed)
     stats = DiffStats()
+    legacy = git_has_prefix_quirk()
     for _ in range(cases):
         files, dirs = random_tree(rng, files_per_case)
         gi = random_gitignore(rng)
         queries = files + dirs
         truth = git_check_ignore(gi, files, queries)
-        ours = GitIgnore(gi)
+        ours = GitIgnore(gi, legacy_prefix_quirk=legacy)
         dirset = set(dirs)
         stats.cases += 1
         naive_wrong_here = False

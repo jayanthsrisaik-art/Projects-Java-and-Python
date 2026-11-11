@@ -32,7 +32,7 @@ churnclock/features.py  durations, landmark cohort (observed > 30 days), day-30 
                         (period-0 usage only), and the LEAKY lifetime aggregates for the ablation
 churnclock/survival.py  Kaplan-Meier (S(t) and S(t-)); Cox PH: Breslow ties, L2, damped Newton,
                         Breslow baseline cumulative hazard, survival curves, median, JSON save/load
-churnclock/metrics.py   Harrell's C, IPCW time-dependent Brier score (Graf), integrated Brier score,
+churnclock/metrics.py   Harrell's C, Uno's IPCW C (truncated at 365 d), IPCW time-dependent Brier score (Graf), integrated Brier score,
                         calibration table (mean predicted vs per-bin Kaplan-Meier observed churn)
 churnclock/pipeline.py  hash-based customer split, model zoo, evaluation, report
 churnclock/cli.py       generate | run | seeds | predict
@@ -44,7 +44,7 @@ fit on train (scalers, logistic models, Cox and the censoring distribution G all
 ## Setup
 ```
 pip install -r requirements.txt     # tested: Python 3.11, numpy 2.4, pandas 3.1, scikit-learn 1.9, scipy 1.17
-python -m pytest -q                 # 23 tests, ~5 s
+python -m pytest -q                 # 30 tests, ~5 s
 ```
 
 ## Usage
@@ -59,6 +59,7 @@ python -m churnclock predict --model samples/cox.model.json \
 `risk_score` (log relative hazard), `churn_by_{90,180,365}d`, and `median_days_after_landmark`
 (`never_below_0.5` when the predicted curve stays above 0.5 within observed follow-up). It also includes
 `has_period0_usage`, which flags customers with no usage rows; those are scored as zero activity.
+Missing input columns or non-positive horizons stop `predict` with exit code 2 and a message naming the problem.
 
 ### Samples
 | file | what |
@@ -138,5 +139,5 @@ Across 5 independently generated datasets (`samples/expected_seeds.txt`):
 * There is one landmark only. Re-scoring customers at day 60, 90 and later would need stacked landmark
   datasets.
 * IBS stops at day 540 because past that point few test customers remain at risk and the IPCW weights
-  become unstable. Harrell's C depends on the censoring pattern; Uno's C is a reasonable addition.
+  become unstable. Harrell's C depends on the censoring pattern, so `metrics.json` also reports Uno's IPCW C truncated at day 365 (`uno_c_365`; Cox 0.6974 vs Harrell 0.6945 on seed 7). It assumes the censoring distribution from train applies to test.
 * Breslow's approximation is slightly biased when ties are heavy. Efron's method would be more accurate.

@@ -24,6 +24,7 @@
   "models": {
     "kaplan_meier": {
       "c_index": 0.5,
+      "uno_c_365": 0.5,
       "brier_90": 0.1356,
       "brier_180": 0.2105,
       "brier_365": 0.2482,
@@ -39,6 +40,7 @@
     },
     "logistic_censored_as_retained": {
       "c_index": 0.6921,
+      "uno_c_365": 0.695,
       "brier_90": 0.126,
       "brier_180": 0.1811,
       "brier_365": 0.2202,
@@ -85,6 +87,7 @@
     },
     "logistic_drop_censored": {
       "c_index": 0.6928,
+      "uno_c_365": 0.6956,
       "brier_90": 0.1251,
       "brier_180": 0.1779,
       "brier_365": 0.1936,
@@ -131,6 +134,7 @@
     },
     "cox": {
       "c_index": 0.6945,
+      "uno_c_365": 0.6974,
       "brier_90": 0.1252,
       "brier_180": 0.1767,
       "brier_365": 0.187,
@@ -177,6 +181,7 @@
     },
     "cox_leaky": {
       "c_index": 0.9792,
+      "uno_c_365": 0.9785,
       "brier_90": 0.0018,
       "brier_180": 0.0026,
       "brier_365": 0.0065,
@@ -217,6 +222,7 @@
     },
     "oracle": {
       "c_index": 0.7069,
+      "uno_c_365": 0.7106,
       "brier_90": 0.1223,
       "brier_180": 0.1729,
       "brier_365": 0.179,

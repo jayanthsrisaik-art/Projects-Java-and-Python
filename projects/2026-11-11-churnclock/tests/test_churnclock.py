@@ -16,6 +16,7 @@ from churnclock.metrics import (
     censoring_km,
     concordance_index,
     integrated_brier,
+    uno_c_index,
 )
 from churnclock.survival import CoxPH, KaplanMeier, breslow_loglik
 
@@ -302,3 +303,60 @@ def test_cli_generate_run_predict(tmp_path, capsys):
                  "--usage", str(SAMPLES / "new_usage.csv"), "--out", str(tmp_path / "p.csv")]) == 0
     assert len(pd.read_csv(tmp_path / "p.csv")) == 6
     assert main(["run", "--data", str(tmp_path / "missing"), "--out", str(tmp_path / "x")]) == 2
+
+
+# ---------------------------------------------------------------- follow-up changes
+def test_uno_c_equals_harrell_without_censoring_and_matches_brute_force():
+    rng = np.random.default_rng(9)
+    t = rng.permutation(150).astype(float) + 1
+    r = rng.normal(size=150)
+    e = np.ones(150, int)
+    G = censoring_km(t, e)  # no censoring: G == 1 everywhere
+    assert uno_c_index(t, e, r, G) == pytest.approx(concordance_index(t, e, r))
+    # with censoring and truncation: compare with an O(n^2) weighted loop
+    e = rng.integers(0, 2, 150)
+    G = censoring_km(t, e)
+    w = 1 / G.predict_left(t) ** 2
+    num = den = 0.0
+    for i in range(150):
+        if e[i] and t[i] < 100:
+            for j in range(150):
+                if t[i] < t[j]:
+                    den += w[i]
+                    num += w[i] * (1.0 if r[i] > r[j] else 0.5 if r[i] == r[j] else 0.0)
+    assert uno_c_index(t, e, r, G, tau=100, chunk=11) == pytest.approx(num / den)
+
+
+def test_report_includes_uno_c(result):
+    m = result["report"]["models"]
+    assert m["kaplan_meier"]["uno_c_365"] == 0.5
+    assert m["oracle"]["uno_c_365"] >= m["cox"]["uno_c_365"] > 0.65
+
+
+@pytest.mark.parametrize(
+    "X, d, e, msg",
+    [
+        ([[np.nan], [1.0]], [1, 2], [1, 0], "finite"),
+        ([[0.0], [1.0]], [-1, 2], [1, 0], "non-negative"),
+        ([[0.0], [1.0]], [1, 2], [2, 0], "0 \\(censored\\) or 1"),
+        ([[0.0], [1.0]], [1, 2], [0, 0], "no events"),
+    ],
+)
+def test_cox_rejects_bad_inputs(X, d, e, msg):
+    with pytest.raises(ValueError, match=msg):
+        CoxPH().fit(np.array(X), np.array(d, float), np.array(e))
+
+
+def test_predict_validates_inputs(tmp_path, capsys):
+    model = CoxPH.from_dict(json.loads((SAMPLES / "cox.model.json").read_text()))
+    read = lambda p: pd.read_csv(p, dtype={"customer_id": str}, keep_default_na=False)
+    c, u = read(SAMPLES / "new_customers.csv"), read(SAMPLES / "new_usage.csv")
+    with pytest.raises(ValueError, match="customers file is missing required columns: plan"):
+        predict_frame(model, c.drop(columns="plan"), u, [90])
+    with pytest.raises(ValueError, match="horizons must be positive"):
+        predict_frame(model, c, u, [0, 90])
+    bad = tmp_path / "usage.csv"
+    u.drop(columns="tickets").to_csv(bad, index=False)
+    rc = main(["predict", "--model", str(SAMPLES / "cox.model.json"),
+               "--customers", str(SAMPLES / "new_customers.csv"), "--usage", str(bad)])
+    assert rc == 2 and "missing required columns: tickets" in capsys.readouterr().err

@@ -36,7 +36,7 @@ wrong surprisingly often.
 ownermap/
   wildmatch.py    git wildmatch -> byte regex (brackets, POSIX classes, **, escapes, aborts)
   pathpattern.py  .gitignore line parsing + evaluator (negation, dir-only, anchoring,
-                  parent-directory exclusion, git's literal-prefix quirk)
+                  parent-directory exclusion, git < 2.52 literal-prefix quirk as an option)
   gitoracle.py    differential harness: random tree + random .gitignore -> git check-ignore
   codeowners.py   CODEOWNERS parser, owner validation, last-match-wins resolution,
                   directory-owns-subtree rule, whole-tree Resolution with caching
@@ -126,10 +126,13 @@ per file mixing `**`, brackets, classes, escapes, negation, anchoring, dir-only,
 | ownermap | **0** | **0** |
 | naive fnmatch (last match wins, basename if no `/`, dir-only, negation) | 1,423 (10.85%), in 248/400 cases | – |
 
-The differential run found one real discrepancy during development: git's `match_pathname`
-compares the literal prefix with `strncmp` and passes only the remainder to wildmatch, so in
-`a**/**` the `**` becomes segment-initial and the pattern matches the directory `a`. This
-quirk is now reproduced and covered by tests.
+The differential run found one real discrepancy during development: git before 2.52 compared
+the literal prefix in `match_pathname` with `strncmp` and passed only the remainder to wildmatch, so in
+`a**/**` the `**` became segment-initial and the pattern matched the directory `a`. Git 2.52 keeps one
+prefix byte (`dir.c`, "Retain one character of the prefix"), which removes the quirk. ownermap follows
+git 2.52+ by default; `GitIgnore(text, legacy_prefix_quirk=True)` reproduces older git. The git-backed
+tests detect the installed git version and pick the matching mode. They pass with git 2.43 (legacy) here
+and with git 2.56 in CI. The 13,121-query table above was measured with git 2.43.
 
 **Reviewer planning, exact vs greedy** (`results/review_benchmark.json`): 500 synthetic PRs
 (8–30 people, 3–10 overlapping teams, 5–40 changed files, 40% of files with two owners):
@@ -152,7 +155,7 @@ python -m pytest -q     # 135 tests
 * `test_wildmatch.py` — git t3070-style cases: `**` placement, bracket parsing edge cases
   (`[]]`, `[[:]`, reversed ranges), unmatchable patterns, byte-wise `?`.
 * `test_gitignore.py` — parsing rules, parent-exclusion, plus differential tests against
-  real git (23 hand-picked quirky patterns and 80 random cases; skipped without git).
+  real git (23 hand-picked quirky patterns and 80 random cases, in the mode matching the installed git version; skipped without git).
 * `test_codeowners.py` — every behaviour from GitHub's CODEOWNERS example file, inline
   comments, invalid/unsupported lines, escaped spaces.
 * `test_lint.py`, `test_review.py` — each lint check; exact solver equals the brute-force
