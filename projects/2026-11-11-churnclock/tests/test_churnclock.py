@@ -346,3 +346,17 @@ def test_cox_rejects_bad_inputs(X, d, e, msg):
     with pytest.raises(ValueError, match=msg):
         CoxPH().fit(np.array(X), np.array(d, float), np.array(e))
 
+
+def test_predict_validates_inputs(tmp_path, capsys):
+    model = CoxPH.from_dict(json.loads((SAMPLES / "cox.model.json").read_text()))
+    read = lambda p: pd.read_csv(p, dtype={"customer_id": str}, keep_default_na=False)
+    c, u = read(SAMPLES / "new_customers.csv"), read(SAMPLES / "new_usage.csv")
+    with pytest.raises(ValueError, match="customers file is missing required columns: plan"):
+        predict_frame(model, c.drop(columns="plan"), u, [90])
+    with pytest.raises(ValueError, match="horizons must be positive"):
+        predict_frame(model, c, u, [0, 90])
+    bad = tmp_path / "usage.csv"
+    u.drop(columns="tickets").to_csv(bad, index=False)
+    rc = main(["predict", "--model", str(SAMPLES / "cox.model.json"),
+               "--customers", str(SAMPLES / "new_customers.csv"), "--usage", str(bad)])
+    assert rc == 2 and "missing required columns: tickets" in capsys.readouterr().err
