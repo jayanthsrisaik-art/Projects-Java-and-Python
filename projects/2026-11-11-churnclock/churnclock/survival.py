@@ -115,6 +115,12 @@ class CoxPH:
         event = np.asarray(event, int)
         if X.ndim != 2 or X.shape[0] != duration.size:
             raise ValueError("X must be (n, p) with n == len(duration)")
+        if not (np.isfinite(X).all() and np.isfinite(duration).all()):
+            raise ValueError("X and duration must be finite (no NaN/inf); impute or drop rows first")
+        if (duration < 0).any():
+            raise ValueError("durations must be non-negative")
+        if not np.isin(event, (0, 1)).all():
+            raise ValueError("event must be 0 (censored) or 1 (churned)")
         if event.sum() == 0:
             raise ValueError("no events: Cox model is not identifiable")
         self.feature_names = list(feature_names) if feature_names is not None else None

@@ -332,3 +332,17 @@ def test_report_includes_uno_c(result):
     assert m["kaplan_meier"]["uno_c_365"] == 0.5
     assert m["oracle"]["uno_c_365"] >= m["cox"]["uno_c_365"] > 0.65
 
+
+@pytest.mark.parametrize(
+    "X, d, e, msg",
+    [
+        ([[np.nan], [1.0]], [1, 2], [1, 0], "finite"),
+        ([[0.0], [1.0]], [-1, 2], [1, 0], "non-negative"),
+        ([[0.0], [1.0]], [1, 2], [2, 0], "0 \\(censored\\) or 1"),
+        ([[0.0], [1.0]], [1, 2], [0, 0], "no events"),
+    ],
+)
+def test_cox_rejects_bad_inputs(X, d, e, msg):
+    with pytest.raises(ValueError, match=msg):
+        CoxPH().fit(np.array(X), np.array(d, float), np.array(e))
+

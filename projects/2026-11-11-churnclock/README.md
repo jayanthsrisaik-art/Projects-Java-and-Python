@@ -44,7 +44,7 @@ fit on train (scalers, logistic models, Cox and the censoring distribution G all
 ## Setup
 ```
 pip install -r requirements.txt     # tested: Python 3.11, numpy 2.4, pandas 3.1, scikit-learn 1.9, scipy 1.17
-python -m pytest -q                 # 25 tests, ~5 s
+python -m pytest -q                 # 29 tests, ~5 s
 ```
 
 ## Usage
