@@ -35,6 +35,30 @@ def concordance_index(duration, event, risk, chunk: int = 2048) -> float:
     return float(num / den)
 
 
+def uno_c_index(duration, event, risk, G: KaplanMeier, tau: float | None = None, chunk: int = 2048) -> float:
+    """Uno's IPCW concordance (Uno et al. 2011), truncated at ``tau``.
+
+    Comparable pairs: i has an event, T_i < T_j and T_i < tau. Each pair is weighted by
+    1 / G(T_i-)^2, which removes Harrell's C dependence on the censoring distribution.
+    ``G`` should be the censoring KM estimated on training data."""
+    t = np.asarray(duration, float)
+    e = np.asarray(event, int).astype(bool)
+    r = np.asarray(risk, float)
+    tau = np.inf if tau is None else float(tau)
+    ev_idx = np.flatnonzero(e & (t < tau))
+    w_all = 1.0 / np.clip(G.predict_left(t), 1e-12, None) ** 2
+    num = den = 0.0
+    for start in range(0, ev_idx.size, chunk):
+        i = ev_idx[start : start + chunk]
+        ti, ri, wi = t[i][:, None], r[i][:, None], w_all[i][:, None]
+        comparable = t[None, :] > ti
+        num += (wi * comparable * ((r[None, :] < ri) + 0.5 * (r[None, :] == ri))).sum()
+        den += (wi * comparable).sum()
+    if den == 0:
+        raise ValueError("no comparable pairs")
+    return float(num / den)
+
+
 def censoring_km(duration, event) -> KaplanMeier:
     """KM estimate of the censoring survival G(t) = P(C > t)."""
     return KaplanMeier().fit(duration, 1 - np.asarray(event, int))
