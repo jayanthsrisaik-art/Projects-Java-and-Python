@@ -1,0 +1,7 @@
+customer_id,signup_date,plan,channel,discount,monthly_price,status,end_date
+N001,2026-10-01,basic,paid_social,1,9.6,active,
+N002,2026-10-01,team,referral,0,79.0,active,
+N003,2026-10-02,pro,organic,0,29.0,active,
+N004,2026-10-03,basic,organic,0,12.0,active,
+N005,2026-10-03,pro,paid_social,0,29.0,active,
+N006,2026-10-04,team,organic,0,79.0,active,
