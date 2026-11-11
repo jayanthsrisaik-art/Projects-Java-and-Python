@@ -14,6 +14,12 @@ parent-directory exclusion done by ``prep_exclude``):
   whole relative path is matched with ``WM_PATHNAME``;
 * the last matching pattern wins, and once a directory is excluded nothing
   below it can be re-included.
+
+``match_pathname`` changed in git 2.52: older git stripped the whole literal
+prefix before calling wildmatch, so in ``a**/**`` the ``**`` counted as
+segment-initial and the pattern matched the directory ``a``. Git 2.52+ keeps
+one prefix byte, which removes that quirk. The default here follows git 2.52+;
+pass ``legacy_prefix_quirk=True`` to reproduce older git.
 """
 
 from __future__ import annotations
@@ -58,6 +64,7 @@ class PathPattern:
     basename_only: bool = False  # no slash: match basename at any depth
     raw: bytes = b""
     line_no: int = 0
+    legacy_prefix_quirk: bool = False  # True = git < 2.52 match_pathname behaviour
     _wp: WildPattern = field(init=False, repr=False)
 
     def __post_init__(self) -> None:
@@ -69,10 +76,15 @@ class PathPattern:
             self._wp = WildPattern(body, pathname=False)
         else:
             # match_pathname(): literal prefix + WM_PATHNAME wildmatch on the rest.
-            self._wp = WildPattern(body, pathname=True, segment_start=literal_prefix_len(body))
+            # git < 2.52 passed only the bytes after the prefix to wildmatch, so a
+            # '**' right after the prefix was segment-initial; git 2.52+ does not.
+            start = literal_prefix_len(body) if self.legacy_prefix_quirk else 0
+            self._wp = WildPattern(body, pathname=True, segment_start=start)
 
     @classmethod
-    def parse(cls, pattern: bytes | str, line_no: int = 0, allow_negation: bool = True) -> "PathPattern":
+    def parse(
+        cls, pattern: bytes | str, line_no: int = 0, allow_negation: bool = True, legacy_prefix_quirk: bool = False
+    ) -> "PathPattern":
         raw = to_bytes(pattern)
         p = raw
         negated = False
@@ -84,7 +96,7 @@ class PathPattern:
             dir_only = True
             p = p[:-1]
         basename_only = b"/" not in p
-        return cls(p, negated, dir_only, basename_only, raw, line_no)
+        return cls(p, negated, dir_only, basename_only, raw, line_no, legacy_prefix_quirk)
 
     @property
     def valid(self) -> bool:
@@ -105,7 +117,7 @@ class PathPattern:
         return self._wp.match(target, ignore_case)
 
 
-def parse_gitignore(content: bytes | str) -> list[PathPattern]:
+def parse_gitignore(content: bytes | str, legacy_prefix_quirk: bool = False) -> list[PathPattern]:
     data = to_bytes(content)
     patterns: list[PathPattern] = []
     lines = data.split(b"\n")
@@ -117,7 +129,7 @@ def parse_gitignore(content: bytes | str) -> list[PathPattern]:
         if not line or line.startswith(b"#"):
             continue
         line = trim_trailing_spaces(line)
-        patterns.append(PathPattern.parse(line, no))
+        patterns.append(PathPattern.parse(line, no, legacy_prefix_quirk=legacy_prefix_quirk))
     return patterns
 
 
@@ -130,8 +142,8 @@ class IgnoreResult:
 class GitIgnore:
     """Evaluate a single root-level .gitignore exactly like ``git check-ignore``."""
 
-    def __init__(self, content: bytes | str):
-        self.patterns = parse_gitignore(content)
+    def __init__(self, content: bytes | str, legacy_prefix_quirk: bool = False):
+        self.patterns = parse_gitignore(content, legacy_prefix_quirk)
         self._dir_cache: dict[bytes, PathPattern | None] = {}
 
     def _last_match(self, path: bytes, is_dir: bool) -> PathPattern | None:
