@@ -1,0 +1,21 @@
+customers=6000  landmark cohort=5192 (excluded before day 30: 808)  train=3906  test=1286
+event rate train=0.4137  test=0.4222
+
+model                             C-index   BS@90  BS@180  BS@365     IBS pred@180  KM@180  cal@180
+kaplan_meier                       0.5000  0.1356  0.2105  0.2482  0.2078   0.2986  0.3065        -
+logistic_censored_as_retained      0.6921  0.1260  0.1811  0.2202  0.1880   0.2534  0.3065   0.0536
+logistic_drop_censored             0.6928  0.1251  0.1779  0.1936  0.1768   0.3437  0.3065   0.0368
+cox                                0.6945  0.1252  0.1767  0.1870  0.1665   0.3023  0.3065   0.0164
+cox_leaky                          0.9792  0.0018  0.0026  0.0065  0.0070   0.5237  0.3065   0.0258
+oracle                             0.7069  0.1223  0.1729  0.1790  0.1615   0.3098  0.3065   0.0282
+
+Cox log-hazard ratios (original feature scale) vs generator truth:
+  log_logins_30d         est=-0.728  true=n/a (proxy/none)
+  tickets_30d            est=+0.238  true=+0.220
+  payment_failed_30d     est=+0.786  true=+0.850
+  discount               est=+0.452  true=+0.450
+  monthly_price          est=-0.008  true=n/a (proxy/none)
+  plan_pro               est=-0.202  true=-0.300
+  plan_team              est=-0.123  true=-0.600
+  channel_paid_social    est=+0.445  true=+0.400
+  channel_referral       est=-0.208  true=-0.300

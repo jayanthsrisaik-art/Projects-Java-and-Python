@@ -1,0 +1,304 @@
+{
+  "n_customers": 6000,
+  "landmark_cohort": 5192,
+  "excluded_before_landmark": 808,
+  "n_train": 3906,
+  "n_test": 1286,
+  "train_event_rate": 0.4137,
+  "test_event_rate": 0.4222,
+  "split": {
+    "kind": "customer-level sha256 hash",
+    "seed": 2026,
+    "test_frac": 0.25
+  },
+  "horizons_days_after_landmark": [
+    90,
+    180,
+    365
+  ],
+  "ibs_grid": [
+    15.0,
+    540.0,
+    15.0
+  ],
+  "models": {
+    "kaplan_meier": {
+      "c_index": 0.5,
+      "brier_90": 0.1356,
+      "brier_180": 0.2105,
+      "brier_365": 0.2482,
+      "ibs": 0.2078,
+      "mean_pred_churn_90": 0.1477,
+      "km_test_churn_90": 0.1631,
+      "mean_pred_churn_180": 0.2986,
+      "km_test_churn_180": 0.3065,
+      "mean_pred_churn_365": 0.513,
+      "km_test_churn_365": 0.536,
+      "calibration_180": [],
+      "calibration_error_180": null
+    },
+    "logistic_censored_as_retained": {
+      "c_index": 0.6921,
+      "brier_90": 0.126,
+      "brier_180": 0.1811,
+      "brier_365": 0.2202,
+      "ibs": 0.188,
+      "mean_pred_churn_90": 0.1366,
+      "km_test_churn_90": 0.1631,
+      "mean_pred_churn_180": 0.2534,
+      "km_test_churn_180": 0.3065,
+      "mean_pred_churn_365": 0.3697,
+      "km_test_churn_365": 0.536,
+      "calibration_180": [
+        {
+          "bin": 1,
+          "n": 254,
+          "mean_predicted": 0.0938,
+          "km_observed": 0.1004
+        },
+        {
+          "bin": 2,
+          "n": 260,
+          "mean_predicted": 0.1563,
+          "km_observed": 0.2052
+        },
+        {
+          "bin": 3,
+          "n": 250,
+          "mean_predicted": 0.2184,
+          "km_observed": 0.2551
+        },
+        {
+          "bin": 4,
+          "n": 264,
+          "mean_predicted": 0.304,
+          "km_observed": 0.3564
+        },
+        {
+          "bin": 5,
+          "n": 258,
+          "mean_predicted": 0.4907,
+          "km_observed": 0.6127
+        }
+      ],
+      "calibration_error_180": 0.0536
+    },
+    "logistic_drop_censored": {
+      "c_index": 0.6928,
+      "brier_90": 0.1251,
+      "brier_180": 0.1779,
+      "brier_365": 0.1936,
+      "ibs": 0.1768,
+      "mean_pred_churn_90": 0.159,
+      "km_test_churn_90": 0.1631,
+      "mean_pred_churn_180": 0.3437,
+      "km_test_churn_180": 0.3065,
+      "mean_pred_churn_365": 0.6362,
+      "km_test_churn_365": 0.536,
+      "calibration_180": [
+        {
+          "bin": 1,
+          "n": 257,
+          "mean_predicted": 0.1313,
+          "km_observed": 0.0957
+        },
+        {
+          "bin": 2,
+          "n": 257,
+          "mean_predicted": 0.2221,
+          "km_observed": 0.1959
+        },
+        {
+          "bin": 3,
+          "n": 257,
+          "mean_predicted": 0.3108,
+          "km_observed": 0.2631
+        },
+        {
+          "bin": 4,
+          "n": 257,
+          "mean_predicted": 0.4257,
+          "km_observed": 0.3798
+        },
+        {
+          "bin": 5,
+          "n": 258,
+          "mean_predicted": 0.6273,
+          "km_observed": 0.5989
+        }
+      ],
+      "calibration_error_180": 0.0368
+    },
+    "cox": {
+      "c_index": 0.6945,
+      "brier_90": 0.1252,
+      "brier_180": 0.1767,
+      "brier_365": 0.187,
+      "ibs": 0.1665,
+      "mean_pred_churn_90": 0.1489,
+      "km_test_churn_90": 0.1631,
+      "mean_pred_churn_180": 0.3023,
+      "km_test_churn_180": 0.3065,
+      "mean_pred_churn_365": 0.5202,
+      "km_test_churn_365": 0.536,
+      "calibration_180": [
+        {
+          "bin": 1,
+          "n": 257,
+          "mean_predicted": 0.1224,
+          "km_observed": 0.109
+        },
+        {
+          "bin": 2,
+          "n": 255,
+          "mean_predicted": 0.1949,
+          "km_observed": 0.2032
+        },
+        {
+          "bin": 3,
+          "n": 257,
+          "mean_predicted": 0.2646,
+          "km_observed": 0.2494
+        },
+        {
+          "bin": 4,
+          "n": 259,
+          "mean_predicted": 0.3585,
+          "km_observed": 0.359
+        },
+        {
+          "bin": 5,
+          "n": 258,
+          "mean_predicted": 0.5687,
+          "km_observed": 0.6134
+        }
+      ],
+      "calibration_error_180": 0.0164
+    },
+    "cox_leaky": {
+      "c_index": 0.9792,
+      "brier_90": 0.0018,
+      "brier_180": 0.0026,
+      "brier_365": 0.0065,
+      "ibs": 0.007,
+      "mean_pred_churn_90": 0.2941,
+      "km_test_churn_90": 0.1631,
+      "mean_pred_churn_180": 0.5237,
+      "km_test_churn_180": 0.3065,
+      "mean_pred_churn_365": 0.8167,
+      "km_test_churn_365": 0.536,
+      "calibration_180": [
+        {
+          "bin": 1,
+          "n": 257,
+          "mean_predicted": 0.0,
+          "km_observed": 0.0
+        },
+        {
+          "bin": 2,
+          "n": 257,
+          "mean_predicted": 0.0006,
+          "km_observed": 0.0
+        },
+        {
+          "bin": 3,
+          "n": 171,
+          "mean_predicted": 0.4231,
+          "km_observed": 0.2298
+        },
+        {
+          "bin": 5,
+          "n": 601,
+          "mean_predicted": 1.0,
+          "km_observed": 1.0
+        }
+      ],
+      "calibration_error_180": 0.0258
+    },
+    "oracle": {
+      "c_index": 0.7069,
+      "brier_90": 0.1223,
+      "brier_180": 0.1729,
+      "brier_365": 0.179,
+      "ibs": 0.1615,
+      "mean_pred_churn_90": 0.1587,
+      "km_test_churn_90": 0.1631,
+      "mean_pred_churn_180": 0.3098,
+      "km_test_churn_180": 0.3065,
+      "mean_pred_churn_365": 0.5352,
+      "km_test_churn_365": 0.536,
+      "calibration_180": [
+        {
+          "bin": 1,
+          "n": 257,
+          "mean_predicted": 0.1072,
+          "km_observed": 0.0948
+        },
+        {
+          "bin": 2,
+          "n": 257,
+          "mean_predicted": 0.1877,
+          "km_observed": 0.1965
+        },
+        {
+          "bin": 3,
+          "n": 257,
+          "mean_predicted": 0.2698,
+          "km_observed": 0.2045
+        },
+        {
+          "bin": 4,
+          "n": 257,
+          "mean_predicted": 0.3807,
+          "km_observed": 0.3846
+        },
+        {
+          "bin": 5,
+          "n": 258,
+          "mean_predicted": 0.6027,
+          "km_observed": 0.6533
+        }
+      ],
+      "calibration_error_180": 0.0282
+    }
+  },
+  "cox_coefficients": {
+    "log_logins_30d": {
+      "estimated": -0.728,
+      "true": null
+    },
+    "tickets_30d": {
+      "estimated": 0.238,
+      "true": 0.22
+    },
+    "payment_failed_30d": {
+      "estimated": 0.786,
+      "true": 0.85
+    },
+    "discount": {
+      "estimated": 0.452,
+      "true": 0.45
+    },
+    "monthly_price": {
+      "estimated": -0.008,
+      "true": null
+    },
+    "plan_pro": {
+      "estimated": -0.202,
+      "true": -0.3
+    },
+    "plan_team": {
+      "estimated": -0.123,
+      "true": -0.6
+    },
+    "channel_paid_social": {
+      "estimated": 0.445,
+      "true": 0.4
+    },
+    "channel_referral": {
+      "estimated": -0.208,
+      "true": -0.3
+    }
+  },
+  "cox_converged_iterations": 4
+}
