@@ -1,0 +1,14 @@
+[
+  {
+    "table": "series",
+    "date": "2025-05-02",
+    "metric": "null_rate:email",
+    "value": 0.09,
+    "expected": 0.02,
+    "lower": null,
+    "upper": 0.039799,
+    "score": 14.142136,
+    "status": "alert",
+    "reason": "above expected 0.02 (score +14.1)"
+  }
+]

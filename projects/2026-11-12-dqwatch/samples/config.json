@@ -1,0 +1,40 @@
+{
+  "tables": [
+    {
+      "name": "orders",
+      "partition_column": "partition_date",
+      "key": "order_id",
+      "loaded_at": "loaded_at",
+      "null_checks": [
+        "customer_id"
+      ],
+      "mean_checks": [
+        "amount"
+      ],
+      "category_checks": [
+        "payment_method"
+      ],
+      "static_rules": {
+        "null_rate_max": 0.01
+      }
+    },
+    {
+      "name": "refunds",
+      "partition_column": "partition_date",
+      "key": "refund_id",
+      "loaded_at": "loaded_at",
+      "null_checks": [
+        "reason"
+      ],
+      "mean_checks": [
+        "amount"
+      ],
+      "category_checks": [
+        "channel"
+      ],
+      "static_rules": {
+        "null_rate_max": 0.2
+      }
+    }
+  ]
+}
