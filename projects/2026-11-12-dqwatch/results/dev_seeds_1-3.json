@@ -1,0 +1,1960 @@
+{
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "days": 365,
+  "per_seed": {
+    "1": {
+      "table_days": 646,
+      "timing_s": {
+        "generate": 2.18,
+        "profile": 0.61,
+        "detect_all_methods": 1.13
+      },
+      "methods": {
+        "dqwatch": {
+          "alerts": 59,
+          "explained_alerts": 55,
+          "false_alerts": 4,
+          "incidents": 40,
+          "caught": 37,
+          "by_type": {
+            "volume_drop": [
+              4,
+              6
+            ],
+            "missing_partition": [
+              8,
+              8
+            ],
+            "duplicate_load": [
+              2,
+              2
+            ],
+            "null_spike": [
+              6,
+              6
+            ],
+            "unit_change": [
+              8,
+              8
+            ],
+            "mix_shift": [
+              4,
+              5
+            ],
+            "late_load": [
+              5,
+              5
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-20"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.678
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-24"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.432
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-28"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "app",
+                "frac": 0.748
+              }
+            }
+          ],
+          "benign_shift_alerts": 1
+        },
+        "dqwatch_exclude_flagged": {
+          "alerts": 62,
+          "explained_alerts": 55,
+          "false_alerts": 7,
+          "incidents": 40,
+          "caught": 37,
+          "by_type": {
+            "volume_drop": [
+              4,
+              6
+            ],
+            "missing_partition": [
+              8,
+              8
+            ],
+            "duplicate_load": [
+              2,
+              2
+            ],
+            "null_spike": [
+              6,
+              6
+            ],
+            "unit_change": [
+              8,
+              8
+            ],
+            "mix_shift": [
+              4,
+              5
+            ],
+            "late_load": [
+              5,
+              5
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-20"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.678
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-24"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.432
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-28"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "app",
+                "frac": 0.748
+              }
+            }
+          ],
+          "benign_shift_alerts": 4
+        },
+        "dqwatch_no_sampling": {
+          "alerts": 66,
+          "explained_alerts": 55,
+          "false_alerts": 11,
+          "incidents": 40,
+          "caught": 37,
+          "by_type": {
+            "volume_drop": [
+              4,
+              6
+            ],
+            "missing_partition": [
+              8,
+              8
+            ],
+            "duplicate_load": [
+              2,
+              2
+            ],
+            "null_spike": [
+              6,
+              6
+            ],
+            "unit_change": [
+              8,
+              8
+            ],
+            "mix_shift": [
+              4,
+              5
+            ],
+            "late_load": [
+              5,
+              5
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-20"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.678
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-24"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.432
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-28"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "app",
+                "frac": 0.748
+              }
+            }
+          ],
+          "benign_shift_alerts": 1
+        },
+        "dqwatch_no_seasonal": {
+          "alerts": 69,
+          "explained_alerts": 54,
+          "false_alerts": 15,
+          "incidents": 40,
+          "caught": 36,
+          "by_type": {
+            "volume_drop": [
+              3,
+              6
+            ],
+            "missing_partition": [
+              8,
+              8
+            ],
+            "duplicate_load": [
+              2,
+              2
+            ],
+            "null_spike": [
+              6,
+              6
+            ],
+            "unit_change": [
+              8,
+              8
+            ],
+            "mix_shift": [
+              4,
+              5
+            ],
+            "late_load": [
+              5,
+              5
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-20"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.678
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-05-27"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.632
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-24"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.432
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-28"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "app",
+                "frac": 0.748
+              }
+            }
+          ],
+          "benign_shift_alerts": 8
+        },
+        "zscore_28d": {
+          "alerts": 76,
+          "explained_alerts": 43,
+          "false_alerts": 33,
+          "incidents": 40,
+          "caught": 30,
+          "by_type": {
+            "volume_drop": [
+              1,
+              6
+            ],
+            "missing_partition": [
+              6,
+              8
+            ],
+            "duplicate_load": [
+              2,
+              2
+            ],
+            "null_spike": [
+              6,
+              6
+            ],
+            "unit_change": [
+              7,
+              8
+            ],
+            "mix_shift": [
+              4,
+              5
+            ],
+            "late_load": [
+              4,
+              5
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-04-14"
+              ],
+              "type": "unit_change",
+              "params": {
+                "factor": 0.01
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-20"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.678
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-05-27"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.632
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-24"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.432
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-07-14"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.708
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-10-02",
+                "2025-10-03"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.587
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-10-12"
+              ],
+              "type": "late_load",
+              "params": {
+                "extra_h": 5.19
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-11-22"
+              ],
+              "type": "missing_partition",
+              "params": {}
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-09",
+                "2025-12-10"
+              ],
+              "type": "missing_partition",
+              "params": {}
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-28"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "app",
+                "frac": 0.748
+              }
+            }
+          ],
+          "benign_shift_alerts": 0
+        },
+        "static_rules": {
+          "alerts": 135,
+          "explained_alerts": 56,
+          "false_alerts": 79,
+          "incidents": 40,
+          "caught": 36,
+          "by_type": {
+            "volume_drop": [
+              4,
+              6
+            ],
+            "missing_partition": [
+              8,
+              8
+            ],
+            "duplicate_load": [
+              2,
+              2
+            ],
+            "null_spike": [
+              6,
+              6
+            ],
+            "unit_change": [
+              8,
+              8
+            ],
+            "mix_shift": [
+              3,
+              5
+            ],
+            "late_load": [
+              5,
+              5
+            ]
+          },
+          "missed": [
+            {
+              "table": "orders",
+              "dates": [
+                "2025-05-27"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.632
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-07-14"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.708
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-09-21"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "paypal",
+                "to": "card",
+                "frac": 0.652
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-28"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "app",
+                "frac": 0.748
+              }
+            }
+          ],
+          "benign_shift_alerts": 6
+        }
+      }
+    },
+    "2": {
+      "table_days": 646,
+      "timing_s": {
+        "generate": 1.95,
+        "profile": 0.55,
+        "detect_all_methods": 1.06
+      },
+      "methods": {
+        "dqwatch": {
+          "alerts": 72,
+          "explained_alerts": 70,
+          "false_alerts": 2,
+          "incidents": 46,
+          "caught": 41,
+          "by_type": {
+            "volume_drop": [
+              3,
+              4
+            ],
+            "missing_partition": [
+              4,
+              4
+            ],
+            "duplicate_load": [
+              4,
+              5
+            ],
+            "null_spike": [
+              3,
+              3
+            ],
+            "unit_change": [
+              7,
+              7
+            ],
+            "mix_shift": [
+              11,
+              14
+            ],
+            "late_load": [
+              9,
+              9
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-03-02"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.637
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-23"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.693
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-10"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.558
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-08-28",
+                "2025-08-29"
+              ],
+              "type": "duplicate_load",
+              "params": {
+                "dup_frac": 0.044
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-25"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.576
+              }
+            }
+          ],
+          "benign_shift_alerts": 0
+        },
+        "dqwatch_exclude_flagged": {
+          "alerts": 71,
+          "explained_alerts": 69,
+          "false_alerts": 2,
+          "incidents": 46,
+          "caught": 40,
+          "by_type": {
+            "volume_drop": [
+              3,
+              4
+            ],
+            "missing_partition": [
+              4,
+              4
+            ],
+            "duplicate_load": [
+              4,
+              5
+            ],
+            "null_spike": [
+              3,
+              3
+            ],
+            "unit_change": [
+              7,
+              7
+            ],
+            "mix_shift": [
+              10,
+              14
+            ],
+            "late_load": [
+              9,
+              9
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-03-02"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.637
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-23"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.693
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-10"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.558
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-08-28",
+                "2025-08-29"
+              ],
+              "type": "duplicate_load",
+              "params": {
+                "dup_frac": 0.044
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-11-12"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.997
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-25"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.576
+              }
+            }
+          ],
+          "benign_shift_alerts": 0
+        },
+        "dqwatch_no_sampling": {
+          "alerts": 81,
+          "explained_alerts": 73,
+          "false_alerts": 8,
+          "incidents": 46,
+          "caught": 43,
+          "by_type": {
+            "volume_drop": [
+              3,
+              4
+            ],
+            "missing_partition": [
+              4,
+              4
+            ],
+            "duplicate_load": [
+              5,
+              5
+            ],
+            "null_spike": [
+              3,
+              3
+            ],
+            "unit_change": [
+              7,
+              7
+            ],
+            "mix_shift": [
+              12,
+              14
+            ],
+            "late_load": [
+              9,
+              9
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-23"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.693
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-10"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.558
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-25"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.576
+              }
+            }
+          ],
+          "benign_shift_alerts": 0
+        },
+        "dqwatch_no_seasonal": {
+          "alerts": 84,
+          "explained_alerts": 64,
+          "false_alerts": 20,
+          "incidents": 46,
+          "caught": 39,
+          "by_type": {
+            "volume_drop": [
+              1,
+              4
+            ],
+            "missing_partition": [
+              4,
+              4
+            ],
+            "duplicate_load": [
+              4,
+              5
+            ],
+            "null_spike": [
+              3,
+              3
+            ],
+            "unit_change": [
+              7,
+              7
+            ],
+            "mix_shift": [
+              11,
+              14
+            ],
+            "late_load": [
+              9,
+              9
+            ]
+          },
+          "missed": [
+            {
+              "table": "orders",
+              "dates": [
+                "2025-02-17"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.668
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-03-02"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.637
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-12"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.314
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-23"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.693
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-10"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.558
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-08-28",
+                "2025-08-29"
+              ],
+              "type": "duplicate_load",
+              "params": {
+                "dup_frac": 0.044
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-25"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.576
+              }
+            }
+          ],
+          "benign_shift_alerts": 4
+        },
+        "zscore_28d": {
+          "alerts": 93,
+          "explained_alerts": 60,
+          "false_alerts": 33,
+          "incidents": 46,
+          "caught": 37,
+          "by_type": {
+            "volume_drop": [
+              0,
+              4
+            ],
+            "missing_partition": [
+              4,
+              4
+            ],
+            "duplicate_load": [
+              5,
+              5
+            ],
+            "null_spike": [
+              3,
+              3
+            ],
+            "unit_change": [
+              7,
+              7
+            ],
+            "mix_shift": [
+              9,
+              14
+            ],
+            "late_load": [
+              9,
+              9
+            ]
+          },
+          "missed": [
+            {
+              "table": "orders",
+              "dates": [
+                "2025-02-17"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.668
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-04-10",
+                "2025-04-11"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "web",
+                "to": "app",
+                "frac": 0.68
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-04-22"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "web",
+                "to": "support",
+                "frac": 0.513
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-12"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.314
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-05-14",
+                "2025-05-15",
+                "2025-05-16"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.432
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-23"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.693
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-06-10"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.558
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-11-12"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.997
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-25"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.576
+              }
+            }
+          ],
+          "benign_shift_alerts": 1
+        },
+        "static_rules": {
+          "alerts": 147,
+          "explained_alerts": 67,
+          "false_alerts": 80,
+          "incidents": 46,
+          "caught": 40,
+          "by_type": {
+            "volume_drop": [
+              3,
+              4
+            ],
+            "missing_partition": [
+              4,
+              4
+            ],
+            "duplicate_load": [
+              5,
+              5
+            ],
+            "null_spike": [
+              3,
+              3
+            ],
+            "unit_change": [
+              7,
+              7
+            ],
+            "mix_shift": [
+              9,
+              14
+            ],
+            "late_load": [
+              9,
+              9
+            ]
+          },
+          "missed": [
+            {
+              "table": "orders",
+              "dates": [
+                "2025-02-17"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.668
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-03-02"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.637
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-05-23"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.693
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-08-28",
+                "2025-08-29"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "card",
+                "frac": 0.745
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-10-20",
+                "2025-10-21",
+                "2025-10-22"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "paypal",
+                "frac": 0.743
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-25"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.576
+              }
+            }
+          ],
+          "benign_shift_alerts": 5
+        }
+      }
+    },
+    "3": {
+      "table_days": 646,
+      "timing_s": {
+        "generate": 2.13,
+        "profile": 0.6,
+        "detect_all_methods": 1.07
+      },
+      "methods": {
+        "dqwatch": {
+          "alerts": 78,
+          "explained_alerts": 70,
+          "false_alerts": 8,
+          "incidents": 44,
+          "caught": 42,
+          "by_type": {
+            "volume_drop": [
+              5,
+              5
+            ],
+            "missing_partition": [
+              5,
+              5
+            ],
+            "duplicate_load": [
+              6,
+              7
+            ],
+            "null_spike": [
+              7,
+              7
+            ],
+            "unit_change": [
+              9,
+              9
+            ],
+            "mix_shift": [
+              7,
+              8
+            ],
+            "late_load": [
+              3,
+              3
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-07-27"
+              ],
+              "type": "duplicate_load",
+              "params": {
+                "dup_frac": 0.031
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-11-16",
+                "2025-11-17"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "paypal",
+                "frac": 0.642
+              }
+            }
+          ],
+          "benign_shift_alerts": 2
+        },
+        "dqwatch_exclude_flagged": {
+          "alerts": 82,
+          "explained_alerts": 70,
+          "false_alerts": 12,
+          "incidents": 44,
+          "caught": 42,
+          "by_type": {
+            "volume_drop": [
+              5,
+              5
+            ],
+            "missing_partition": [
+              5,
+              5
+            ],
+            "duplicate_load": [
+              6,
+              7
+            ],
+            "null_spike": [
+              7,
+              7
+            ],
+            "unit_change": [
+              9,
+              9
+            ],
+            "mix_shift": [
+              7,
+              8
+            ],
+            "late_load": [
+              3,
+              3
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-07-27"
+              ],
+              "type": "duplicate_load",
+              "params": {
+                "dup_frac": 0.031
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-11-16",
+                "2025-11-17"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "paypal",
+                "frac": 0.642
+              }
+            }
+          ],
+          "benign_shift_alerts": 3
+        },
+        "dqwatch_no_sampling": {
+          "alerts": 91,
+          "explained_alerts": 71,
+          "false_alerts": 20,
+          "incidents": 44,
+          "caught": 43,
+          "by_type": {
+            "volume_drop": [
+              5,
+              5
+            ],
+            "missing_partition": [
+              5,
+              5
+            ],
+            "duplicate_load": [
+              7,
+              7
+            ],
+            "null_spike": [
+              7,
+              7
+            ],
+            "unit_change": [
+              9,
+              9
+            ],
+            "mix_shift": [
+              7,
+              8
+            ],
+            "late_load": [
+              3,
+              3
+            ]
+          },
+          "missed": [
+            {
+              "table": "orders",
+              "dates": [
+                "2025-11-16",
+                "2025-11-17"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "paypal",
+                "frac": 0.642
+              }
+            }
+          ],
+          "benign_shift_alerts": 2
+        },
+        "dqwatch_no_seasonal": {
+          "alerts": 88,
+          "explained_alerts": 66,
+          "false_alerts": 22,
+          "incidents": 44,
+          "caught": 41,
+          "by_type": {
+            "volume_drop": [
+              4,
+              5
+            ],
+            "missing_partition": [
+              5,
+              5
+            ],
+            "duplicate_load": [
+              6,
+              7
+            ],
+            "null_spike": [
+              7,
+              7
+            ],
+            "unit_change": [
+              9,
+              9
+            ],
+            "mix_shift": [
+              7,
+              8
+            ],
+            "late_load": [
+              3,
+              3
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-03-24"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.55
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-07-27"
+              ],
+              "type": "duplicate_load",
+              "params": {
+                "dup_frac": 0.031
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-11-16",
+                "2025-11-17"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "paypal",
+                "frac": 0.642
+              }
+            }
+          ],
+          "benign_shift_alerts": 12
+        },
+        "zscore_28d": {
+          "alerts": 94,
+          "explained_alerts": 51,
+          "false_alerts": 43,
+          "incidents": 44,
+          "caught": 32,
+          "by_type": {
+            "volume_drop": [
+              0,
+              5
+            ],
+            "missing_partition": [
+              3,
+              5
+            ],
+            "duplicate_load": [
+              6,
+              7
+            ],
+            "null_spike": [
+              7,
+              7
+            ],
+            "unit_change": [
+              8,
+              9
+            ],
+            "mix_shift": [
+              5,
+              8
+            ],
+            "late_load": [
+              3,
+              3
+            ]
+          },
+          "missed": [
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-03-24"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.55
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-04-02",
+                "2025-04-03",
+                "2025-04-04"
+              ],
+              "type": "missing_partition",
+              "params": {}
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-05-13",
+                "2025-05-14"
+              ],
+              "type": "missing_partition",
+              "params": {}
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-05-31"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.266
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-07-30"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.497
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-09-30"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "support",
+                "to": "web",
+                "frac": 0.977
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-11-04"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "paypal",
+                "to": "card",
+                "frac": 0.857
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-11-16",
+                "2025-11-17"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "paypal",
+                "frac": 0.642
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-11-20",
+                "2025-11-21"
+              ],
+              "type": "duplicate_load",
+              "params": {
+                "dup_frac": 0.123
+              }
+            },
+            {
+              "table": "refunds",
+              "dates": [
+                "2025-12-12"
+              ],
+              "type": "unit_change",
+              "params": {
+                "factor": 0.01
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-12-17"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.634
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-12-27",
+                "2025-12-28"
+              ],
+              "type": "volume_drop",
+              "params": {
+                "keep": 0.631
+              }
+            }
+          ],
+          "benign_shift_alerts": 0
+        },
+        "static_rules": {
+          "alerts": 162,
+          "explained_alerts": 70,
+          "false_alerts": 92,
+          "incidents": 44,
+          "caught": 42,
+          "by_type": {
+            "volume_drop": [
+              5,
+              5
+            ],
+            "missing_partition": [
+              5,
+              5
+            ],
+            "duplicate_load": [
+              7,
+              7
+            ],
+            "null_spike": [
+              7,
+              7
+            ],
+            "unit_change": [
+              9,
+              9
+            ],
+            "mix_shift": [
+              6,
+              8
+            ],
+            "late_load": [
+              3,
+              3
+            ]
+          },
+          "missed": [
+            {
+              "table": "orders",
+              "dates": [
+                "2025-04-05"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "paypal",
+                "frac": 0.699
+              }
+            },
+            {
+              "table": "orders",
+              "dates": [
+                "2025-11-16",
+                "2025-11-17"
+              ],
+              "type": "mix_shift",
+              "params": {
+                "from": "bank_transfer",
+                "to": "paypal",
+                "frac": 0.642
+              }
+            }
+          ],
+          "benign_shift_alerts": 9
+        }
+      }
+    }
+  },
+  "summary": {
+    "dqwatch": {
+      "alerts": 209,
+      "explained_alerts": 195,
+      "false_alerts": 14,
+      "incidents": 130,
+      "caught": 120,
+      "benign_shift_alerts": 3,
+      "recall": 0.9231,
+      "precision": 0.933,
+      "false_alerts_per_100_table_days": 0.72,
+      "recall_min_seed": 0.8913,
+      "recall_max_seed": 0.9545,
+      "by_type": {
+        "volume_drop": [
+          12,
+          15
+        ],
+        "missing_partition": [
+          17,
+          17
+        ],
+        "duplicate_load": [
+          12,
+          14
+        ],
+        "null_spike": [
+          16,
+          16
+        ],
+        "unit_change": [
+          24,
+          24
+        ],
+        "mix_shift": [
+          22,
+          27
+        ],
+        "late_load": [
+          17,
+          17
+        ]
+      }
+    },
+    "dqwatch_exclude_flagged": {
+      "alerts": 215,
+      "explained_alerts": 194,
+      "false_alerts": 21,
+      "incidents": 130,
+      "caught": 119,
+      "benign_shift_alerts": 7,
+      "recall": 0.9154,
+      "precision": 0.9023,
+      "false_alerts_per_100_table_days": 1.08,
+      "recall_min_seed": 0.8696,
+      "recall_max_seed": 0.9545,
+      "by_type": {
+        "volume_drop": [
+          12,
+          15
+        ],
+        "missing_partition": [
+          17,
+          17
+        ],
+        "duplicate_load": [
+          12,
+          14
+        ],
+        "null_spike": [
+          16,
+          16
+        ],
+        "unit_change": [
+          24,
+          24
+        ],
+        "mix_shift": [
+          21,
+          27
+        ],
+        "late_load": [
+          17,
+          17
+        ]
+      }
+    },
+    "dqwatch_no_sampling": {
+      "alerts": 238,
+      "explained_alerts": 199,
+      "false_alerts": 39,
+      "incidents": 130,
+      "caught": 123,
+      "benign_shift_alerts": 3,
+      "recall": 0.9462,
+      "precision": 0.8361,
+      "false_alerts_per_100_table_days": 2.01,
+      "recall_min_seed": 0.925,
+      "recall_max_seed": 0.9773,
+      "by_type": {
+        "volume_drop": [
+          12,
+          15
+        ],
+        "missing_partition": [
+          17,
+          17
+        ],
+        "duplicate_load": [
+          14,
+          14
+        ],
+        "null_spike": [
+          16,
+          16
+        ],
+        "unit_change": [
+          24,
+          24
+        ],
+        "mix_shift": [
+          23,
+          27
+        ],
+        "late_load": [
+          17,
+          17
+        ]
+      }
+    },
+    "dqwatch_no_seasonal": {
+      "alerts": 241,
+      "explained_alerts": 184,
+      "false_alerts": 57,
+      "incidents": 130,
+      "caught": 116,
+      "benign_shift_alerts": 24,
+      "recall": 0.8923,
+      "precision": 0.7635,
+      "false_alerts_per_100_table_days": 2.94,
+      "recall_min_seed": 0.8478,
+      "recall_max_seed": 0.9318,
+      "by_type": {
+        "volume_drop": [
+          8,
+          15
+        ],
+        "missing_partition": [
+          17,
+          17
+        ],
+        "duplicate_load": [
+          12,
+          14
+        ],
+        "null_spike": [
+          16,
+          16
+        ],
+        "unit_change": [
+          24,
+          24
+        ],
+        "mix_shift": [
+          22,
+          27
+        ],
+        "late_load": [
+          17,
+          17
+        ]
+      }
+    },
+    "zscore_28d": {
+      "alerts": 263,
+      "explained_alerts": 154,
+      "false_alerts": 109,
+      "incidents": 130,
+      "caught": 99,
+      "benign_shift_alerts": 1,
+      "recall": 0.7615,
+      "precision": 0.5856,
+      "false_alerts_per_100_table_days": 5.62,
+      "recall_min_seed": 0.7273,
+      "recall_max_seed": 0.8043,
+      "by_type": {
+        "volume_drop": [
+          1,
+          15
+        ],
+        "missing_partition": [
+          13,
+          17
+        ],
+        "duplicate_load": [
+          13,
+          14
+        ],
+        "null_spike": [
+          16,
+          16
+        ],
+        "unit_change": [
+          22,
+          24
+        ],
+        "mix_shift": [
+          18,
+          27
+        ],
+        "late_load": [
+          16,
+          17
+        ]
+      }
+    },
+    "static_rules": {
+      "alerts": 444,
+      "explained_alerts": 193,
+      "false_alerts": 251,
+      "incidents": 130,
+      "caught": 118,
+      "benign_shift_alerts": 20,
+      "recall": 0.9077,
+      "precision": 0.4347,
+      "false_alerts_per_100_table_days": 12.95,
+      "recall_min_seed": 0.8696,
+      "recall_max_seed": 0.9545,
+      "by_type": {
+        "volume_drop": [
+          12,
+          15
+        ],
+        "missing_partition": [
+          17,
+          17
+        ],
+        "duplicate_load": [
+          14,
+          14
+        ],
+        "null_spike": [
+          16,
+          16
+        ],
+        "unit_change": [
+          24,
+          24
+        ],
+        "mix_shift": [
+          18,
+          27
+        ],
+        "late_load": [
+          17,
+          17
+        ]
+      }
+    }
+  }
+}

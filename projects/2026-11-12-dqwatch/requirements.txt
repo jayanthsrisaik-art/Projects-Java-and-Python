@@ -1,0 +1,3 @@
+# Runtime: Python >= 3.10 standard library only (sqlite3, statistics, argparse). Tested on 3.11.18.
+# Tests:
+pytest>=7.4,<10
