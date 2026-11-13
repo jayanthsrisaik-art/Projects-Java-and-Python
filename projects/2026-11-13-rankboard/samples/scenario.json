@@ -1,0 +1,240 @@
+{
+ "board": "Release 1.4",
+ "columns": [
+  "Todo",
+  "Doing",
+  "Done"
+ ],
+ "max_key_len": 3,
+ "steps": [
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "t1",
+   "column": "Todo",
+   "title": "Write migration"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "t2",
+   "column": "Todo",
+   "title": "Update docs"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "t3",
+   "column": "Todo",
+   "title": "Cut release"
+  },
+  {
+   "who": "bob",
+   "op": "sync"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "fixA",
+   "column": "Todo",
+   "title": "Fix login bug",
+   "after": "t1",
+   "before": "t2"
+  },
+  {
+   "who": "bob",
+   "op": "create",
+   "id": "fixB",
+   "column": "Todo",
+   "title": "Fix crash",
+   "after": "t1",
+   "before": "t2"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "fixA",
+   "column": "Todo",
+   "title": "Fix login bug",
+   "after": "t1",
+   "before": "t2"
+  },
+  {
+   "who": "bob",
+   "op": "show",
+   "column": "Todo"
+  },
+  {
+   "who": "bob",
+   "op": "move",
+   "id": "t3",
+   "column": "Doing"
+  },
+  {
+   "who": "alice",
+   "op": "move",
+   "id": "t2",
+   "column": "Todo",
+   "after": "t3"
+  },
+  {
+   "who": "alice",
+   "op": "move",
+   "id": "t2",
+   "column": "Todo",
+   "before": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "show",
+   "column": "Todo"
+  },
+  {
+   "who": "alice",
+   "op": "edit",
+   "id": "t1",
+   "title": "Write + test migration"
+  },
+  {
+   "who": "bob",
+   "op": "edit",
+   "id": "t1",
+   "version": 1,
+   "title": "Write migration (bob)"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h1",
+   "column": "Todo",
+   "title": "Triage 1",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h2",
+   "column": "Todo",
+   "title": "Triage 2",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h3",
+   "column": "Todo",
+   "title": "Triage 3",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h4",
+   "column": "Todo",
+   "title": "Triage 4",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h5",
+   "column": "Todo",
+   "title": "Triage 5",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h6",
+   "column": "Todo",
+   "title": "Triage 6",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h7",
+   "column": "Todo",
+   "title": "Triage 7",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h8",
+   "column": "Todo",
+   "title": "Triage 8",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h9",
+   "column": "Todo",
+   "title": "Triage 9",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "create",
+   "id": "h10",
+   "column": "Todo",
+   "title": "Triage 10",
+   "after": "t1"
+  },
+  {
+   "who": "alice",
+   "op": "show",
+   "column": "Todo"
+  },
+  {
+   "who": "bob",
+   "op": "sync"
+  },
+  {
+   "who": "bob",
+   "op": "move",
+   "id": "fixB",
+   "column": "Done",
+   "after": "nope"
+  },
+  {
+   "who": "alice",
+   "op": "delete",
+   "id": "fixA"
+  },
+  {
+   "who": "admin",
+   "op": "compact",
+   "keep_last": 1
+  },
+  {
+   "who": "alice",
+   "op": "sync"
+  },
+  {
+   "who": "bob",
+   "op": "sync"
+  },
+  {
+   "who": "alice",
+   "op": "sync"
+  },
+  {
+   "who": "bob",
+   "op": "create",
+   "id": "t4",
+   "column": "Done",
+   "title": "Retro",
+   "before": "fixB"
+  },
+  {
+   "who": "alice",
+   "op": "sync"
+  },
+  {
+   "who": "bob",
+   "op": "sync"
+  }
+ ]
+}

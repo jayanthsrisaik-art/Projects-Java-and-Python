@@ -1,0 +1,2735 @@
+{
+ "between": [
+  [
+   null,
+   null,
+   "a0"
+  ],
+  [
+   "a0",
+   null,
+   "a1"
+  ],
+  [
+   "a1",
+   null,
+   "a2"
+  ],
+  [
+   null,
+   "a0",
+   "Zz"
+  ],
+  [
+   "Zz",
+   "a0",
+   "ZzV"
+  ],
+  [
+   "a1",
+   "a2",
+   "a1V"
+  ],
+  [
+   "a1",
+   "a1V",
+   "a1G"
+  ],
+  [
+   "a1V",
+   "a2",
+   "a1l"
+  ],
+  [
+   "a2",
+   null,
+   "a3"
+  ],
+  [
+   "a1l",
+   "a2",
+   "a1t"
+  ],
+  [
+   "a2",
+   "a3",
+   "a2V"
+  ],
+  [
+   "a1l",
+   "a1t",
+   "a1p"
+  ],
+  [
+   "a0",
+   "a1",
+   "a0V"
+  ],
+  [
+   null,
+   "Zz",
+   "Zy"
+  ],
+  [
+   "a1l",
+   "a1p",
+   "a1n"
+  ],
+  [
+   "Zz",
+   "ZzV",
+   "ZzG"
+  ],
+  [
+   "ZzG",
+   "ZzV",
+   "ZzO"
+  ],
+  [
+   "a1G",
+   "a1V",
+   "a1O"
+  ],
+  [
+   "ZzG",
+   "ZzO",
+   "ZzK"
+  ],
+  [
+   "a1n",
+   "a1p",
+   "a1o"
+  ],
+  [
+   null,
+   "Zy",
+   "Zx"
+  ],
+  [
+   "a3",
+   null,
+   "a4"
+  ],
+  [
+   "a1n",
+   "a1o",
+   "a1nV"
+  ],
+  [
+   "a2V",
+   "a3",
+   "a2l"
+  ],
+  [
+   "a1",
+   "a1G",
+   "a18"
+  ],
+  [
+   "ZzO",
+   "ZzV",
+   "ZzS"
+  ],
+  [
+   "a18",
+   "a1G",
+   "a1C"
+  ],
+  [
+   "ZzV",
+   "a0",
+   "Zzl"
+  ],
+  [
+   "a0V",
+   "a1",
+   "a0l"
+  ],
+  [
+   "a4",
+   null,
+   "a5"
+  ],
+  [
+   "a0V",
+   "a0l",
+   "a0d"
+  ],
+  [
+   "a1p",
+   "a1t",
+   "a1r"
+  ],
+  [
+   "a5",
+   null,
+   "a6"
+  ],
+  [
+   "ZzG",
+   "ZzK",
+   "ZzI"
+  ],
+  [
+   "a1l",
+   "a1n",
+   "a1m"
+  ],
+  [
+   "ZzI",
+   "ZzK",
+   "ZzJ"
+  ],
+  [
+   "a5",
+   "a6",
+   "a5V"
+  ],
+  [
+   "a4",
+   "a5",
+   "a4V"
+  ],
+  [
+   "a1C",
+   "a1G",
+   "a1E"
+  ],
+  [
+   "a1C",
+   "a1E",
+   "a1D"
+  ],
+  [
+   "a1p",
+   "a1r",
+   "a1q"
+  ],
+  [
+   "ZzS",
+   "ZzV",
+   "ZzU"
+  ],
+  [
+   "a5V",
+   "a6",
+   "a5l"
+  ],
+  [
+   "a2l",
+   "a3",
+   "a2t"
+  ],
+  [
+   "a1C",
+   "a1D",
+   "a1CV"
+  ],
+  [
+   "Zx",
+   "Zy",
+   "ZxV"
+  ],
+  [
+   "a5l",
+   "a6",
+   "a5t"
+  ],
+  [
+   "a1E",
+   "a1G",
+   "a1F"
+  ],
+  [
+   "a1E",
+   "a1F",
+   "a1EV"
+  ],
+  [
+   "a1l",
+   "a1m",
+   "a1lV"
+  ],
+  [
+   "a1O",
+   "a1V",
+   "a1S"
+  ],
+  [
+   "ZzG",
+   "ZzI",
+   "ZzH"
+  ],
+  [
+   "a1EV",
+   "a1F",
+   "a1El"
+  ],
+  [
+   "a1o",
+   "a1p",
+   "a1oV"
+  ],
+  [
+   "a1n",
+   "a1nV",
+   "a1nG"
+  ],
+  [
+   "a1V",
+   "a1l",
+   "a1d"
+  ],
+  [
+   "a5t",
+   "a6",
+   "a5x"
+  ],
+  [
+   "ZzI",
+   "ZzJ",
+   "ZzIV"
+  ],
+  [
+   "a1El",
+   "a1F",
+   "a1Et"
+  ],
+  [
+   "a1S",
+   "a1V",
+   "a1U"
+  ],
+  [
+   "a1d",
+   "a1l",
+   "a1h"
+  ],
+  [
+   "Zy",
+   "Zz",
+   "ZyV"
+  ],
+  [
+   "a1t",
+   "a2",
+   "a1x"
+  ],
+  [
+   "a0",
+   "a0V",
+   "a0G"
+  ],
+  [
+   "a1x",
+   "a2",
+   "a1z"
+  ],
+  [
+   "a2V",
+   "a2l",
+   "a2d"
+  ],
+  [
+   "a2V",
+   "a2d",
+   "a2Z"
+  ],
+  [
+   "a1",
+   "a18",
+   "a14"
+  ],
+  [
+   "a1V",
+   "a1d",
+   "a1Z"
+  ],
+  [
+   "a1oV",
+   "a1p",
+   "a1ol"
+  ],
+  [
+   "a1z",
+   "a2",
+   "a1zV"
+  ],
+  [
+   "a2",
+   "a2V",
+   "a2G"
+  ],
+  [
+   "a1V",
+   "a1Z",
+   "a1X"
+  ],
+  [
+   "Zy",
+   "ZyV",
+   "ZyG"
+  ],
+  [
+   "a2l",
+   "a2t",
+   "a2p"
+  ],
+  [
+   "a1t",
+   "a1x",
+   "a1v"
+  ],
+  [
+   "a1zV",
+   "a2",
+   "a1zl"
+  ],
+  [
+   "a1x",
+   "a1z",
+   "a1y"
+  ],
+  [
+   "a1nV",
+   "a1o",
+   "a1nl"
+  ],
+  [
+   "a14",
+   "a18",
+   "a16"
+  ],
+  [
+   "a1V",
+   "a1X",
+   "a1W"
+  ],
+  [
+   "a2l",
+   "a2p",
+   "a2n"
+  ],
+  [
+   "a1r",
+   "a1t",
+   "a1s"
+  ],
+  [
+   "a1ol",
+   "a1p",
+   "a1ot"
+  ],
+  [
+   "a1r",
+   "a1s",
+   "a1rV"
+  ],
+  [
+   "a2p",
+   "a2t",
+   "a2r"
+  ],
+  [
+   "a3",
+   "a4",
+   "a3V"
+  ],
+  [
+   "a2r",
+   "a2t",
+   "a2s"
+  ],
+  [
+   "a1o",
+   "a1oV",
+   "a1oG"
+  ],
+  [
+   "a1rV",
+   "a1s",
+   "a1rl"
+  ],
+  [
+   "a0l",
+   "a1",
+   "a0t"
+  ],
+  [
+   "a0t",
+   "a1",
+   "a0x"
+  ],
+  [
+   "a0x",
+   "a1",
+   "a0z"
+  ],
+  [
+   "a0x",
+   "a0z",
+   "a0y"
+  ],
+  [
+   "a0",
+   "a0G",
+   "a08"
+  ],
+  [
+   "a08",
+   "a0G",
+   "a0C"
+  ],
+  [
+   "a1",
+   "a14",
+   "a12"
+  ],
+  [
+   "a0x",
+   "a0y",
+   "a0xV"
+  ],
+  [
+   "a1",
+   "a12",
+   "a11"
+  ],
+  [
+   "a0z",
+   "a1",
+   "a0zV"
+  ],
+  [
+   "a0d",
+   "a0l",
+   "a0h"
+  ],
+  [
+   "a0t",
+   "a0x",
+   "a0v"
+  ],
+  [
+   "a0",
+   "a08",
+   "a04"
+  ],
+  [
+   "a0t",
+   "a0v",
+   "a0u"
+  ],
+  [
+   "a0y",
+   "a0z",
+   "a0yV"
+  ],
+  [
+   "a04",
+   "a08",
+   "a06"
+  ],
+  [
+   null,
+   "Zx",
+   "Zw"
+  ],
+  [
+   "a0u",
+   "a0v",
+   "a0uV"
+  ],
+  [
+   "a12",
+   "a14",
+   "a13"
+  ],
+  [
+   "Zzl",
+   "a0",
+   "Zzt"
+  ],
+  [
+   "a0C",
+   "a0G",
+   "a0E"
+  ],
+  [
+   "a0zV",
+   "a1",
+   "a0zl"
+  ],
+  [
+   "a16",
+   "a18",
+   "a17"
+  ],
+  [
+   "Zzl",
+   "Zzt",
+   "Zzp"
+  ],
+  [
+   "a16",
+   "a17",
+   "a16V"
+  ],
+  [
+   "a0zl",
+   "a1",
+   "a0zt"
+  ],
+  [
+   "a0V",
+   "a0d",
+   "a0Z"
+  ],
+  [
+   "Zz",
+   "ZzG",
+   "Zz8"
+  ],
+  [
+   "a0uV",
+   "a0v",
+   "a0ul"
+  ],
+  [
+   "a0G",
+   "a0V",
+   "a0O"
+  ],
+  [
+   "a0O",
+   "a0V",
+   "a0S"
+  ],
+  [
+   "ZyV",
+   "Zz",
+   "Zyl"
+  ],
+  [
+   "a0d",
+   "a0h",
+   "a0f"
+  ],
+  [
+   "a0d",
+   "a0f",
+   "a0e"
+  ],
+  [
+   "a0h",
+   "a0l",
+   "a0j"
+  ],
+  [
+   "a0f",
+   "a0h",
+   "a0g"
+  ],
+  [
+   "a0O",
+   "a0S",
+   "a0Q"
+  ],
+  [
+   "a0G",
+   "a0O",
+   "a0K"
+  ],
+  [
+   "a0K",
+   "a0O",
+   "a0M"
+  ],
+  [
+   "Zy",
+   "ZyG",
+   "Zy8"
+  ],
+  [
+   "a0S",
+   "a0V",
+   "a0U"
+  ],
+  [
+   "a0G",
+   "a0K",
+   "a0I"
+  ],
+  [
+   "a0K",
+   "a0M",
+   "a0L"
+  ],
+  [
+   "a0j",
+   "a0l",
+   "a0k"
+  ],
+  [
+   "a0Z",
+   "a0d",
+   "a0b"
+  ],
+  [
+   "a0k",
+   "a0l",
+   "a0kV"
+  ],
+  [
+   "a4V",
+   "a5",
+   "a4l"
+  ],
+  [
+   "a0L",
+   "a0M",
+   "a0LV"
+  ],
+  [
+   "Zy8",
+   "ZyG",
+   "ZyC"
+  ],
+  [
+   "a0d",
+   "a0e",
+   "a0dV"
+  ],
+  [
+   "a3",
+   "a3V",
+   "a3G"
+  ],
+  [
+   "Zx",
+   "ZxV",
+   "ZxG"
+  ],
+  [
+   "a0h",
+   "a0j",
+   "a0i"
+  ],
+  [
+   "ZxG",
+   "ZxV",
+   "ZxO"
+  ],
+  [
+   "a0Z",
+   "a0b",
+   "a0a"
+  ],
+  [
+   "a3G",
+   "a3V",
+   "a3O"
+  ],
+  [
+   "a0a",
+   "a0b",
+   "a0aV"
+  ],
+  [
+   "a0l",
+   "a0t",
+   "a0p"
+  ],
+  [
+   "a4",
+   "a4V",
+   "a4G"
+  ],
+  [
+   "Zz8",
+   "ZzG",
+   "ZzC"
+  ],
+  [
+   "ZzV",
+   "Zzl",
+   "Zzd"
+  ],
+  [
+   "Zz",
+   "Zz8",
+   "Zz4"
+  ],
+  [
+   "Zzt",
+   "a0",
+   "Zzx"
+  ],
+  [
+   "Zzx",
+   "a0",
+   "Zzz"
+  ],
+  [
+   "Zzz",
+   "a0",
+   "ZzzV"
+  ],
+  [
+   "Zzt",
+   "Zzx",
+   "Zzv"
+  ],
+  [
+   "Zzt",
+   "Zzv",
+   "Zzu"
+  ],
+  [
+   "ZzS",
+   "ZzU",
+   "ZzT"
+  ],
+  [
+   "Zzt",
+   "Zzu",
+   "ZztV"
+  ],
+  [
+   "Zzd",
+   "Zzl",
+   "Zzh"
+  ],
+  [
+   "Zzl",
+   "Zzp",
+   "Zzn"
+  ],
+  [
+   "ZzH",
+   "ZzI",
+   "ZzHV"
+  ],
+  [
+   "ZzT",
+   "ZzU",
+   "ZzTV"
+  ],
+  [
+   "ZzTV",
+   "ZzU",
+   "ZzTl"
+  ],
+  [
+   "ZzC",
+   "ZzG",
+   "ZzE"
+  ],
+  [
+   "Zzx",
+   "Zzz",
+   "Zzy"
+  ],
+  [
+   "Zzh",
+   "Zzl",
+   "Zzj"
+  ],
+  [
+   "Zzt",
+   "ZztV",
+   "ZztG"
+  ],
+  [
+   "ZzzV",
+   "a0",
+   "Zzzl"
+  ],
+  [
+   "ZzJ",
+   "ZzK",
+   "ZzJV"
+  ],
+  [
+   "Zzd",
+   "Zzh",
+   "Zzf"
+  ],
+  [
+   "ZzHV",
+   "ZzI",
+   "ZzHl"
+  ],
+  [
+   "ZzV",
+   "Zzd",
+   "ZzZ"
+  ],
+  [
+   "Zzv",
+   "Zzx",
+   "Zzw"
+  ],
+  [
+   "Zzw",
+   "Zzx",
+   "ZzwV"
+  ],
+  [
+   "Zzu",
+   "Zzv",
+   "ZzuV"
+  ],
+  [
+   "ZzJ",
+   "ZzJV",
+   "ZzJG"
+  ],
+  [
+   "ZzE",
+   "ZzG",
+   "ZzF"
+  ],
+  [
+   "Zzw",
+   "ZzwV",
+   "ZzwG"
+  ],
+  [
+   "ZzzV",
+   "Zzzl",
+   "Zzzd"
+  ],
+  [
+   "ZzK",
+   "ZzO",
+   "ZzM"
+  ],
+  [
+   "ZztG",
+   "ZztV",
+   "ZztO"
+  ],
+  [
+   "Zzzd",
+   "Zzzl",
+   "Zzzh"
+  ],
+  [
+   "a08",
+   "a0C",
+   "a0A"
+  ],
+  [
+   "Zz4",
+   "Zz8",
+   "Zz6"
+  ],
+  [
+   "Zzp",
+   "Zzt",
+   "Zzr"
+  ],
+  [
+   "Zw",
+   "Zx",
+   "ZwV"
+  ],
+  [
+   "Zz4",
+   "Zz6",
+   "Zz5"
+  ],
+  [
+   "Zz",
+   "Zz4",
+   "Zz2"
+  ],
+  [
+   "a1h",
+   "a1l",
+   "a1j"
+  ],
+  [
+   "a1j",
+   "a1l",
+   "a1k"
+  ],
+  [
+   "a1h",
+   "a1j",
+   "a1i"
+  ],
+  [
+   "a1j",
+   "a1k",
+   "a1jV"
+  ],
+  [
+   "a1jV",
+   "a1k",
+   "a1jl"
+  ],
+  [
+   "a1t",
+   "a1v",
+   "a1u"
+  ],
+  [
+   "a1i",
+   "a1j",
+   "a1iV"
+  ],
+  [
+   "ZwV",
+   "Zx",
+   "Zwl"
+  ],
+  [
+   "Zzr",
+   "Zzt",
+   "Zzs"
+  ],
+  [
+   "a1G",
+   "a1O",
+   "a1K"
+  ],
+  [
+   "ZxV",
+   "Zy",
+   "Zxl"
+  ],
+  [
+   "a1K",
+   "a1O",
+   "a1M"
+  ],
+  [
+   "a1M",
+   "a1O",
+   "a1N"
+  ],
+  [
+   "a1O",
+   "a1S",
+   "a1Q"
+  ],
+  [
+   "a1O",
+   "a1Q",
+   "a1P"
+  ],
+  [
+   "a1P",
+   "a1Q",
+   "a1PV"
+  ],
+  [
+   "a2G",
+   "a2V",
+   "a2O"
+  ],
+  [
+   "a1Z",
+   "a1d",
+   "a1b"
+  ],
+  [
+   "Zx",
+   "ZxG",
+   "Zx8"
+  ],
+  [
+   "a1q",
+   "a1r",
+   "a1qV"
+  ],
+  [
+   "a1q",
+   "a1qV",
+   "a1qG"
+  ],
+  [
+   "a1X",
+   "a1Z",
+   "a1Y"
+  ],
+  [
+   "a1G",
+   "a1K",
+   "a1I"
+  ],
+  [
+   "ZyG",
+   "ZyV",
+   "ZyO"
+  ],
+  [
+   "Zw",
+   "ZwV",
+   "ZwG"
+  ],
+  [
+   "ZyG",
+   "ZyO",
+   "ZyK"
+  ],
+  [
+   "ZyG",
+   "ZyK",
+   "ZyI"
+  ],
+  [
+   "Zw",
+   "ZwG",
+   "Zw8"
+  ],
+  [
+   null,
+   "Zw",
+   "Zv"
+  ],
+  [
+   "ZyK",
+   "ZyO",
+   "ZyM"
+  ],
+  [
+   "Zv",
+   "Zw",
+   "ZvV"
+  ],
+  [
+   "ZxG",
+   "ZxO",
+   "ZxK"
+  ],
+  [
+   "Zy",
+   "Zy8",
+   "Zy4"
+  ],
+  [
+   "ZyG",
+   "ZyI",
+   "ZyH"
+  ],
+  [
+   "ZyM",
+   "ZyO",
+   "ZyN"
+  ],
+  [
+   "ZxV",
+   "Zxl",
+   "Zxd"
+  ],
+  [
+   "ZyN",
+   "ZyO",
+   "ZyNV"
+  ],
+  [
+   "ZyM",
+   "ZyN",
+   "ZyMV"
+  ],
+  [
+   "Zzf",
+   "Zzh",
+   "Zzg"
+  ],
+  [
+   "Zzg",
+   "Zzh",
+   "ZzgV"
+  ],
+  [
+   "ZyH",
+   "ZyI",
+   "ZyHV"
+  ],
+  [
+   "ZxV",
+   "Zxd",
+   "ZxZ"
+  ],
+  [
+   "ZxK",
+   "ZxO",
+   "ZxM"
+  ],
+  [
+   "Zzg",
+   "ZzgV",
+   "ZzgG"
+  ],
+  [
+   "ZyMV",
+   "ZyN",
+   "ZyMl"
+  ],
+  [
+   "ZxG",
+   "ZxK",
+   "ZxI"
+  ],
+  [
+   "ZyO",
+   "ZyV",
+   "ZyS"
+  ],
+  [
+   null,
+   "Zv",
+   "Zu"
+  ],
+  [
+   "ZyG",
+   "ZyH",
+   "ZyGV"
+  ],
+  [
+   "ZyO",
+   "ZyS",
+   "ZyQ"
+  ],
+  [
+   "az",
+   null,
+   "b00"
+  ],
+  [
+   "bzz",
+   null,
+   "c000"
+  ],
+  [
+   null,
+   "Z0",
+   "Yzz"
+  ],
+  [
+   null,
+   "Y00",
+   "Xzzz"
+  ],
+  [
+   "a0",
+   "a04",
+   "a02"
+  ],
+  [
+   "a0",
+   "a02",
+   "a01"
+  ],
+  [
+   "a0",
+   "a01",
+   "a00V"
+  ],
+  [
+   "a0",
+   "a00V",
+   "a00G"
+  ],
+  [
+   "a0",
+   "a00G",
+   "a008"
+  ],
+  [
+   "a0",
+   "a008",
+   "a004"
+  ],
+  [
+   "a0",
+   "a004",
+   "a002"
+  ],
+  [
+   "a0",
+   "a002",
+   "a001"
+  ],
+  [
+   "a0",
+   "a001",
+   "a000V"
+  ],
+  [
+   "a0",
+   "a000V",
+   "a000G"
+  ],
+  [
+   "a0",
+   "a000G",
+   "a0008"
+  ],
+  [
+   "a0",
+   "a0008",
+   "a0004"
+  ],
+  [
+   "a0",
+   "a0004",
+   "a0002"
+  ],
+  [
+   "a0",
+   "a0002",
+   "a0001"
+  ],
+  [
+   "a0",
+   "a0001",
+   "a0000V"
+  ],
+  [
+   "a0",
+   "a0000V",
+   "a0000G"
+  ],
+  [
+   "a0",
+   "a0000G",
+   "a00008"
+  ],
+  [
+   "a0",
+   "a00008",
+   "a00004"
+  ],
+  [
+   "a0",
+   "a00004",
+   "a00002"
+  ],
+  [
+   "a0",
+   "a00002",
+   "a00001"
+  ],
+  [
+   "a0",
+   "a00001",
+   "a00000V"
+  ],
+  [
+   "a0",
+   "a00000V",
+   "a00000G"
+  ],
+  [
+   "a0",
+   "a00000G",
+   "a000008"
+  ],
+  [
+   "a0",
+   "a000008",
+   "a000004"
+  ],
+  [
+   "a0",
+   "a000004",
+   "a000002"
+  ],
+  [
+   "a0",
+   "a000002",
+   "a000001"
+  ],
+  [
+   "a0",
+   "a000001",
+   "a000000V"
+  ],
+  [
+   "a0",
+   "a000000V",
+   "a000000G"
+  ],
+  [
+   "a0",
+   "a000000G",
+   "a0000008"
+  ],
+  [
+   "a0",
+   "a0000008",
+   "a0000004"
+  ],
+  [
+   "a0",
+   "a0000004",
+   "a0000002"
+  ],
+  [
+   "a0",
+   "a0000002",
+   "a0000001"
+  ],
+  [
+   "a0",
+   "a0000001",
+   "a0000000V"
+  ],
+  [
+   "a0",
+   "a0000000V",
+   "a0000000G"
+  ],
+  [
+   "a0",
+   "a0000000G",
+   "a00000008"
+  ],
+  [
+   "a0",
+   "a00000008",
+   "a00000004"
+  ],
+  [
+   "a0",
+   "a00000004",
+   "a00000002"
+  ],
+  [
+   "zzzzzzzzzzzzzzzzzzzzzzzzzzy",
+   null,
+   "zzzzzzzzzzzzzzzzzzzzzzzzzzz"
+  ],
+  [
+   "az",
+   "b00",
+   "azV"
+  ],
+  [
+   null,
+   "A00000000000000000000000001",
+   "A00000000000000000000000000V"
+  ]
+ ],
+ "invalid": [
+  [
+   "a0",
+   "a0"
+  ],
+  [
+   "a1",
+   "a0"
+  ],
+  [
+   "a00",
+   null
+  ],
+  [
+   "b0",
+   null
+  ],
+  [
+   "a$",
+   null
+  ],
+  [
+   "",
+   null
+  ],
+  [
+   "A00000000000000000000000000",
+   null
+  ]
+ ],
+ "sequence_10": [
+  "a0",
+  "a1",
+  "a2",
+  "a3",
+  "a4",
+  "a5",
+  "a6",
+  "a7",
+  "a8",
+  "a9"
+ ],
+ "placements": [
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "Zz"
+    ],
+    [
+     "c2",
+     "ZzG"
+    ],
+    [
+     "c3",
+     "ZzV"
+    ],
+    [
+     "c4",
+     "Zzl"
+    ],
+    [
+     "c5",
+     "a0"
+    ]
+   ],
+   "moving": "c4",
+   "after": "c2",
+   "before": "c1",
+   "rank": "ZzO",
+   "resolved": "after"
+  },
+  {
+   "column": [],
+   "moving": null,
+   "after": "gone",
+   "before": null,
+   "rank": "a0",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [],
+   "moving": null,
+   "after": null,
+   "before": null,
+   "rank": "a0",
+   "resolved": "end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "ZyV"
+    ],
+    [
+     "c2",
+     "Zyl"
+    ],
+    [
+     "c3",
+     "Zz"
+    ],
+    [
+     "c4",
+     "Zz8"
+    ],
+    [
+     "c5",
+     "ZzG"
+    ],
+    [
+     "c6",
+     "ZzV"
+    ],
+    [
+     "c7",
+     "a0"
+    ]
+   ],
+   "moving": "c4",
+   "after": "c0",
+   "before": null,
+   "rank": "ZyG",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a0V"
+    ],
+    [
+     "c2",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "c2",
+   "before": "c2",
+   "rank": "a2",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ]
+   ],
+   "moving": "c0",
+   "after": null,
+   "before": null,
+   "rank": "a1",
+   "resolved": "end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "c0",
+   "before": "gone",
+   "rank": "a1",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "ZzV"
+    ],
+    [
+     "c2",
+     "a0"
+    ],
+    [
+     "c3",
+     "a1"
+    ]
+   ],
+   "moving": "c1",
+   "after": "c0",
+   "before": "c2",
+   "rank": "ZzV",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "ZzV"
+    ],
+    [
+     "c2",
+     "Zzd"
+    ],
+    [
+     "c3",
+     "Zzl"
+    ],
+    [
+     "c4",
+     "a0"
+    ],
+    [
+     "c5",
+     "a0V"
+    ],
+    [
+     "c6",
+     "a1"
+    ]
+   ],
+   "moving": "c1",
+   "after": "c5",
+   "before": "gone",
+   "rank": "a0l",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "Zz"
+    ],
+    [
+     "c2",
+     "ZzV"
+    ],
+    [
+     "c3",
+     "a0"
+    ]
+   ],
+   "moving": "c3",
+   "after": "gone",
+   "before": "gone",
+   "rank": "a0",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a0G"
+    ],
+    [
+     "c2",
+     "a0V"
+    ],
+    [
+     "c3",
+     "a0l"
+    ],
+    [
+     "c4",
+     "a1"
+    ]
+   ],
+   "moving": "c1",
+   "after": null,
+   "before": "c3",
+   "rank": "a0d",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a0V"
+    ],
+    [
+     "c2",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": "c1",
+   "rank": "a0G",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": "gone",
+   "rank": "a1",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": "gone",
+   "rank": "a1",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "c1",
+   "before": "c0",
+   "rank": "a1",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a1"
+    ],
+    [
+     "c2",
+     "a2"
+    ],
+    [
+     "c3",
+     "a3"
+    ]
+   ],
+   "moving": "c3",
+   "after": "c0",
+   "before": "gone",
+   "rank": "a0V",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ],
+    [
+     "c2",
+     "a1"
+    ],
+    [
+     "c3",
+     "a2"
+    ],
+    [
+     "c4",
+     "a3"
+    ]
+   ],
+   "moving": "c4",
+   "after": "c1",
+   "before": "c3",
+   "rank": "a0V",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "Zz"
+    ],
+    [
+     "c2",
+     "ZzG"
+    ],
+    [
+     "c3",
+     "ZzV"
+    ],
+    [
+     "c4",
+     "a0"
+    ]
+   ],
+   "moving": "c2",
+   "after": "c4",
+   "before": "gone",
+   "rank": "a1",
+   "resolved": "after"
+  },
+  {
+   "column": [],
+   "moving": null,
+   "after": "gone",
+   "before": "gone",
+   "rank": "a0",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "c0",
+   "before": "c0",
+   "rank": "a1",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zx"
+    ],
+    [
+     "c1",
+     "Zy"
+    ],
+    [
+     "c2",
+     "Zz"
+    ],
+    [
+     "c3",
+     "ZzV"
+    ],
+    [
+     "c4",
+     "a0"
+    ],
+    [
+     "c5",
+     "a1"
+    ],
+    [
+     "c6",
+     "a2"
+    ]
+   ],
+   "moving": "c2",
+   "after": "c5",
+   "before": "c3",
+   "rank": "a1V",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "Zz"
+    ],
+    [
+     "c2",
+     "a0"
+    ],
+    [
+     "c3",
+     "a0G"
+    ],
+    [
+     "c4",
+     "a0V"
+    ],
+    [
+     "c5",
+     "a0l"
+    ],
+    [
+     "c6",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": null,
+   "before": "c2",
+   "rank": "ZzV",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": "c0",
+   "rank": "Zz",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": "gone",
+   "rank": "a2",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a0V"
+    ],
+    [
+     "c2",
+     "a0d"
+    ],
+    [
+     "c3",
+     "a0l"
+    ],
+    [
+     "c4",
+     "a1"
+    ]
+   ],
+   "moving": "c0",
+   "after": "gone",
+   "before": "c3",
+   "rank": "a0h",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": null,
+   "rank": "a2",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a1"
+    ],
+    [
+     "c2",
+     "a2"
+    ]
+   ],
+   "moving": null,
+   "after": "c2",
+   "before": "c1",
+   "rank": "a3",
+   "resolved": "after"
+  },
+  {
+   "column": [],
+   "moving": null,
+   "after": null,
+   "before": "gone",
+   "rank": "a0",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ],
+    [
+     "c2",
+     "a1"
+    ],
+    [
+     "c3",
+     "a2"
+    ],
+    [
+     "c4",
+     "a2G"
+    ],
+    [
+     "c5",
+     "a2O"
+    ],
+    [
+     "c6",
+     "a2V"
+    ],
+    [
+     "c7",
+     "a3"
+    ]
+   ],
+   "moving": "c7",
+   "after": "c5",
+   "before": "c5",
+   "rank": "a2S",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "ZzV"
+    ],
+    [
+     "c2",
+     "Zzl"
+    ],
+    [
+     "c3",
+     "a0"
+    ],
+    [
+     "c4",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "c4",
+   "before": "c4",
+   "rank": "a2",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "ZyG"
+    ],
+    [
+     "c2",
+     "ZyV"
+    ],
+    [
+     "c3",
+     "Zz"
+    ],
+    [
+     "c4",
+     "a0"
+    ],
+    [
+     "c5",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "c2",
+   "before": "c3",
+   "rank": "Zyl",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ],
+    [
+     "c2",
+     "a0V"
+    ],
+    [
+     "c3",
+     "a1"
+    ]
+   ],
+   "moving": "c2",
+   "after": null,
+   "before": "c3",
+   "rank": "a0V",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "Zz"
+    ],
+    [
+     "c2",
+     "Zz8"
+    ],
+    [
+     "c3",
+     "ZzG"
+    ],
+    [
+     "c4",
+     "ZzV"
+    ],
+    [
+     "c5",
+     "a0"
+    ],
+    [
+     "c6",
+     "a1"
+    ],
+    [
+     "c7",
+     "a2"
+    ]
+   ],
+   "moving": "c0",
+   "after": "c4",
+   "before": "c4",
+   "rank": "Zzl",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "c1",
+   "before": null,
+   "rank": "a2",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "Zz"
+    ],
+    [
+     "c2",
+     "a0"
+    ],
+    [
+     "c3",
+     "a0G"
+    ],
+    [
+     "c4",
+     "a0V"
+    ],
+    [
+     "c5",
+     "a1"
+    ],
+    [
+     "c6",
+     "a2"
+    ]
+   ],
+   "moving": "c6",
+   "after": "c2",
+   "before": "c5",
+   "rank": "a08",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "ZzV"
+    ],
+    [
+     "c2",
+     "a0"
+    ],
+    [
+     "c3",
+     "a1"
+    ],
+    [
+     "c4",
+     "a2"
+    ]
+   ],
+   "moving": "c1",
+   "after": null,
+   "before": null,
+   "rank": "a3",
+   "resolved": "end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": "c0",
+   "rank": "Zz",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "c1",
+   "before": "gone",
+   "rank": "a1",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": "c1",
+   "rank": "a0V",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "ZzV"
+    ],
+    [
+     "c2",
+     "a0"
+    ],
+    [
+     "c3",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "c1",
+   "before": "c0",
+   "rank": "Zzl",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": null,
+   "before": null,
+   "rank": "a1",
+   "resolved": "end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ],
+    [
+     "c2",
+     "a0G"
+    ],
+    [
+     "c3",
+     "a0V"
+    ],
+    [
+     "c4",
+     "a1"
+    ],
+    [
+     "c5",
+     "a2"
+    ]
+   ],
+   "moving": "c5",
+   "after": "gone",
+   "before": "c0",
+   "rank": "Zy",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ],
+    [
+     "c2",
+     "a0G"
+    ],
+    [
+     "c3",
+     "a0V"
+    ],
+    [
+     "c4",
+     "a1"
+    ],
+    [
+     "c5",
+     "a2"
+    ],
+    [
+     "c6",
+     "a3"
+    ]
+   ],
+   "moving": "c2",
+   "after": null,
+   "before": "c3",
+   "rank": "a0G",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": null,
+   "rank": "a1",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zx"
+    ],
+    [
+     "c1",
+     "ZxV"
+    ],
+    [
+     "c2",
+     "Zy"
+    ],
+    [
+     "c3",
+     "Zz"
+    ],
+    [
+     "c4",
+     "a0"
+    ],
+    [
+     "c5",
+     "a0V"
+    ],
+    [
+     "c6",
+     "a0l"
+    ],
+    [
+     "c7",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "c7",
+   "before": null,
+   "rank": "a2",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ]
+   ],
+   "moving": null,
+   "after": null,
+   "before": "gone",
+   "rank": "a1",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zx"
+    ],
+    [
+     "c1",
+     "Zy"
+    ],
+    [
+     "c2",
+     "Zz"
+    ],
+    [
+     "c3",
+     "Zz8"
+    ],
+    [
+     "c4",
+     "ZzG"
+    ],
+    [
+     "c5",
+     "ZzV"
+    ],
+    [
+     "c6",
+     "a0"
+    ]
+   ],
+   "moving": "c1",
+   "after": "c2",
+   "before": null,
+   "rank": "Zz4",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "Zz"
+    ],
+    [
+     "c2",
+     "a0"
+    ],
+    [
+     "c3",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "gone",
+   "before": "c0",
+   "rank": "Zx",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "a0"
+    ],
+    [
+     "c1",
+     "a0G"
+    ],
+    [
+     "c2",
+     "a0O"
+    ],
+    [
+     "c3",
+     "a0V"
+    ],
+    [
+     "c4",
+     "a1"
+    ]
+   ],
+   "moving": null,
+   "after": "c3",
+   "before": "gone",
+   "rank": "a0l",
+   "resolved": "after"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "a0"
+    ],
+    [
+     "c2",
+     "a1"
+    ]
+   ],
+   "moving": "c2",
+   "after": "gone",
+   "before": "c0",
+   "rank": "Zy",
+   "resolved": "before"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zy"
+    ],
+    [
+     "c1",
+     "Zz"
+    ],
+    [
+     "c2",
+     "ZzG"
+    ],
+    [
+     "c3",
+     "ZzO"
+    ],
+    [
+     "c4",
+     "ZzV"
+    ],
+    [
+     "c5",
+     "Zzl"
+    ],
+    [
+     "c6",
+     "a0"
+    ]
+   ],
+   "moving": "c6",
+   "after": "gone",
+   "before": null,
+   "rank": "a0",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [],
+   "moving": null,
+   "after": null,
+   "before": "gone",
+   "rank": "a0",
+   "resolved": "fallback_end"
+  },
+  {
+   "column": [
+    [
+     "c0",
+     "Zz"
+    ],
+    [
+     "c1",
+     "ZzV"
+    ],
+    [
+     "c2",
+     "a0"
+    ],
+    [
+     "c3",
+     "a0V"
+    ],
+    [
+     "c4",
+     "a0l"
+    ],
+    [
+     "c5",
+     "a1"
+    ]
+   ],
+   "moving": "c5",
+   "after": "c4",
+   "before": "gone",
+   "rank": "a1",
+   "resolved": "after"
+  }
+ ]
+}

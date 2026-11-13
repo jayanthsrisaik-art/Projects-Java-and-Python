@@ -1,0 +1,41 @@
+alice create t1       -> 201 rank=a0 placement=end rebalanced=0
+alice create t2       -> 201 rank=a1 placement=end rebalanced=0
+alice create t3       -> 201 rank=a2 placement=end rebalanced=0
+bob   sync -> 3 changes {"create": 3}
+alice create fixA     -> 201 rank=a0V placement=after rebalanced=0
+bob   create fixB     -> 201 rank=a0G placement=after rebalanced=0
+alice create fixA     -> 200 rank=a0V placement=replay rebalanced=0
+      Todo  : t1 fixB fixA t2 t3
+bob   move   t3       -> 200 Doing rank=a0 placement=end
+alice move   t2       -> 200 Todo rank=a1 placement=fallback_end
+alice move   t2       -> 200 Todo rank=Zz placement=before
+      Todo  : t2 t1 fixB fixA
+alice edit   t1       v1 -> 200 now v2
+bob   edit   t1       v1 -> 412 current v2 title='Write + test migration'
+alice create h1       -> 201 rank=a08 placement=after rebalanced=0
+alice create h2       -> 201 rank=a04 placement=after rebalanced=0
+alice create h3       -> 201 rank=a02 placement=after rebalanced=0
+alice create h4       -> 201 rank=a01 placement=after rebalanced=0
+alice create h5       -> 201 rank=a2 placement=after rebalanced=9
+alice create h6       -> 201 rank=a1V placement=after rebalanced=0
+alice create h7       -> 201 rank=a1G placement=after rebalanced=0
+alice create h8       -> 201 rank=a18 placement=after rebalanced=0
+alice create h9       -> 201 rank=a14 placement=after rebalanced=0
+alice create h10      -> 201 rank=a12 placement=after rebalanced=0
+      Todo  : t2 t1 h10 h9 h8 h7 h6 h5 h4 h3 h2 h1 fixB fixA
+bob   sync -> 25 changes {"create": 12, "edit": 1, "move": 3, "rebalance": 9}
+bob   move   fixB     -> 200 Done rank=a0 placement=fallback_end
+alice delete fixA     -> 204
+admin compact keep_last=1 -> dropped 29
+alice sync since 0 -> 410, reloading snapshot
+bob   sync since 28 -> 410, reloading snapshot
+alice sync -> 0 changes {}
+bob   create t4       -> 201 rank=Zz placement=before rebalanced=0
+alice sync -> 1 changes {"create": 1}
+bob   sync -> 1 changes {"create": 1}
+alice replica matches server: True
+bob replica matches server: True
+final Todo  : t2 t1 h10 h9 h8 h7 h6 h5 h4 h3 h2 h1
+final Doing : t3
+final Done  : t4 fixB
+invariant problems: []
