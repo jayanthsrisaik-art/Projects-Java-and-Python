@@ -1,0 +1,454 @@
+{
+ "dev": {
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "strategies": {
+   "naive": {
+    "n": 240,
+    "accuracy": 0.3042,
+    "policy_accuracy": 0.9833,
+    "per_qtype": {
+     "current": {
+      "n": 30,
+      "accuracy": 0.1667
+     },
+     "point": {
+      "n": 60,
+      "accuracy": 0.3
+     },
+     "range": {
+      "n": 30,
+      "accuracy": 0.1333
+     },
+     "relative": {
+      "n": 30,
+      "accuracy": 0.2
+     },
+     "future": {
+      "n": 30,
+      "accuracy": 0.3
+     },
+     "previous": {
+      "n": 30,
+      "accuracy": 0.2667
+     },
+     "when": {
+      "n": 30,
+      "accuracy": 0.7667
+     }
+    },
+    "abstention": {
+     "gold_abstain": 19,
+     "recall": 0.0,
+     "precision": null
+    },
+    "errors": {
+     "older_version": 87,
+     "unapproved_version": 28,
+     "newer_version": 22,
+     "missed_abstention": 19,
+     "incomplete_range": 7,
+     "wrong_policy": 3,
+     "wrong_date": 1
+    },
+    "per_seed_accuracy": {
+     "0": 0.275,
+     "1": 0.4,
+     "2": 0.2375
+    }
+   },
+   "latest": {
+    "n": 240,
+    "accuracy": 0.5667,
+    "policy_accuracy": 0.9833,
+    "per_qtype": {
+     "current": {
+      "n": 30,
+      "accuracy": 0.9667
+     },
+     "point": {
+      "n": 60,
+      "accuracy": 0.4833
+     },
+     "range": {
+      "n": 30,
+      "accuracy": 0.3333
+     },
+     "relative": {
+      "n": 30,
+      "accuracy": 0.7
+     },
+     "future": {
+      "n": 30,
+      "accuracy": 0.6333
+     },
+     "previous": {
+      "n": 30,
+      "accuracy": 0.0
+     },
+     "when": {
+      "n": 30,
+      "accuracy": 0.9333
+     }
+    },
+    "abstention": {
+     "gold_abstain": 19,
+     "recall": 0.3158,
+     "precision": 0.75
+    },
+    "errors": {
+     "newer_version": 70,
+     "missed_abstention": 13,
+     "older_version": 10,
+     "incomplete_range": 5,
+     "wrong_policy": 4,
+     "false_abstention": 2
+    },
+    "per_seed_accuracy": {
+     "0": 0.5625,
+     "1": 0.5375,
+     "2": 0.6
+    }
+   },
+   "asof_nostatus": {
+    "n": 240,
+    "accuracy": 0.8917,
+    "policy_accuracy": 0.9833,
+    "per_qtype": {
+     "current": {
+      "n": 30,
+      "accuracy": 0.9
+     },
+     "point": {
+      "n": 60,
+      "accuracy": 0.95
+     },
+     "range": {
+      "n": 30,
+      "accuracy": 1.0
+     },
+     "relative": {
+      "n": 30,
+      "accuracy": 0.9
+     },
+     "future": {
+      "n": 30,
+      "accuracy": 0.8333
+     },
+     "previous": {
+      "n": 30,
+      "accuracy": 0.8
+     },
+     "when": {
+      "n": 30,
+      "accuracy": 0.8
+     }
+    },
+    "abstention": {
+     "gold_abstain": 19,
+     "recall": 0.6842,
+     "precision": 0.9286
+    },
+    "errors": {
+     "unapproved_version": 14,
+     "missed_abstention": 6,
+     "wrong_policy": 3,
+     "newer_version": 2,
+     "false_abstention": 1
+    },
+    "per_seed_accuracy": {
+     "0": 0.8375,
+     "1": 0.9,
+     "2": 0.9375
+    }
+   },
+   "asof": {
+    "n": 240,
+    "accuracy": 0.9833,
+    "policy_accuracy": 0.9833,
+    "per_qtype": {
+     "current": {
+      "n": 30,
+      "accuracy": 0.9667
+     },
+     "point": {
+      "n": 60,
+      "accuracy": 0.9833
+     },
+     "range": {
+      "n": 30,
+      "accuracy": 1.0
+     },
+     "relative": {
+      "n": 30,
+      "accuracy": 0.9667
+     },
+     "future": {
+      "n": 30,
+      "accuracy": 0.9667
+     },
+     "previous": {
+      "n": 30,
+      "accuracy": 1.0
+     },
+     "when": {
+      "n": 30,
+      "accuracy": 1.0
+     }
+    },
+    "abstention": {
+     "gold_abstain": 19,
+     "recall": 1.0,
+     "precision": 0.95
+    },
+    "errors": {
+     "wrong_policy": 3,
+     "false_abstention": 1
+    },
+    "per_seed_accuracy": {
+     "0": 1.0,
+     "1": 0.95,
+     "2": 1.0
+    }
+   }
+  },
+  "ablation_history_filter": {
+   "asof": 0.9833,
+   "asof (no history filter)": 0.9833
+  }
+ },
+ "test": {
+  "seeds": [
+   100,
+   101,
+   102,
+   103,
+   104
+  ],
+  "strategies": {
+   "naive": {
+    "n": 400,
+    "accuracy": 0.14,
+    "policy_accuracy": 0.885,
+    "per_qtype": {
+     "current": {
+      "n": 50,
+      "accuracy": 0.04
+     },
+     "point": {
+      "n": 100,
+      "accuracy": 0.17
+     },
+     "range": {
+      "n": 50,
+      "accuracy": 0.16
+     },
+     "relative": {
+      "n": 50,
+      "accuracy": 0.02
+     },
+     "future": {
+      "n": 50,
+      "accuracy": 0.1
+     },
+     "previous": {
+      "n": 50,
+      "accuracy": 0.32
+     },
+     "when": {
+      "n": 50,
+      "accuracy": 0.14
+     }
+    },
+    "abstention": {
+     "gold_abstain": 21,
+     "recall": 0.0,
+     "precision": null
+    },
+    "errors": {
+     "older_version": 230,
+     "wrong_policy": 40,
+     "wrong_date": 35,
+     "missed_abstention": 21,
+     "incomplete_range": 7,
+     "newer_version": 6,
+     "unapproved_version": 5
+    },
+    "per_seed_accuracy": {
+     "100": 0.15,
+     "101": 0.125,
+     "102": 0.175,
+     "103": 0.0875,
+     "104": 0.1625
+    }
+   },
+   "latest": {
+    "n": 400,
+    "accuracy": 0.5925,
+    "policy_accuracy": 0.9525,
+    "per_qtype": {
+     "current": {
+      "n": 50,
+      "accuracy": 0.94
+     },
+     "point": {
+      "n": 100,
+      "accuracy": 0.56
+     },
+     "range": {
+      "n": 50,
+      "accuracy": 0.36
+     },
+     "relative": {
+      "n": 50,
+      "accuracy": 0.8
+     },
+     "future": {
+      "n": 50,
+      "accuracy": 0.64
+     },
+     "previous": {
+      "n": 50,
+      "accuracy": 0.0
+     },
+     "when": {
+      "n": 50,
+      "accuracy": 0.88
+     }
+    },
+    "abstention": {
+     "gold_abstain": 21,
+     "recall": 0.3333,
+     "precision": 0.5385
+    },
+    "errors": {
+     "newer_version": 107,
+     "older_version": 16,
+     "wrong_policy": 16,
+     "missed_abstention": 14,
+     "false_abstention": 6,
+     "incomplete_range": 4
+    },
+    "per_seed_accuracy": {
+     "100": 0.625,
+     "101": 0.575,
+     "102": 0.575,
+     "103": 0.55,
+     "104": 0.6375
+    }
+   },
+   "asof_nostatus": {
+    "n": 400,
+    "accuracy": 0.8425,
+    "policy_accuracy": 0.9525,
+    "per_qtype": {
+     "current": {
+      "n": 50,
+      "accuracy": 0.8
+     },
+     "point": {
+      "n": 100,
+      "accuracy": 0.88
+     },
+     "range": {
+      "n": 50,
+      "accuracy": 0.94
+     },
+     "relative": {
+      "n": 50,
+      "accuracy": 0.9
+     },
+     "future": {
+      "n": 50,
+      "accuracy": 0.8
+     },
+     "previous": {
+      "n": 50,
+      "accuracy": 0.7
+     },
+     "when": {
+      "n": 50,
+      "accuracy": 0.84
+     }
+    },
+    "abstention": {
+     "gold_abstain": 21,
+     "recall": 0.7143,
+     "precision": 0.8824
+    },
+    "errors": {
+     "unapproved_version": 32,
+     "wrong_policy": 16,
+     "newer_version": 7,
+     "missed_abstention": 6,
+     "false_abstention": 2
+    },
+    "per_seed_accuracy": {
+     "100": 0.8,
+     "101": 0.9,
+     "102": 0.8375,
+     "103": 0.9125,
+     "104": 0.7625
+    }
+   },
+   "asof": {
+    "n": 400,
+    "accuracy": 0.955,
+    "policy_accuracy": 0.9525,
+    "per_qtype": {
+     "current": {
+      "n": 50,
+      "accuracy": 0.94
+     },
+     "point": {
+      "n": 100,
+      "accuracy": 0.94
+     },
+     "range": {
+      "n": 50,
+      "accuracy": 0.98
+     },
+     "relative": {
+      "n": 50,
+      "accuracy": 0.98
+     },
+     "future": {
+      "n": 50,
+      "accuracy": 0.96
+     },
+     "previous": {
+      "n": 50,
+      "accuracy": 0.94
+     },
+     "when": {
+      "n": 50,
+      "accuracy": 0.96
+     }
+    },
+    "abstention": {
+     "gold_abstain": 21,
+     "recall": 1.0,
+     "precision": 0.913
+    },
+    "errors": {
+     "wrong_policy": 16,
+     "false_abstention": 2
+    },
+    "per_seed_accuracy": {
+     "100": 0.95,
+     "101": 0.975,
+     "102": 0.9375,
+     "103": 0.9625,
+     "104": 0.95
+    }
+   }
+  },
+  "ablation_history_filter": {
+   "asof": 0.955,
+   "asof (no history filter)": 0.955
+  }
+ }
+}

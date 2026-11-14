@@ -1,0 +1,30 @@
+Q: How many days of paid time off do employees get?
+A: 30 [pto-v3, from 2024-05-01].
+
+Q: What was the paid time off allowance on 2022-01-15?
+A: 15 [pto-v1, from 2021-08-01 to 2022-04-30].
+
+Q: What was the paid time off allowance in 2022?
+A: The value changed during that period: 15 [pto-v1, from 2021-08-01 to 2022-04-30]; then 25 [pto-v2, from 2022-05-01 to 2024-04-30].
+
+Q: What was the paid time off allowance before the most recent change?
+A: 25 [pto-v2, from 2022-05-01 to 2024-04-30].
+
+Q: When did the paid time off allowance become 20 days?
+A: No version of this policy ever set that value.
+
+Q: What is the remote work allowance?
+A: 4 [remote-v2, from 2022-10-01 to 2026-12-31].
+
+Q: What will the remote work allowance be on 2027-03-01?
+A: 1 [remote-v3, from 2027-01-01].
+
+Q: When does the remote work allowance become 1 days per week?
+A: It took effect on 2027-01-01 [remote-v3, from 2027-01-01].
+
+Q: What was the length of paid parental leave in March 2019?
+A: No version of this policy was in force for that time.
+
+Q: What was the length of paid parental leave two years ago?
+A: 20 [parental-v2, from 2022-05-01].
+

@@ -1,0 +1,365 @@
+{
+ "ref_date": "2026-11-14",
+ "versions": [
+  {
+   "doc_id": "pto-v1",
+   "policy": "pto",
+   "version": 1,
+   "status": "active",
+   "effective": "2021-08-01",
+   "value": 15,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "pto-v2",
+   "policy": "pto",
+   "version": 2,
+   "status": "active",
+   "effective": "2022-05-01",
+   "value": 25,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "pto-v3",
+   "policy": "pto",
+   "version": 3,
+   "status": "active",
+   "effective": "2024-05-01",
+   "value": 30,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "pto-v4",
+   "policy": "pto",
+   "version": 4,
+   "status": "proposed",
+   "effective": "2027-05-01",
+   "value": 20,
+   "kind": "proposed",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "remote-v1",
+   "policy": "remote",
+   "version": 1,
+   "status": "active",
+   "effective": "2020-08-01",
+   "value": 5,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "remote-v2",
+   "policy": "remote",
+   "version": 2,
+   "status": "active",
+   "effective": "2022-10-01",
+   "value": 4,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "remote-v3",
+   "policy": "remote",
+   "version": 3,
+   "status": "active",
+   "effective": "2027-01-01",
+   "value": 1,
+   "kind": "scheduled",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "remote-v4",
+   "policy": "remote",
+   "version": 4,
+   "status": "proposed",
+   "effective": "2027-08-01",
+   "value": 3,
+   "kind": "proposed",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "meal-v1",
+   "policy": "meal",
+   "version": 1,
+   "status": "active",
+   "effective": "2021-07-01",
+   "value": 55,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "meal-v2",
+   "policy": "meal",
+   "version": 2,
+   "status": "active",
+   "effective": "2022-06-01",
+   "value": 60,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "meal-v3",
+   "policy": "meal",
+   "version": 3,
+   "status": "withdrawn",
+   "effective": "2025-08-01",
+   "value": 50,
+   "kind": "withdrawn",
+   "withdrawn_on": "2025-07-22"
+  },
+  {
+   "doc_id": "parental-v1",
+   "policy": "parental",
+   "version": 1,
+   "status": "active",
+   "effective": "2020-03-01",
+   "value": 18,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "parental-v2",
+   "policy": "parental",
+   "version": 2,
+   "status": "active",
+   "effective": "2022-05-01",
+   "value": 20,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "equipment-v1",
+   "policy": "equipment",
+   "version": 1,
+   "status": "active",
+   "effective": "2021-08-01",
+   "value": 500,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "equipment-v2",
+   "policy": "equipment",
+   "version": 2,
+   "status": "active",
+   "effective": "2023-06-01",
+   "value": 600,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "match-v1",
+   "policy": "match",
+   "version": 1,
+   "status": "active",
+   "effective": "2021-05-01",
+   "value": 3,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "match-v2",
+   "policy": "match",
+   "version": 2,
+   "status": "active",
+   "effective": "2022-11-01",
+   "value": 4,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "match-v3",
+   "policy": "match",
+   "version": 3,
+   "status": "active",
+   "effective": "2024-09-01",
+   "value": 5,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "match-v4",
+   "policy": "match",
+   "version": 4,
+   "status": "active",
+   "effective": "2027-03-01",
+   "value": 6,
+   "kind": "scheduled",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "oncall-v1",
+   "policy": "oncall",
+   "version": 1,
+   "status": "active",
+   "effective": "2020-03-01",
+   "value": 200,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "oncall-v2",
+   "policy": "oncall",
+   "version": 2,
+   "status": "withdrawn",
+   "effective": "2020-04-01",
+   "value": 150,
+   "kind": "withdrawn",
+   "withdrawn_on": "2020-03-18"
+  },
+  {
+   "doc_id": "oncall-v3",
+   "policy": "oncall",
+   "version": 3,
+   "status": "active",
+   "effective": "2021-01-01",
+   "value": 250,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "oncall-v4",
+   "policy": "oncall",
+   "version": 4,
+   "status": "active",
+   "effective": "2022-05-01",
+   "value": 300,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "oncall-v5",
+   "policy": "oncall",
+   "version": 5,
+   "status": "active",
+   "effective": "2024-04-01",
+   "value": 350,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "learning-v1",
+   "policy": "learning",
+   "version": 1,
+   "status": "active",
+   "effective": "2021-04-01",
+   "value": 500,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "learning-v2",
+   "policy": "learning",
+   "version": 2,
+   "status": "active",
+   "effective": "2022-11-01",
+   "value": 1500,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "learning-v3",
+   "policy": "learning",
+   "version": 3,
+   "status": "active",
+   "effective": "2023-12-01",
+   "value": 2000,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "learning-v4",
+   "policy": "learning",
+   "version": 4,
+   "status": "active",
+   "effective": "2024-11-01",
+   "value": 3000,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "mileage-v1",
+   "policy": "mileage",
+   "version": 1,
+   "status": "active",
+   "effective": "2020-06-01",
+   "value": 0.56,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "mileage-v2",
+   "policy": "mileage",
+   "version": 2,
+   "status": "active",
+   "effective": "2022-04-01",
+   "value": 0.625,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "mileage-v3",
+   "policy": "mileage",
+   "version": 3,
+   "status": "active",
+   "effective": "2023-12-01",
+   "value": 0.655,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "mileage-v4",
+   "policy": "mileage",
+   "version": 4,
+   "status": "active",
+   "effective": "2027-05-01",
+   "value": 0.67,
+   "kind": "scheduled",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "mileage-v5",
+   "policy": "mileage",
+   "version": 5,
+   "status": "proposed",
+   "effective": "2027-06-01",
+   "value": 0.545,
+   "kind": "proposed",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "sick-v1",
+   "policy": "sick",
+   "version": 1,
+   "status": "active",
+   "effective": "2020-08-01",
+   "value": 8,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "sick-v2",
+   "policy": "sick",
+   "version": 2,
+   "status": "active",
+   "effective": "2021-08-01",
+   "value": 10,
+   "kind": "past",
+   "withdrawn_on": null
+  },
+  {
+   "doc_id": "sick-v3",
+   "policy": "sick",
+   "version": 3,
+   "status": "proposed",
+   "effective": "2027-03-01",
+   "value": 15,
+   "kind": "proposed",
+   "withdrawn_on": null
+  }
+ ]
+}
