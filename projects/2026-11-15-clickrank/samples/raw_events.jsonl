@@ -1,0 +1,40 @@
+{"type":"impression","event_id":"e01","request_id":"r1","session_id":"u1-0","user_id":"u1","ts":100.0,"query":"Wireless  HEADPHONES","results":["P0001","P0002","P0003","P0004","P0005"],"intervention":null,"policy":"production"}
+{"type":"click","event_id":"e02","request_id":"r1","session_id":"u1-0","user_id":"u1","ts":104.0,"product_id":"P0002","position":2}
+{"type":"click","event_id":"e03","request_id":"r1","session_id":"u1-0","user_id":"u1","ts":104.4,"product_id":"P0002","position":2}
+{"type":"click","event_id":"e02","request_id":"r1","session_id":"u1-0","user_id":"u1","ts":104.0,"product_id":"P0002","position":2}
+{"type":"click","event_id":"e04","request_id":"r1","session_id":"u1-0","user_id":"u1","ts":109.0,"product_id":"P0004","position":5}
+{"type":"click","event_id":"e05","request_id":"r404","session_id":"u1-0","user_id":"u1","ts":110.0,"product_id":"P0001","position":1}
+{"type":"click","event_id":"e99","request_id":"r1"
+{"type":"hover","event_id":"e98"}
+{"type":"click","event_id":"e06","request_id":"r1","session_id":"u1-0","user_id":"u1","ts":111.0,"product_id":"P0999","position":1}
+{"type":"impression","event_id":"e07","request_id":"r2","session_id":"u2-0","user_id":"u2","ts":120.0,"query":"wireless headphones","results":["P0003","P0002","P0001","P0004","P0005"],"intervention":{"kind":"swap","k":3},"policy":"production"}
+{"type":"click","event_id":"e08","request_id":"r2","session_id":"u2-0","user_id":"u2","ts":121.0,"product_id":"P0001","position":3}
+{"type":"click","event_id":"e00","request_id":"r3","session_id":"u3-0","user_id":"u3","ts":129.0,"product_id":"P0010","position":1}
+{"type":"impression","event_id":"e09","request_id":"r3","session_id":"u3-0","user_id":"u3","ts":125.0,"query":"tent","results":["P0010","P0011"],"intervention":null,"policy":"production"}
+{"type":"impression","event_id":"e10","request_id":"r4","session_id":"u4-0","user_id":"u4","ts":130.0,"query":"   ","results":["P0010"],"intervention":null,"policy":"production"}
+{"type":"impression","event_id":"e11","request_id":"r5","session_id":"u4-0","user_id":"u4","ts":131.0,"query":"tent","results":["P0010","P0010"],"intervention":null,"policy":"production"}
+{"type":"impression","event_id":"eb0","request_id":"b0","session_id":"bot1-0","user_id":"bot1","ts":200.0,"query":"tent","results":["P0010","P0011","P0012","P0013"],"intervention":null,"policy":"production"}
+{"type":"click","event_id":"eb0c1","request_id":"b0","session_id":"bot1-0","user_id":"bot1","ts":200.2,"product_id":"P0010","position":1}
+{"type":"click","event_id":"eb0c2","request_id":"b0","session_id":"bot1-0","user_id":"bot1","ts":200.4,"product_id":"P0011","position":2}
+{"type":"click","event_id":"eb0c3","request_id":"b0","session_id":"bot1-0","user_id":"bot1","ts":200.6,"product_id":"P0012","position":3}
+{"type":"click","event_id":"eb0c4","request_id":"b0","session_id":"bot1-0","user_id":"bot1","ts":200.8,"product_id":"P0013","position":4}
+{"type":"impression","event_id":"eb1","request_id":"b1","session_id":"bot1-0","user_id":"bot1","ts":210.0,"query":"tent","results":["P0010","P0011","P0012","P0013"],"intervention":null,"policy":"production"}
+{"type":"click","event_id":"eb1c1","request_id":"b1","session_id":"bot1-0","user_id":"bot1","ts":210.2,"product_id":"P0010","position":1}
+{"type":"click","event_id":"eb1c2","request_id":"b1","session_id":"bot1-0","user_id":"bot1","ts":210.4,"product_id":"P0011","position":2}
+{"type":"click","event_id":"eb1c3","request_id":"b1","session_id":"bot1-0","user_id":"bot1","ts":210.6,"product_id":"P0012","position":3}
+{"type":"click","event_id":"eb1c4","request_id":"b1","session_id":"bot1-0","user_id":"bot1","ts":210.8,"product_id":"P0013","position":4}
+{"type":"impression","event_id":"eb2","request_id":"b2","session_id":"bot1-0","user_id":"bot1","ts":220.0,"query":"tent","results":["P0010","P0011","P0012","P0013"],"intervention":null,"policy":"production"}
+{"type":"click","event_id":"eb2c1","request_id":"b2","session_id":"bot1-0","user_id":"bot1","ts":220.2,"product_id":"P0010","position":1}
+{"type":"click","event_id":"eb2c2","request_id":"b2","session_id":"bot1-0","user_id":"bot1","ts":220.4,"product_id":"P0011","position":2}
+{"type":"click","event_id":"eb2c3","request_id":"b2","session_id":"bot1-0","user_id":"bot1","ts":220.6,"product_id":"P0012","position":3}
+{"type":"click","event_id":"eb2c4","request_id":"b2","session_id":"bot1-0","user_id":"bot1","ts":220.8,"product_id":"P0013","position":4}
+{"type":"impression","event_id":"eb3","request_id":"b3","session_id":"bot1-0","user_id":"bot1","ts":230.0,"query":"tent","results":["P0010","P0011","P0012","P0013"],"intervention":null,"policy":"production"}
+{"type":"click","event_id":"eb3c1","request_id":"b3","session_id":"bot1-0","user_id":"bot1","ts":230.2,"product_id":"P0010","position":1}
+{"type":"click","event_id":"eb3c2","request_id":"b3","session_id":"bot1-0","user_id":"bot1","ts":230.4,"product_id":"P0011","position":2}
+{"type":"click","event_id":"eb3c3","request_id":"b3","session_id":"bot1-0","user_id":"bot1","ts":230.6,"product_id":"P0012","position":3}
+{"type":"click","event_id":"eb3c4","request_id":"b3","session_id":"bot1-0","user_id":"bot1","ts":230.8,"product_id":"P0013","position":4}
+{"type":"impression","event_id":"eb4","request_id":"b4","session_id":"bot1-0","user_id":"bot1","ts":240.0,"query":"tent","results":["P0010","P0011","P0012","P0013"],"intervention":null,"policy":"production"}
+{"type":"click","event_id":"eb4c1","request_id":"b4","session_id":"bot1-0","user_id":"bot1","ts":240.2,"product_id":"P0010","position":1}
+{"type":"click","event_id":"eb4c2","request_id":"b4","session_id":"bot1-0","user_id":"bot1","ts":240.4,"product_id":"P0011","position":2}
+{"type":"click","event_id":"eb4c3","request_id":"b4","session_id":"bot1-0","user_id":"bot1","ts":240.6,"product_id":"P0012","position":3}
+{"type":"click","event_id":"eb4c4","request_id":"b4","session_id":"bot1-0","user_id":"bot1","ts":240.8,"product_id":"P0013","position":4}

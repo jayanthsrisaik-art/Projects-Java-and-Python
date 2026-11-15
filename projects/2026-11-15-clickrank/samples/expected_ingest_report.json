@@ -1,0 +1,15 @@
+{
+ "bot_clicks_removed": 20,
+ "bot_impressions_removed": 5,
+ "bot_users": 1,
+ "click_positions_corrected": 1,
+ "clicks_loaded": 4,
+ "clicks_not_in_results": 1,
+ "duplicate_events": 1,
+ "impressions_loaded": 3,
+ "invalid_events": 3,
+ "lines": 40,
+ "malformed_lines": 1,
+ "orphan_clicks": 1,
+ "repeat_clicks_collapsed": 1
+}
