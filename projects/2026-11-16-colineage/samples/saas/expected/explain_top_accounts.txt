@@ -1,0 +1,4 @@
+top_accounts.account_id
+  <-[control]- account_usage.minutes
+  <-[aggregate]- user_activity.minutes
+  <-[aggregate]- events.duration

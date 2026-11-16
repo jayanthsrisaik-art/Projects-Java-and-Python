@@ -1,0 +1,9 @@
+schema change: drop=['orders.discount'] rename=['products.supplier=vendor']
+  breaks 7 model(s), reshapes 0, affects 9 column(s)
+  ERROR   contact_list: unknown column 'supplier'
+  ERROR   stg_orders: unknown column 'discount'
+  BLOCKED order_totals: upstream model(s) failed: stg_orders
+  BLOCKED customer_ltv: upstream model(s) failed: order_totals
+  BLOCKED customer_rank: upstream model(s) failed: customer_ltv
+  BLOCKED refunds_enriched: upstream model(s) failed: stg_orders
+  BLOCKED vip_customers: upstream model(s) failed: customer_ltv, refunds_enriched

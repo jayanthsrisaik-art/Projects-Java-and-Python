@@ -1,0 +1,4 @@
+# Runtime
+sqlglot==30.20.0   # SQL parser + qualifier (pure Python, MIT); tested with 30.20.0
+# Tests
+pytest>=7.4,<10

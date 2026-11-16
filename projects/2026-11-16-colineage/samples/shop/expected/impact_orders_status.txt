@@ -1,0 +1,26 @@
+orders.status -> 25 column(s) in 7 model(s)
+  channel_daily.channel            control
+  channel_daily.day                control
+  customer_ltv.first_order         control
+  customer_ltv.ltv                 control
+  customer_ltv.orders              control
+  customer_rank.country_rank       control
+  customer_rank.ltv                control
+  order_totals.customer_id         control
+  order_totals.gross               control
+  order_totals.n_lines             control
+  order_totals.net                 control
+  order_totals.order_date          control
+  order_totals.order_id            control
+  refunds_enriched.amount          control
+  refunds_enriched.customer_id     control
+  refunds_enriched.order_id        control
+  refunds_enriched.reason          control
+  stg_orders.customer_id           control
+  stg_orders.discount              control
+  stg_orders.order_date            control
+  stg_orders.order_id              control
+  stg_orders.status                transform+control
+  vip_customers.customer_id        control
+  vip_customers.ltv                control
+  vip_customers.name               control
