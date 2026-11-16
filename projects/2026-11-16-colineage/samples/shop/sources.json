@@ -1,0 +1,50 @@
+{
+  "customers": {
+    "rows": 60,
+    "columns": {
+      "id": {"type": "INTEGER", "pk": true},
+      "name": {"type": "TEXT", "pattern": "name"},
+      "email": {"type": "TEXT", "pattern": "email"},
+      "country": {"type": "TEXT", "values": ["us", "de", "in", "br"]},
+      "created_at": {"type": "TEXT", "date": ["2024-01-01", "2024-06-30"]}
+    }
+  },
+  "orders": {
+    "rows": 200,
+    "columns": {
+      "id": {"type": "INTEGER", "pk": true},
+      "customer_id": {"type": "INTEGER", "fk": "customers.id"},
+      "status": {"type": "TEXT", "values": ["complete", "complete", "complete", "pending", "cancelled", "test"]},
+      "order_date": {"type": "TEXT", "date": ["2024-07-01", "2024-12-31"]},
+      "discount": {"type": "REAL", "range": [0, 20], "null_rate": 0.4},
+      "channel": {"type": "TEXT", "values": ["web", "app", "store"]}
+    }
+  },
+  "order_items": {
+    "rows": 500,
+    "columns": {
+      "order_id": {"type": "INTEGER", "fk": "orders.id"},
+      "product_id": {"type": "INTEGER", "fk": "products.id"},
+      "quantity": {"type": "INTEGER", "range": [1, 5]},
+      "unit_price": {"type": "REAL", "range": [3, 120]}
+    }
+  },
+  "products": {
+    "rows": 25,
+    "columns": {
+      "id": {"type": "INTEGER", "pk": true},
+      "name": {"type": "TEXT", "pattern": "name"},
+      "category": {"type": "TEXT", "values": ["toys", "books", "garden", "kitchen"]},
+      "cost": {"type": "REAL", "range": [1, 60]},
+      "supplier": {"type": "TEXT", "values": ["acme", "globex", "initech"]}
+    }
+  },
+  "refunds": {
+    "rows": 40,
+    "columns": {
+      "order_id": {"type": "INTEGER", "fk": "orders.id"},
+      "amount": {"type": "REAL", "range": [1, 80]},
+      "reason": {"type": "TEXT", "values": ["damaged", "late", "wrong_item"]}
+    }
+  }
+}

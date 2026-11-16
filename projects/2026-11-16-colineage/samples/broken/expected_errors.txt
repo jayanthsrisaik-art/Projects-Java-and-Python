@@ -1,0 +1,7 @@
+analyzed 2/8 model(s), 2 column(s)
+  ERROR   ambiguous: ambiguous column 'id': present in a, b; qualify it
+  BLOCKED blocked: upstream model(s) failed: ambiguous
+  ERROR   unknown_column: Unknown column: missing
+  ERROR   unknown_table: unknown relation(s): c
+  ERROR   cycle_a: dependency cycle: cycle_a -> cycle_b -> cycle_a
+  ERROR   cycle_b: dependency cycle: cycle_b -> cycle_a -> cycle_b

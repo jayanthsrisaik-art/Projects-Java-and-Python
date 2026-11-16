@@ -1,0 +1,88 @@
+{
+  "models": {
+    "ambiguous": {
+      "status": "error",
+      "depends_on": [],
+      "sql_sha1": "14bb499ea5ae",
+      "error": "ambiguous column 'id': present in a, b; qualify it"
+    },
+    "blocked": {
+      "status": "blocked",
+      "depends_on": [
+        "ambiguous"
+      ],
+      "sql_sha1": "9d296e5a2d4b",
+      "error": "upstream model(s) failed: ambiguous"
+    },
+    "ok_model": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "d65ea3bcd4c1",
+      "columns": {
+        "x": {
+          "a.x": "identity"
+        }
+      },
+      "control": [
+        "a.x"
+      ]
+    },
+    "downstream": {
+      "status": "ok",
+      "depends_on": [
+        "ok_model"
+      ],
+      "sql_sha1": "5d50e8d20ca9",
+      "columns": {
+        "x": {
+          "ok_model.x": "identity"
+        }
+      },
+      "control": [
+        "ok_model.*"
+      ]
+    },
+    "unknown_column": {
+      "status": "error",
+      "depends_on": [],
+      "sql_sha1": "7f4de09cd41a",
+      "error": "Unknown column: missing"
+    },
+    "unknown_table": {
+      "status": "error",
+      "depends_on": [],
+      "sql_sha1": "d8c8bf397203",
+      "error": "unknown relation(s): c"
+    },
+    "cycle_a": {
+      "status": "error",
+      "depends_on": [
+        "cycle_b"
+      ],
+      "sql_sha1": "c0ad9659cc2f",
+      "error": "dependency cycle: cycle_a -> cycle_b -> cycle_a"
+    },
+    "cycle_b": {
+      "status": "error",
+      "depends_on": [
+        "cycle_a"
+      ],
+      "sql_sha1": "07d7b359646a",
+      "error": "dependency cycle: cycle_b -> cycle_a -> cycle_b"
+    }
+  },
+  "end_to_end": {
+    "ok_model.x": {
+      "a.x": {
+        "value": "identity",
+        "control": true
+      }
+    },
+    "downstream.x": {
+      "a.x": {
+        "value": "identity",
+        "control": true
+      }
+    }
+  }
+}

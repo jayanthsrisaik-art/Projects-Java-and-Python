@@ -1,0 +1,370 @@
+{
+ "_doc": "Hand-labelled semantic lineage: a source column is listed if changing its values can change the multiset of values in the model column on some database that respects the declared primary keys. 'value' = data flows into the expression; 'control' = only through row selection, matching, grouping or dedupe. Written before running colineage.",
+ "columns": {
+  "stg_orders.order_id": {
+   "value": [
+    "orders.id"
+   ],
+   "control": [
+    "orders.status"
+   ]
+  },
+  "stg_orders.customer_id": {
+   "value": [
+    "orders.customer_id"
+   ],
+   "control": [
+    "orders.status"
+   ]
+  },
+  "stg_orders.status": {
+   "value": [
+    "orders.status"
+   ],
+   "control": []
+  },
+  "stg_orders.order_date": {
+   "value": [
+    "orders.order_date"
+   ],
+   "control": [
+    "orders.status"
+   ]
+  },
+  "stg_orders.discount": {
+   "value": [
+    "orders.discount"
+   ],
+   "control": [
+    "orders.status"
+   ]
+  },
+  "stg_items.order_id": {
+   "value": [
+    "order_items.order_id"
+   ],
+   "control": []
+  },
+  "stg_items.product_id": {
+   "value": [
+    "order_items.product_id"
+   ],
+   "control": []
+  },
+  "stg_items.quantity": {
+   "value": [
+    "order_items.quantity"
+   ],
+   "control": []
+  },
+  "stg_items.unit_price": {
+   "value": [
+    "order_items.unit_price"
+   ],
+   "control": []
+  },
+  "stg_items.line_total": {
+   "value": [
+    "order_items.quantity",
+    "order_items.unit_price"
+   ],
+   "control": []
+  },
+  "order_totals.order_id": {
+   "value": [
+    "orders.id"
+   ],
+   "control": [
+    "order_items.order_id",
+    "orders.status"
+   ]
+  },
+  "order_totals.customer_id": {
+   "value": [
+    "orders.customer_id"
+   ],
+   "control": [
+    "order_items.order_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "order_totals.order_date": {
+   "value": [
+    "orders.order_date"
+   ],
+   "control": [
+    "order_items.order_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "order_totals.gross": {
+   "value": [
+    "order_items.quantity",
+    "order_items.unit_price"
+   ],
+   "control": [
+    "order_items.order_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "order_totals.net": {
+   "value": [
+    "order_items.quantity",
+    "order_items.unit_price",
+    "orders.discount"
+   ],
+   "control": [
+    "order_items.order_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "order_totals.n_lines": {
+   "value": [],
+   "control": [
+    "order_items.order_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "customer_ltv.customer_id": {
+   "value": [
+    "customers.id"
+   ],
+   "control": []
+  },
+  "customer_ltv.name": {
+   "value": [
+    "customers.name"
+   ],
+   "control": []
+  },
+  "customer_ltv.country": {
+   "value": [
+    "customers.country"
+   ],
+   "control": []
+  },
+  "customer_ltv.orders": {
+   "value": [
+    "orders.id"
+   ],
+   "control": [
+    "customers.id",
+    "order_items.order_id",
+    "orders.customer_id",
+    "orders.status"
+   ]
+  },
+  "customer_ltv.ltv": {
+   "value": [
+    "order_items.quantity",
+    "order_items.unit_price",
+    "orders.discount"
+   ],
+   "control": [
+    "customers.id",
+    "order_items.order_id",
+    "orders.customer_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "customer_ltv.first_order": {
+   "value": [
+    "orders.order_date"
+   ],
+   "control": [
+    "customers.id",
+    "order_items.order_id",
+    "orders.customer_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "product_margin.category": {
+   "value": [
+    "products.category"
+   ],
+   "control": [
+    "order_items.product_id",
+    "products.id"
+   ]
+  },
+  "product_margin.revenue": {
+   "value": [
+    "order_items.quantity",
+    "order_items.unit_price"
+   ],
+   "control": [
+    "order_items.product_id",
+    "products.category",
+    "products.id"
+   ]
+  },
+  "product_margin.margin": {
+   "value": [
+    "order_items.quantity",
+    "order_items.unit_price",
+    "products.cost"
+   ],
+   "control": [
+    "order_items.product_id",
+    "products.category",
+    "products.id"
+   ]
+  },
+  "refunds_enriched.order_id": {
+   "value": [
+    "refunds.order_id"
+   ],
+   "control": [
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "refunds_enriched.amount": {
+   "value": [
+    "refunds.amount"
+   ],
+   "control": [
+    "orders.id",
+    "orders.status",
+    "refunds.order_id"
+   ]
+  },
+  "refunds_enriched.reason": {
+   "value": [
+    "refunds.reason"
+   ],
+   "control": [
+    "orders.id",
+    "orders.status",
+    "refunds.order_id"
+   ]
+  },
+  "refunds_enriched.customer_id": {
+   "value": [
+    "orders.customer_id"
+   ],
+   "control": [
+    "orders.id",
+    "orders.status",
+    "refunds.order_id"
+   ]
+  },
+  "customer_rank.customer_id": {
+   "value": [
+    "customers.id"
+   ],
+   "control": []
+  },
+  "customer_rank.ltv": {
+   "value": [
+    "order_items.quantity",
+    "order_items.unit_price",
+    "orders.discount"
+   ],
+   "control": [
+    "customers.id",
+    "order_items.order_id",
+    "orders.customer_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "customer_rank.country_rank": {
+   "value": [
+    "customers.country",
+    "order_items.quantity",
+    "order_items.unit_price",
+    "orders.discount"
+   ],
+   "control": [
+    "customers.id",
+    "order_items.order_id",
+    "orders.customer_id",
+    "orders.id",
+    "orders.status"
+   ]
+  },
+  "contact_list.contact": {
+   "value": [
+    "customers.email",
+    "products.supplier"
+   ],
+   "control": []
+  },
+  "contact_list.kind": {
+   "value": [],
+   "control": []
+  },
+  "vip_customers.customer_id": {
+   "value": [
+    "customers.id"
+   ],
+   "control": [
+    "order_items.order_id",
+    "order_items.quantity",
+    "order_items.unit_price",
+    "orders.customer_id",
+    "orders.discount",
+    "orders.id",
+    "orders.status",
+    "refunds.order_id"
+   ]
+  },
+  "vip_customers.name": {
+   "value": [
+    "customers.name"
+   ],
+   "control": [
+    "customers.id",
+    "order_items.order_id",
+    "order_items.quantity",
+    "order_items.unit_price",
+    "orders.customer_id",
+    "orders.discount",
+    "orders.id",
+    "orders.status",
+    "refunds.order_id"
+   ]
+  },
+  "vip_customers.ltv": {
+   "value": [
+    "order_items.quantity",
+    "order_items.unit_price",
+    "orders.discount"
+   ],
+   "control": [
+    "customers.id",
+    "order_items.order_id",
+    "orders.customer_id",
+    "orders.id",
+    "orders.status",
+    "refunds.order_id"
+   ]
+  },
+  "channel_daily.channel": {
+   "value": [
+    "orders.channel"
+   ],
+   "control": [
+    "orders.order_date",
+    "orders.status"
+   ]
+  },
+  "channel_daily.day": {
+   "value": [
+    "orders.order_date"
+   ],
+   "control": [
+    "orders.channel",
+    "orders.status"
+   ]
+  }
+ }
+}

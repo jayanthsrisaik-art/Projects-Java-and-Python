@@ -1,0 +1,1 @@
+SELECT x FROM a WHERE x > 0

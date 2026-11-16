@@ -1,0 +1,40 @@
+{
+  "accounts": {
+    "rows": 20,
+    "columns": {
+      "id": {"type": "INTEGER", "pk": true},
+      "plan": {"type": "TEXT", "values": ["free", "team", "enterprise"]},
+      "region": {"type": "TEXT", "values": ["emea", "amer", "apac"]},
+      "created_at": {"type": "TEXT", "date": ["2023-01-01", "2024-12-31"]}
+    }
+  },
+  "users": {
+    "rows": 80,
+    "columns": {
+      "id": {"type": "INTEGER", "pk": true},
+      "account_id": {"type": "INTEGER", "fk": "accounts.id"},
+      "email": {"type": "TEXT", "pattern": "email"},
+      "role": {"type": "TEXT", "values": ["admin", "member", "member", "viewer"]},
+      "active": {"type": "INTEGER", "values": [1, 1, 1, 0]}
+    }
+  },
+  "events": {
+    "rows": 600,
+    "columns": {
+      "user_id": {"type": "INTEGER", "fk": "users.id"},
+      "event_type": {"type": "TEXT", "values": ["login", "edit", "export", "heartbeat"]},
+      "ts": {"type": "TEXT", "date": ["2025-01-01", "2025-03-31"]},
+      "duration": {"type": "REAL", "range": [0.5, 90]}
+    }
+  },
+  "invoices": {
+    "rows": 60,
+    "columns": {
+      "id": {"type": "INTEGER", "pk": true},
+      "account_id": {"type": "INTEGER", "fk": "accounts.id"},
+      "amount": {"type": "REAL", "range": [10, 900]},
+      "paid_at": {"type": "TEXT", "date": ["2025-01-01", "2025-03-31"], "null_rate": 0.3},
+      "currency": {"type": "TEXT", "values": ["usd", "usd", "eur"]}
+    }
+  }
+}

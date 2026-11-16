@@ -1,0 +1,4 @@
+{
+  "a": {"rows": 5, "columns": {"id": {"type": "INTEGER", "pk": true}, "x": "INTEGER"}},
+  "b": {"rows": 5, "columns": {"id": {"type": "INTEGER", "pk": true}, "y": "TEXT"}}
+}

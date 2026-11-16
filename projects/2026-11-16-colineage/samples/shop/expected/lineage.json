@@ -1,0 +1,922 @@
+{
+  "models": {
+    "channel_daily": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "1f93fa392cf3",
+      "columns": {
+        "channel": {
+          "orders.channel": "identity"
+        },
+        "day": {
+          "orders.order_date": "transform"
+        }
+      },
+      "control": [
+        "orders.channel",
+        "orders.order_date",
+        "orders.status"
+      ]
+    },
+    "contact_list": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "8ec318fe3580",
+      "columns": {
+        "contact": {
+          "customers.email": "identity",
+          "products.supplier": "identity"
+        },
+        "kind": {}
+      },
+      "control": []
+    },
+    "stg_items": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "9a37c9917a13",
+      "columns": {
+        "order_id": {
+          "order_items.order_id": "identity"
+        },
+        "product_id": {
+          "order_items.product_id": "identity"
+        },
+        "quantity": {
+          "order_items.quantity": "identity"
+        },
+        "unit_price": {
+          "order_items.unit_price": "identity"
+        },
+        "line_total": {
+          "order_items.quantity": "transform",
+          "order_items.unit_price": "transform"
+        }
+      },
+      "control": []
+    },
+    "product_margin": {
+      "status": "ok",
+      "depends_on": [
+        "stg_items"
+      ],
+      "sql_sha1": "307b3ebb9de1",
+      "columns": {
+        "category": {
+          "products.category": "identity"
+        },
+        "revenue": {
+          "stg_items.line_total": "aggregate"
+        },
+        "margin": {
+          "products.cost": "aggregate",
+          "stg_items.line_total": "aggregate",
+          "stg_items.quantity": "aggregate"
+        }
+      },
+      "control": [
+        "products.category",
+        "products.id",
+        "stg_items.*",
+        "stg_items.product_id"
+      ]
+    },
+    "stg_orders": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "d0da5bab914c",
+      "columns": {
+        "order_id": {
+          "orders.id": "identity"
+        },
+        "customer_id": {
+          "orders.customer_id": "identity"
+        },
+        "status": {
+          "orders.status": "transform"
+        },
+        "order_date": {
+          "orders.order_date": "transform"
+        },
+        "discount": {
+          "orders.discount": "transform"
+        }
+      },
+      "control": [
+        "orders.status"
+      ]
+    },
+    "order_totals": {
+      "status": "ok",
+      "depends_on": [
+        "stg_items",
+        "stg_orders"
+      ],
+      "sql_sha1": "3f05064eef5e",
+      "columns": {
+        "order_id": {
+          "stg_orders.order_id": "identity"
+        },
+        "customer_id": {
+          "stg_orders.customer_id": "identity"
+        },
+        "order_date": {
+          "stg_orders.order_date": "identity"
+        },
+        "gross": {
+          "stg_items.line_total": "aggregate"
+        },
+        "net": {
+          "stg_items.line_total": "aggregate",
+          "stg_orders.discount": "transform"
+        },
+        "n_lines": {}
+      },
+      "control": [
+        "stg_items.*",
+        "stg_items.order_id",
+        "stg_orders.*",
+        "stg_orders.order_id",
+        "stg_orders.status"
+      ]
+    },
+    "customer_ltv": {
+      "status": "ok",
+      "depends_on": [
+        "order_totals"
+      ],
+      "sql_sha1": "c1b7b2ce6e64",
+      "columns": {
+        "customer_id": {
+          "customers.id": "identity"
+        },
+        "name": {
+          "customers.name": "identity"
+        },
+        "country": {
+          "customers.country": "transform"
+        },
+        "orders": {
+          "order_totals.order_id": "aggregate"
+        },
+        "ltv": {
+          "order_totals.net": "aggregate"
+        },
+        "first_order": {
+          "order_totals.order_date": "aggregate"
+        }
+      },
+      "control": [],
+      "column_control": {
+        "orders": [
+          "customers.id",
+          "order_totals.*",
+          "order_totals.customer_id"
+        ],
+        "ltv": [
+          "customers.id",
+          "order_totals.*",
+          "order_totals.customer_id"
+        ],
+        "first_order": [
+          "customers.id",
+          "order_totals.*",
+          "order_totals.customer_id"
+        ]
+      }
+    },
+    "customer_rank": {
+      "status": "ok",
+      "depends_on": [
+        "customer_ltv"
+      ],
+      "sql_sha1": "ebd2b5cb2622",
+      "columns": {
+        "customer_id": {
+          "customer_ltv.customer_id": "identity"
+        },
+        "ltv": {
+          "customer_ltv.ltv": "identity"
+        },
+        "country_rank": {
+          "customer_ltv.country": "window",
+          "customer_ltv.ltv": "window"
+        }
+      },
+      "control": [
+        "customer_ltv.*"
+      ]
+    },
+    "refunds_enriched": {
+      "status": "ok",
+      "depends_on": [
+        "stg_orders"
+      ],
+      "sql_sha1": "5c41fbe13b18",
+      "columns": {
+        "order_id": {
+          "refunds.order_id": "identity"
+        },
+        "amount": {
+          "refunds.amount": "identity"
+        },
+        "reason": {
+          "refunds.reason": "identity"
+        },
+        "customer_id": {
+          "stg_orders.customer_id": "identity"
+        }
+      },
+      "control": [
+        "refunds.order_id",
+        "stg_orders.*",
+        "stg_orders.order_id"
+      ]
+    },
+    "vip_customers": {
+      "status": "ok",
+      "depends_on": [
+        "customer_ltv",
+        "refunds_enriched"
+      ],
+      "sql_sha1": "e52721a31909",
+      "columns": {
+        "customer_id": {
+          "customer_ltv.customer_id": "identity"
+        },
+        "name": {
+          "customer_ltv.name": "identity"
+        },
+        "ltv": {
+          "customer_ltv.ltv": "identity"
+        }
+      },
+      "control": [
+        "customer_ltv.*",
+        "customer_ltv.customer_id",
+        "customer_ltv.ltv",
+        "refunds_enriched.*",
+        "refunds_enriched.customer_id"
+      ]
+    }
+  },
+  "end_to_end": {
+    "channel_daily.channel": {
+      "orders.channel": {
+        "value": "identity",
+        "control": true
+      },
+      "orders.order_date": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "channel_daily.day": {
+      "orders.channel": {
+        "value": null,
+        "control": true
+      },
+      "orders.order_date": {
+        "value": "transform",
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "contact_list.contact": {
+      "customers.email": {
+        "value": "identity",
+        "control": false
+      },
+      "products.supplier": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "contact_list.kind": {},
+    "stg_items.order_id": {
+      "order_items.order_id": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "stg_items.product_id": {
+      "order_items.product_id": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "stg_items.quantity": {
+      "order_items.quantity": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "stg_items.unit_price": {
+      "order_items.unit_price": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "stg_items.line_total": {
+      "order_items.quantity": {
+        "value": "transform",
+        "control": false
+      },
+      "order_items.unit_price": {
+        "value": "transform",
+        "control": false
+      }
+    },
+    "product_margin.category": {
+      "order_items.product_id": {
+        "value": null,
+        "control": true
+      },
+      "products.category": {
+        "value": "identity",
+        "control": true
+      },
+      "products.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "product_margin.revenue": {
+      "order_items.product_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": "aggregate",
+        "control": false
+      },
+      "order_items.unit_price": {
+        "value": "aggregate",
+        "control": false
+      },
+      "products.category": {
+        "value": null,
+        "control": true
+      },
+      "products.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "product_margin.margin": {
+      "order_items.product_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": "aggregate",
+        "control": false
+      },
+      "order_items.unit_price": {
+        "value": "aggregate",
+        "control": false
+      },
+      "products.category": {
+        "value": null,
+        "control": true
+      },
+      "products.cost": {
+        "value": "aggregate",
+        "control": false
+      },
+      "products.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "stg_orders.order_id": {
+      "orders.id": {
+        "value": "identity",
+        "control": false
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "stg_orders.customer_id": {
+      "orders.customer_id": {
+        "value": "identity",
+        "control": false
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "stg_orders.status": {
+      "orders.status": {
+        "value": "transform",
+        "control": true
+      }
+    },
+    "stg_orders.order_date": {
+      "orders.order_date": {
+        "value": "transform",
+        "control": false
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "stg_orders.discount": {
+      "orders.discount": {
+        "value": "transform",
+        "control": false
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "order_totals.order_id": {
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.id": {
+        "value": "identity",
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "order_totals.customer_id": {
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.customer_id": {
+        "value": "identity",
+        "control": false
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "order_totals.order_date": {
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.order_date": {
+        "value": "transform",
+        "control": false
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "order_totals.gross": {
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": "aggregate",
+        "control": false
+      },
+      "order_items.unit_price": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "order_totals.net": {
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": "aggregate",
+        "control": false
+      },
+      "order_items.unit_price": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.discount": {
+        "value": "transform",
+        "control": false
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "order_totals.n_lines": {
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "customer_ltv.customer_id": {
+      "customers.id": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "customer_ltv.name": {
+      "customers.name": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "customer_ltv.country": {
+      "customers.country": {
+        "value": "transform",
+        "control": false
+      }
+    },
+    "customer_ltv.orders": {
+      "customers.id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.customer_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.id": {
+        "value": "aggregate",
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "customer_ltv.ltv": {
+      "customers.id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": "aggregate",
+        "control": false
+      },
+      "order_items.unit_price": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.customer_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.discount": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "customer_ltv.first_order": {
+      "customers.id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.customer_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.order_date": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "customer_rank.customer_id": {
+      "customers.id": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "customer_rank.ltv": {
+      "customers.id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": "aggregate",
+        "control": false
+      },
+      "order_items.unit_price": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.customer_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.discount": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "customer_rank.country_rank": {
+      "customers.country": {
+        "value": "window",
+        "control": false
+      },
+      "customers.id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": "aggregate",
+        "control": false
+      },
+      "order_items.unit_price": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.customer_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.discount": {
+        "value": "aggregate",
+        "control": false
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      }
+    },
+    "refunds_enriched.order_id": {
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      },
+      "refunds.order_id": {
+        "value": "identity",
+        "control": true
+      }
+    },
+    "refunds_enriched.amount": {
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      },
+      "refunds.amount": {
+        "value": "identity",
+        "control": false
+      },
+      "refunds.order_id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "refunds_enriched.reason": {
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      },
+      "refunds.order_id": {
+        "value": null,
+        "control": true
+      },
+      "refunds.reason": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "refunds_enriched.customer_id": {
+      "orders.customer_id": {
+        "value": "identity",
+        "control": false
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      },
+      "refunds.order_id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "vip_customers.customer_id": {
+      "customers.id": {
+        "value": "identity",
+        "control": true
+      },
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": null,
+        "control": true
+      },
+      "order_items.unit_price": {
+        "value": null,
+        "control": true
+      },
+      "orders.customer_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.discount": {
+        "value": null,
+        "control": true
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      },
+      "refunds.order_id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "vip_customers.name": {
+      "customers.id": {
+        "value": null,
+        "control": true
+      },
+      "customers.name": {
+        "value": "identity",
+        "control": false
+      },
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": null,
+        "control": true
+      },
+      "order_items.unit_price": {
+        "value": null,
+        "control": true
+      },
+      "orders.customer_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.discount": {
+        "value": null,
+        "control": true
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      },
+      "refunds.order_id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "vip_customers.ltv": {
+      "customers.id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.order_id": {
+        "value": null,
+        "control": true
+      },
+      "order_items.quantity": {
+        "value": "aggregate",
+        "control": true
+      },
+      "order_items.unit_price": {
+        "value": "aggregate",
+        "control": true
+      },
+      "orders.customer_id": {
+        "value": null,
+        "control": true
+      },
+      "orders.discount": {
+        "value": "aggregate",
+        "control": true
+      },
+      "orders.id": {
+        "value": null,
+        "control": true
+      },
+      "orders.status": {
+        "value": null,
+        "control": true
+      },
+      "refunds.order_id": {
+        "value": null,
+        "control": true
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+customer_rank.country_rank <- 9 source column(s)
+  customers.country                window
+  order_items.quantity             aggregate
+  order_items.unit_price           aggregate
+  orders.discount                  aggregate
+  customers.id                     control
+  order_items.order_id             control
+  orders.customer_id               control
+  orders.id                        control
+  orders.status                    control

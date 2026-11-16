@@ -1,0 +1,129 @@
+{
+ "colineage_false_negatives": {},
+ "colineage_false_positives": {},
+ "impact_vs_truth": {
+  "colineage": {
+   "exact_columns": 1.0,
+   "f1": 1.0,
+   "fn": 0,
+   "fp": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "tp": 145
+  },
+  "colineage_value_only": {
+   "exact_columns": 0.3077,
+   "f1": 0.5427,
+   "fn": 91,
+   "fp": 0,
+   "precision": 1.0,
+   "recall": 0.3724,
+   "tp": 54
+  },
+  "name_match": {
+   "exact_columns": 0.2051,
+   "f1": 0.25,
+   "fn": 124,
+   "fp": 2,
+   "precision": 0.913,
+   "recall": 0.1448,
+   "tp": 21
+  },
+  "table_level": {
+   "exact_columns": 0.0,
+   "f1": 0.538,
+   "fn": 0,
+   "fp": 249,
+   "precision": 0.368,
+   "recall": 1.0,
+   "tp": 145
+  }
+ },
+ "oracle_unconfirmed_colineage_pairs": 2,
+ "truth_vs_oracle": {
+  "covered": 143,
+  "missed": {},
+  "observed_pairs": 143,
+  "recall_vs_oracle": 1.0
+ },
+ "value_role_vs_truth": {
+  "colineage": {
+   "exact_columns": 1.0,
+   "f1": 1.0,
+   "fn": 0,
+   "fp": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "tp": 54
+  }
+ },
+ "vs_oracle": {
+  "colineage": {
+   "covered": 143,
+   "missed_examples": {},
+   "observed_pairs": 143,
+   "recall_vs_oracle": 1.0
+  },
+  "colineage_value_only": {
+   "covered": 53,
+   "missed_examples": {
+    "channel_daily.channel": [
+     "orders.order_date",
+     "orders.status"
+    ],
+    "channel_daily.day": [
+     "orders.channel",
+     "orders.status"
+    ],
+    "product_margin.category": [
+     "products.id"
+    ],
+    "product_margin.margin": [
+     "order_items.product_id",
+     "products.category",
+     "products.id"
+    ],
+    "product_margin.revenue": [
+     "order_items.product_id",
+     "products.category",
+     "products.id"
+    ]
+   },
+   "observed_pairs": 143,
+   "recall_vs_oracle": 0.3706
+  },
+  "name_match": {
+   "covered": 21,
+   "missed_examples": {
+    "channel_daily.channel": [
+     "orders.order_date",
+     "orders.status"
+    ],
+    "channel_daily.day": [
+     "orders.channel",
+     "orders.order_date",
+     "orders.status"
+    ],
+    "contact_list.contact": [
+     "customers.email",
+     "products.supplier"
+    ],
+    "product_margin.category": [
+     "products.id"
+    ],
+    "stg_items.line_total": [
+     "order_items.quantity",
+     "order_items.unit_price"
+    ]
+   },
+   "observed_pairs": 143,
+   "recall_vs_oracle": 0.1469
+  },
+  "table_level": {
+   "covered": 143,
+   "missed_examples": {},
+   "observed_pairs": 143,
+   "recall_vs_oracle": 1.0
+  }
+ }
+}

@@ -1,0 +1,788 @@
+{
+  "models": {
+    "account_contacts": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "735decebf4b3",
+      "columns": {
+        "account_id": {
+          "accounts.id": "identity"
+        },
+        "region": {
+          "accounts.region": "identity"
+        },
+        "email": {
+          "users.email": "identity"
+        }
+      },
+      "control": [
+        "accounts.id",
+        "users.account_id",
+        "users.role"
+      ]
+    },
+    "active_users": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "9a25fcc194b6",
+      "columns": {
+        "user_id": {
+          "users.id": "identity"
+        },
+        "account_id": {
+          "users.account_id": "identity"
+        },
+        "email": {
+          "users.email": "transform"
+        }
+      },
+      "control": [
+        "users.active"
+      ]
+    },
+    "paid_share": {
+      "status": "ok",
+      "depends_on": [
+        "active_users"
+      ],
+      "sql_sha1": "047519cac8f9",
+      "columns": {
+        "account_id": {
+          "invoices.account_id": "identity"
+        },
+        "amount": {
+          "invoices.amount": "identity"
+        },
+        "share": {
+          "invoices.amount": "aggregate",
+          "invoices.currency": "transform"
+        }
+      },
+      "control": [
+        "active_users.*",
+        "active_users.account_id",
+        "invoices.account_id",
+        "invoices.currency"
+      ]
+    },
+    "region_rollup": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "0dcfe98dc6ed",
+      "columns": {
+        "region": {
+          "accounts.region": "identity"
+        },
+        "plan": {
+          "accounts.plan": "identity"
+        },
+        "n": {}
+      },
+      "control": [
+        "accounts.plan",
+        "accounts.region"
+      ]
+    },
+    "revenue_by_plan": {
+      "status": "ok",
+      "depends_on": [],
+      "sql_sha1": "886717b85ad0",
+      "columns": {
+        "plan": {
+          "accounts.plan": "identity"
+        },
+        "billed": {
+          "invoices.amount": "aggregate"
+        },
+        "collected": {
+          "invoices.amount": "aggregate",
+          "invoices.paid_at": "aggregate"
+        }
+      },
+      "control": [
+        "accounts.id",
+        "accounts.plan",
+        "invoices.account_id",
+        "invoices.currency"
+      ]
+    },
+    "user_activity": {
+      "status": "ok",
+      "depends_on": [
+        "active_users"
+      ],
+      "sql_sha1": "d097c97cbbcd",
+      "columns": {
+        "user_id": {
+          "active_users.user_id": "identity"
+        },
+        "account_id": {
+          "active_users.account_id": "identity"
+        },
+        "n_events": {},
+        "minutes": {
+          "events.duration": "aggregate"
+        },
+        "last_seen": {
+          "events.ts": "aggregate"
+        }
+      },
+      "control": [
+        "active_users.*",
+        "active_users.user_id",
+        "events.event_type",
+        "events.user_id"
+      ]
+    },
+    "account_usage": {
+      "status": "ok",
+      "depends_on": [
+        "user_activity"
+      ],
+      "sql_sha1": "7be823c9dc6b",
+      "columns": {
+        "account_id": {
+          "accounts.id": "identity"
+        },
+        "plan": {
+          "accounts.plan": "identity"
+        },
+        "users": {
+          "user_activity.user_id": "aggregate"
+        },
+        "minutes": {
+          "user_activity.minutes": "aggregate"
+        }
+      },
+      "control": [],
+      "column_control": {
+        "users": [
+          "accounts.id",
+          "user_activity.*",
+          "user_activity.account_id"
+        ],
+        "minutes": [
+          "accounts.id",
+          "user_activity.*",
+          "user_activity.account_id"
+        ]
+      }
+    },
+    "idle_accounts": {
+      "status": "ok",
+      "depends_on": [
+        "user_activity"
+      ],
+      "sql_sha1": "ce6de84ba98f",
+      "columns": {
+        "account_id": {
+          "accounts.id": "identity"
+        }
+      },
+      "control": [
+        "accounts.id",
+        "user_activity.*",
+        "user_activity.account_id",
+        "user_activity.n_events"
+      ]
+    },
+    "top_accounts": {
+      "status": "ok",
+      "depends_on": [
+        "account_usage"
+      ],
+      "sql_sha1": "9fa1a3e042fe",
+      "columns": {
+        "account_id": {
+          "account_usage.account_id": "identity"
+        },
+        "minutes": {
+          "account_usage.minutes": "identity"
+        }
+      },
+      "control": [
+        "account_usage.*",
+        "account_usage.minutes"
+      ]
+    },
+    "weekly_events": {
+      "status": "ok",
+      "depends_on": [
+        "active_users"
+      ],
+      "sql_sha1": "751c74efe02a",
+      "columns": {
+        "week": {
+          "events.ts": "transform"
+        },
+        "users": {
+          "events.user_id": "aggregate"
+        },
+        "running_minutes": {
+          "events.duration": "window",
+          "events.ts": "window"
+        }
+      },
+      "control": [
+        "active_users.*",
+        "active_users.user_id",
+        "events.ts",
+        "events.user_id"
+      ]
+    }
+  },
+  "end_to_end": {
+    "account_contacts.account_id": {
+      "accounts.id": {
+        "value": "identity",
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.role": {
+        "value": null,
+        "control": true
+      }
+    },
+    "account_contacts.region": {
+      "accounts.id": {
+        "value": null,
+        "control": true
+      },
+      "accounts.region": {
+        "value": "identity",
+        "control": false
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.role": {
+        "value": null,
+        "control": true
+      }
+    },
+    "account_contacts.email": {
+      "accounts.id": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.email": {
+        "value": "identity",
+        "control": false
+      },
+      "users.role": {
+        "value": null,
+        "control": true
+      }
+    },
+    "active_users.user_id": {
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "active_users.account_id": {
+      "users.account_id": {
+        "value": "identity",
+        "control": false
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      }
+    },
+    "active_users.email": {
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.email": {
+        "value": "transform",
+        "control": false
+      }
+    },
+    "paid_share.account_id": {
+      "invoices.account_id": {
+        "value": "identity",
+        "control": true
+      },
+      "invoices.currency": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      }
+    },
+    "paid_share.amount": {
+      "invoices.account_id": {
+        "value": null,
+        "control": true
+      },
+      "invoices.amount": {
+        "value": "identity",
+        "control": false
+      },
+      "invoices.currency": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      }
+    },
+    "paid_share.share": {
+      "invoices.account_id": {
+        "value": null,
+        "control": true
+      },
+      "invoices.amount": {
+        "value": "aggregate",
+        "control": false
+      },
+      "invoices.currency": {
+        "value": "transform",
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      }
+    },
+    "region_rollup.region": {
+      "accounts.plan": {
+        "value": null,
+        "control": true
+      },
+      "accounts.region": {
+        "value": "identity",
+        "control": true
+      }
+    },
+    "region_rollup.plan": {
+      "accounts.plan": {
+        "value": "identity",
+        "control": true
+      },
+      "accounts.region": {
+        "value": null,
+        "control": true
+      }
+    },
+    "region_rollup.n": {
+      "accounts.plan": {
+        "value": null,
+        "control": true
+      },
+      "accounts.region": {
+        "value": null,
+        "control": true
+      }
+    },
+    "revenue_by_plan.plan": {
+      "accounts.id": {
+        "value": null,
+        "control": true
+      },
+      "accounts.plan": {
+        "value": "identity",
+        "control": true
+      },
+      "invoices.account_id": {
+        "value": null,
+        "control": true
+      },
+      "invoices.currency": {
+        "value": null,
+        "control": true
+      }
+    },
+    "revenue_by_plan.billed": {
+      "accounts.id": {
+        "value": null,
+        "control": true
+      },
+      "accounts.plan": {
+        "value": null,
+        "control": true
+      },
+      "invoices.account_id": {
+        "value": null,
+        "control": true
+      },
+      "invoices.amount": {
+        "value": "aggregate",
+        "control": false
+      },
+      "invoices.currency": {
+        "value": null,
+        "control": true
+      }
+    },
+    "revenue_by_plan.collected": {
+      "accounts.id": {
+        "value": null,
+        "control": true
+      },
+      "accounts.plan": {
+        "value": null,
+        "control": true
+      },
+      "invoices.account_id": {
+        "value": null,
+        "control": true
+      },
+      "invoices.amount": {
+        "value": "aggregate",
+        "control": false
+      },
+      "invoices.currency": {
+        "value": null,
+        "control": true
+      },
+      "invoices.paid_at": {
+        "value": "aggregate",
+        "control": false
+      }
+    },
+    "user_activity.user_id": {
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": "identity",
+        "control": true
+      }
+    },
+    "user_activity.account_id": {
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": "identity",
+        "control": false
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "user_activity.n_events": {
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "user_activity.minutes": {
+      "events.duration": {
+        "value": "aggregate",
+        "control": false
+      },
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "user_activity.last_seen": {
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.ts": {
+        "value": "aggregate",
+        "control": false
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "account_usage.account_id": {
+      "accounts.id": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "account_usage.plan": {
+      "accounts.plan": {
+        "value": "identity",
+        "control": false
+      }
+    },
+    "account_usage.users": {
+      "accounts.id": {
+        "value": null,
+        "control": true
+      },
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": "aggregate",
+        "control": true
+      }
+    },
+    "account_usage.minutes": {
+      "accounts.id": {
+        "value": null,
+        "control": true
+      },
+      "events.duration": {
+        "value": "aggregate",
+        "control": false
+      },
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "idle_accounts.account_id": {
+      "accounts.id": {
+        "value": "identity",
+        "control": true
+      },
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "top_accounts.account_id": {
+      "accounts.id": {
+        "value": "identity",
+        "control": true
+      },
+      "events.duration": {
+        "value": null,
+        "control": true
+      },
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "top_accounts.minutes": {
+      "accounts.id": {
+        "value": null,
+        "control": true
+      },
+      "events.duration": {
+        "value": "aggregate",
+        "control": true
+      },
+      "events.event_type": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.account_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "weekly_events.week": {
+      "events.ts": {
+        "value": "transform",
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "weekly_events.users": {
+      "events.ts": {
+        "value": null,
+        "control": true
+      },
+      "events.user_id": {
+        "value": "aggregate",
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    },
+    "weekly_events.running_minutes": {
+      "events.duration": {
+        "value": "window",
+        "control": false
+      },
+      "events.ts": {
+        "value": "window",
+        "control": true
+      },
+      "events.user_id": {
+        "value": null,
+        "control": true
+      },
+      "users.active": {
+        "value": null,
+        "control": true
+      },
+      "users.id": {
+        "value": null,
+        "control": true
+      }
+    }
+  }
+}

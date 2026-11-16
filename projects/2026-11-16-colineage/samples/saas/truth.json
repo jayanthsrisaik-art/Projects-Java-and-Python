@@ -1,0 +1,300 @@
+{
+ "_doc": "Held-out project. Hand-labelled semantic lineage written after the analyzer was frozen and before colineage was run on this project. Same definition as samples/shop/truth.json.",
+ "columns": {
+  "active_users.user_id": {
+   "value": [
+    "users.id"
+   ],
+   "control": [
+    "users.active"
+   ]
+  },
+  "active_users.account_id": {
+   "value": [
+    "users.account_id"
+   ],
+   "control": [
+    "users.active"
+   ]
+  },
+  "active_users.email": {
+   "value": [
+    "users.email"
+   ],
+   "control": [
+    "users.active"
+   ]
+  },
+  "user_activity.user_id": {
+   "value": [
+    "users.id"
+   ],
+   "control": [
+    "users.active"
+   ]
+  },
+  "user_activity.account_id": {
+   "value": [
+    "users.account_id"
+   ],
+   "control": [
+    "users.active"
+   ]
+  },
+  "user_activity.n_events": {
+   "value": [],
+   "control": [
+    "events.event_type",
+    "events.user_id",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "user_activity.minutes": {
+   "value": [
+    "events.duration"
+   ],
+   "control": [
+    "events.event_type",
+    "events.user_id",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "user_activity.last_seen": {
+   "value": [
+    "events.ts"
+   ],
+   "control": [
+    "events.event_type",
+    "events.user_id",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "account_usage.account_id": {
+   "value": [
+    "accounts.id"
+   ],
+   "control": []
+  },
+  "account_usage.plan": {
+   "value": [
+    "accounts.plan"
+   ],
+   "control": []
+  },
+  "account_usage.users": {
+   "value": [
+    "users.id"
+   ],
+   "control": [
+    "accounts.id",
+    "users.account_id",
+    "users.active"
+   ]
+  },
+  "account_usage.minutes": {
+   "value": [
+    "events.duration"
+   ],
+   "control": [
+    "accounts.id",
+    "events.event_type",
+    "events.user_id",
+    "users.account_id",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "revenue_by_plan.plan": {
+   "value": [
+    "accounts.plan"
+   ],
+   "control": [
+    "accounts.id",
+    "invoices.account_id",
+    "invoices.currency"
+   ]
+  },
+  "revenue_by_plan.billed": {
+   "value": [
+    "invoices.amount"
+   ],
+   "control": [
+    "accounts.id",
+    "accounts.plan",
+    "invoices.account_id",
+    "invoices.currency"
+   ]
+  },
+  "revenue_by_plan.collected": {
+   "value": [
+    "invoices.amount",
+    "invoices.paid_at"
+   ],
+   "control": [
+    "accounts.id",
+    "accounts.plan",
+    "invoices.account_id",
+    "invoices.currency"
+   ]
+  },
+  "top_accounts.account_id": {
+   "value": [
+    "accounts.id"
+   ],
+   "control": [
+    "events.duration",
+    "events.event_type",
+    "events.user_id",
+    "users.account_id",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "top_accounts.minutes": {
+   "value": [
+    "events.duration"
+   ],
+   "control": [
+    "accounts.id",
+    "events.event_type",
+    "events.user_id",
+    "users.account_id",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "idle_accounts.account_id": {
+   "value": [
+    "accounts.id"
+   ],
+   "control": [
+    "events.event_type",
+    "events.user_id",
+    "users.account_id",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "paid_share.account_id": {
+   "value": [
+    "invoices.account_id"
+   ],
+   "control": [
+    "invoices.currency",
+    "users.account_id",
+    "users.active"
+   ]
+  },
+  "paid_share.amount": {
+   "value": [
+    "invoices.amount"
+   ],
+   "control": [
+    "invoices.account_id",
+    "invoices.currency",
+    "users.account_id",
+    "users.active"
+   ]
+  },
+  "paid_share.share": {
+   "value": [
+    "invoices.amount"
+   ],
+   "control": [
+    "invoices.account_id",
+    "invoices.currency",
+    "users.account_id",
+    "users.active"
+   ]
+  },
+  "account_contacts.account_id": {
+   "value": [
+    "accounts.id"
+   ],
+   "control": [
+    "users.account_id",
+    "users.role"
+   ]
+  },
+  "account_contacts.region": {
+   "value": [
+    "accounts.region"
+   ],
+   "control": [
+    "accounts.id",
+    "users.account_id",
+    "users.role"
+   ]
+  },
+  "account_contacts.email": {
+   "value": [
+    "users.email"
+   ],
+   "control": [
+    "accounts.id",
+    "users.account_id",
+    "users.role"
+   ]
+  },
+  "region_rollup.region": {
+   "value": [
+    "accounts.region"
+   ],
+   "control": [
+    "accounts.plan"
+   ]
+  },
+  "region_rollup.plan": {
+   "value": [
+    "accounts.plan"
+   ],
+   "control": [
+    "accounts.region"
+   ]
+  },
+  "region_rollup.n": {
+   "value": [],
+   "control": [
+    "accounts.plan",
+    "accounts.region"
+   ]
+  },
+  "weekly_events.week": {
+   "value": [
+    "events.ts"
+   ],
+   "control": [
+    "events.user_id",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "weekly_events.users": {
+   "value": [
+    "events.user_id"
+   ],
+   "control": [
+    "events.ts",
+    "users.active",
+    "users.id"
+   ]
+  },
+  "weekly_events.running_minutes": {
+   "value": [
+    "events.duration",
+    "events.ts"
+   ],
+   "control": [
+    "events.user_id",
+    "users.active",
+    "users.id"
+   ]
+  }
+ },
+ "_corrections": [
+  "paid_share.amount and paid_share.share: added control invoices.account_id (the IN (SELECT account_id FROM active_users) filter tests i.account_id). Missed in the first hand labelling; found because the perturbation oracle observed the dependency and truth did not contain it."
+ ]
+}
