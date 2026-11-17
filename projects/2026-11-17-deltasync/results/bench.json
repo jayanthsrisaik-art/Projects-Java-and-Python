@@ -1,0 +1,351 @@
+{
+  "comparison": {
+    "size": 262144,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "workloads": {
+      "identical": {
+        "whole-file": {
+          "mean_up": 0,
+          "mean_down": 262144,
+          "mean_total": 262144,
+          "mean_seconds": 0.0,
+          "all_correct": true
+        },
+        "aligned-blocks": {
+          "mean_up": 1024,
+          "mean_down": 136,
+          "mean_total": 1160,
+          "mean_seconds": 0.0008,
+          "all_correct": true
+        },
+        "fixed-dedupe": {
+          "mean_up": 512,
+          "mean_down": 512,
+          "mean_total": 1024,
+          "mean_seconds": 0.0007,
+          "all_correct": true
+        },
+        "cdc-dedupe": {
+          "mean_up": 459,
+          "mean_down": 459,
+          "mean_total": 917,
+          "mean_seconds": 0.0419,
+          "all_correct": true
+        },
+        "rsync-delta": {
+          "mean_up": 4511,
+          "mean_down": 46,
+          "mean_total": 4557,
+          "mean_seconds": 0.025,
+          "all_correct": true
+        }
+      },
+      "append-4k": {
+        "whole-file": {
+          "mean_up": 0,
+          "mean_down": 266240,
+          "mean_total": 266240,
+          "mean_seconds": 0.0,
+          "all_correct": true
+        },
+        "aligned-blocks": {
+          "mean_up": 1024,
+          "mean_down": 4234,
+          "mean_total": 5258,
+          "mean_seconds": 0.0008,
+          "all_correct": true
+        },
+        "fixed-dedupe": {
+          "mean_up": 512,
+          "mean_down": 4628,
+          "mean_total": 5140,
+          "mean_seconds": 0.0007,
+          "all_correct": true
+        },
+        "cdc-dedupe": {
+          "mean_up": 459,
+          "mean_down": 8844,
+          "mean_total": 9303,
+          "mean_seconds": 0.0356,
+          "all_correct": true
+        },
+        "rsync-delta": {
+          "mean_up": 4511,
+          "mean_down": 4489,
+          "mean_total": 9000,
+          "mean_seconds": 0.0273,
+          "all_correct": true
+        }
+      },
+      "prepend-1b": {
+        "whole-file": {
+          "mean_up": 0,
+          "mean_down": 262145,
+          "mean_total": 262145,
+          "mean_seconds": 0.0,
+          "all_correct": true
+        },
+        "aligned-blocks": {
+          "mean_up": 1024,
+          "mean_down": 262282,
+          "mean_total": 263306,
+          "mean_seconds": 0.0011,
+          "all_correct": true
+        },
+        "fixed-dedupe": {
+          "mean_up": 512,
+          "mean_down": 262805,
+          "mean_total": 263317,
+          "mean_seconds": 0.0009,
+          "all_correct": true
+        },
+        "cdc-dedupe": {
+          "mean_up": 459,
+          "mean_down": 10362,
+          "mean_total": 10821,
+          "mean_seconds": 0.0422,
+          "all_correct": true
+        },
+        "rsync-delta": {
+          "mean_up": 4511,
+          "mean_down": 49,
+          "mean_total": 4560,
+          "mean_seconds": 0.0288,
+          "all_correct": true
+        }
+      },
+      "insert-1k-middle": {
+        "whole-file": {
+          "mean_up": 0,
+          "mean_down": 263168,
+          "mean_total": 263168,
+          "mean_seconds": 0.0,
+          "all_correct": true
+        },
+        "aligned-blocks": {
+          "mean_up": 1024,
+          "mean_down": 132916,
+          "mean_total": 133940,
+          "mean_seconds": 0.001,
+          "all_correct": true
+        },
+        "fixed-dedupe": {
+          "mean_up": 512,
+          "mean_down": 135424,
+          "mean_total": 135936,
+          "mean_seconds": 0.0009,
+          "all_correct": true
+        },
+        "cdc-dedupe": {
+          "mean_up": 459,
+          "mean_down": 23458,
+          "mean_total": 23917,
+          "mean_seconds": 0.0392,
+          "all_correct": true
+        },
+        "rsync-delta": {
+          "mean_up": 4511,
+          "mean_down": 1780,
+          "mean_total": 6291,
+          "mean_seconds": 0.0277,
+          "all_correct": true
+        }
+      },
+      "scattered-20-edits": {
+        "whole-file": {
+          "mean_up": 0,
+          "mean_down": 262144,
+          "mean_total": 262144,
+          "mean_seconds": 0.0,
+          "all_correct": true
+        },
+        "aligned-blocks": {
+          "mean_up": 1024,
+          "mean_down": 40413,
+          "mean_total": 41437,
+          "mean_seconds": 0.001,
+          "all_correct": true
+        },
+        "fixed-dedupe": {
+          "mean_up": 512,
+          "mean_down": 134380,
+          "mean_total": 134892,
+          "mean_seconds": 0.0009,
+          "all_correct": true
+        },
+        "cdc-dedupe": {
+          "mean_up": 459,
+          "mean_down": 161858,
+          "mean_total": 162316,
+          "mean_seconds": 0.0459,
+          "all_correct": true
+        },
+        "rsync-delta": {
+          "mean_up": 4511,
+          "mean_down": 14224,
+          "mean_total": 18735,
+          "mean_seconds": 0.0391,
+          "all_correct": true
+        }
+      },
+      "delete-10k": {
+        "whole-file": {
+          "mean_up": 0,
+          "mean_down": 251904,
+          "mean_total": 251904,
+          "mean_seconds": 0.0,
+          "all_correct": true
+        },
+        "aligned-blocks": {
+          "mean_up": 1024,
+          "mean_down": 102531,
+          "mean_total": 103555,
+          "mean_seconds": 0.001,
+          "all_correct": true
+        },
+        "fixed-dedupe": {
+          "mean_up": 512,
+          "mean_down": 104996,
+          "mean_total": 105508,
+          "mean_seconds": 0.001,
+          "all_correct": true
+        },
+        "cdc-dedupe": {
+          "mean_up": 459,
+          "mean_down": 9848,
+          "mean_total": 10306,
+          "mean_seconds": 0.0385,
+          "all_correct": true
+        },
+        "rsync-delta": {
+          "mean_up": 4511,
+          "mean_down": 783,
+          "mean_total": 5294,
+          "mean_seconds": 0.0287,
+          "all_correct": true
+        }
+      },
+      "move-32k-section": {
+        "whole-file": {
+          "mean_up": 0,
+          "mean_down": 262144,
+          "mean_total": 262144,
+          "mean_seconds": 0.0,
+          "all_correct": true
+        },
+        "aligned-blocks": {
+          "mean_up": 1024,
+          "mean_down": 184456,
+          "mean_total": 185480,
+          "mean_seconds": 0.0009,
+          "all_correct": true
+        },
+        "fixed-dedupe": {
+          "mean_up": 512,
+          "mean_down": 49688,
+          "mean_total": 50200,
+          "mean_seconds": 0.0009,
+          "all_correct": true
+        },
+        "cdc-dedupe": {
+          "mean_up": 459,
+          "mean_down": 55692,
+          "mean_total": 56150,
+          "mean_seconds": 0.0389,
+          "all_correct": true
+        },
+        "rsync-delta": {
+          "mean_up": 4511,
+          "mean_down": 2175,
+          "mean_total": 6686,
+          "mean_seconds": 0.0288,
+          "all_correct": true
+        }
+      },
+      "full-rewrite": {
+        "whole-file": {
+          "mean_up": 0,
+          "mean_down": 262144,
+          "mean_total": 262144,
+          "mean_seconds": 0.0,
+          "all_correct": true
+        },
+        "aligned-blocks": {
+          "mean_up": 1024,
+          "mean_down": 262280,
+          "mean_total": 263304,
+          "mean_seconds": 0.001,
+          "all_correct": true
+        },
+        "fixed-dedupe": {
+          "mean_up": 512,
+          "mean_down": 262784,
+          "mean_total": 263296,
+          "mean_seconds": 0.001,
+          "all_correct": true
+        },
+        "cdc-dedupe": {
+          "mean_up": 459,
+          "mean_down": 262724,
+          "mean_total": 263183,
+          "mean_seconds": 0.0402,
+          "all_correct": true
+        },
+        "rsync-delta": {
+          "mean_up": 4511,
+          "mean_down": 262189,
+          "mean_total": 266700,
+          "mean_seconds": 0.0705,
+          "all_correct": true
+        }
+      }
+    },
+    "all_correct": true
+  },
+  "sweep": {
+    "workload": "scattered-20-edits",
+    "size": 262144,
+    "block_sizes": {
+      "128": {
+        "mean_up": 24587,
+        "mean_down": 2960,
+        "mean_total": 27547,
+        "all_correct": true
+      },
+      "256": {
+        "mean_up": 12299,
+        "mean_down": 5520,
+        "mean_total": 17819,
+        "all_correct": true
+      },
+      "512": {
+        "mean_up": 6155,
+        "mean_down": 10634,
+        "mean_total": 16789,
+        "all_correct": true
+      },
+      "700": {
+        "mean_up": 4511,
+        "mean_down": 14224,
+        "mean_total": 18735,
+        "all_correct": true
+      },
+      "2048": {
+        "mean_up": 1547,
+        "mean_down": 40480,
+        "mean_total": 42027,
+        "all_correct": true
+      },
+      "8192": {
+        "mean_up": 395,
+        "mean_down": 133929,
+        "mean_total": 134324,
+        "all_correct": true
+      }
+    }
+  }
+}

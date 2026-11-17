@@ -1,0 +1,16 @@
+target_len   14057
+target_hash  195a3b7652ab0ebe...
+wire_bytes   2100
+ops          9
+copy_bytes   12032
+literal_bytes 2025
+---
+@       0  LITERAL 281 B  'id,region,qty,unit_price'
+@     281  COPY    basis[256:4352]  (4096 B)
+@    4377  LITERAL 213 B  '.48\n00196,north,414,649.'
+@    4590  COPY    basis[5888:9984]  (4096 B)
+@    8686  LITERAL 258 B  '50\n00450,east,122,196.81'
+@    8944  COPY    basis[10240:13056]  (2816 B)
+@   11760  LITERAL 439 B  '416.92\n00589,south,375,9'
+@   12199  COPY    basis[4608:5632]  (1024 B)
+@   13223  LITERAL 834 B  '4\n00254,north,437,668.98'
