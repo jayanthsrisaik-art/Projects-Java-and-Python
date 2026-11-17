@@ -1,0 +1,10 @@
+{
+  "method": "delta",
+  "target_len": 14057,
+  "signature_bytes": 634,
+  "delta_bytes": 2100,
+  "literal_bytes": 2025,
+  "copy_bytes": 12032,
+  "attempts": 1,
+  "wire_bytes": 2734
+}

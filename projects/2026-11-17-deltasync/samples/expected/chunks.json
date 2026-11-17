@@ -1,0 +1,16 @@
+{
+  "fixed": {
+    "old_chunks": 16,
+    "new_chunks": 16,
+    "reused_bytes": 0,
+    "new_bytes": 64570,
+    "reuse_ratio": 0.0
+  },
+  "fastcdc": {
+    "old_chunks": 14,
+    "new_chunks": 14,
+    "reused_bytes": 50840,
+    "new_bytes": 13730,
+    "reuse_ratio": 0.7874
+  }
+}
