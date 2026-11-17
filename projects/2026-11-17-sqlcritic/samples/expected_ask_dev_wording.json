@@ -1,0 +1,39 @@
+{
+  "question": "Show revenue by region for 2024.",
+  "status": "answered",
+  "sql": "SELECT r.name AS region, SUM(oi.quantity * oi.unit_price) AS value FROM order_items oi JOIN orders o ON o.order_id = oi.order_id JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2024' AND o.status = 'completed' GROUP BY r.name",
+  "columns": [
+    "region",
+    "value"
+  ],
+  "rows": [
+    [
+      "East",
+      274948.56
+    ],
+    [
+      "North",
+      613147.6
+    ],
+    [
+      "South",
+      463591.65
+    ],
+    [
+      "West",
+      535631.06
+    ]
+  ],
+  "contract": {
+    "shape": "grouped",
+    "k": null,
+    "count_entity": null
+  },
+  "attempts": [
+    {
+      "sql": "SELECT r.name AS region, SUM(oi.quantity * oi.unit_price) AS value FROM order_items oi JOIN orders o ON o.order_id = oi.order_id JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2024' AND o.status = 'completed' GROUP BY r.name",
+      "issues": []
+    }
+  ],
+  "seconds": 0.0131
+}

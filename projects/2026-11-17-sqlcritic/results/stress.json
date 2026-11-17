@@ -1,0 +1,102 @@
+{
+  "examples": {
+    "dev": 176,
+    "test": 176
+  },
+  "false_reject_rate": {
+    "gold_contract/dev": 0.0,
+    "gold_contract/test": 0.0,
+    "inferred_contract/dev": 0.0,
+    "inferred_contract/test": 0.2045
+  },
+  "mutations": {
+    "fanout_join": {
+      "kind": "structural",
+      "n": 64,
+      "ineffective_skipped": 12,
+      "recall_gold_contract": 1.0,
+      "recall_inferred_contract": 1.0,
+      "first_issue_codes": {
+        "fanout_count": 48,
+        "fanout_aggregate": 16
+      }
+    },
+    "hallucinated_column": {
+      "kind": "structural",
+      "n": 340,
+      "ineffective_skipped": 0,
+      "recall_gold_contract": 1.0,
+      "recall_inferred_contract": 1.0,
+      "first_issue_codes": {
+        "unknown_column": 340
+      }
+    },
+    "destructive_stmt": {
+      "kind": "safety",
+      "n": 352,
+      "ineffective_skipped": 0,
+      "recall_gold_contract": 1.0,
+      "recall_inferred_contract": 1.0,
+      "first_issue_codes": {
+        "not_read_only": 352
+      }
+    },
+    "spurious_group_by": {
+      "kind": "structural",
+      "n": 28,
+      "ineffective_skipped": 152,
+      "recall_gold_contract": 1.0,
+      "recall_inferred_contract": 1.0,
+      "first_issue_codes": {
+        "row_count": 28
+      }
+    },
+    "wrong_year": {
+      "kind": "semantic",
+      "n": 204,
+      "ineffective_skipped": 0,
+      "recall_gold_contract": 0.0,
+      "recall_inferred_contract": 0.074,
+      "first_issue_codes": {}
+    },
+    "drop_status_filter": {
+      "kind": "semantic",
+      "n": 196,
+      "ineffective_skipped": 4,
+      "recall_gold_contract": 0.0,
+      "recall_inferred_contract": 0.046,
+      "first_issue_codes": {}
+    },
+    "drop_label_column": {
+      "kind": "structural",
+      "n": 84,
+      "ineffective_skipped": 0,
+      "recall_gold_contract": 1.0,
+      "recall_inferred_contract": 1.0,
+      "first_issue_codes": {
+        "column_count": 72,
+        "unknown_column": 12
+      }
+    },
+    "drop_limit": {
+      "kind": "structural",
+      "n": 48,
+      "ineffective_skipped": 0,
+      "recall_gold_contract": 1.0,
+      "recall_inferred_contract": 1.0,
+      "first_issue_codes": {
+        "row_count": 48
+      }
+    },
+    "drop_distinct": {
+      "kind": "structural",
+      "n": 32,
+      "ineffective_skipped": 0,
+      "recall_gold_contract": 1.0,
+      "recall_inferred_contract": 1.0,
+      "first_issue_codes": {
+        "fanout_count": 32
+      }
+    }
+  }
+}

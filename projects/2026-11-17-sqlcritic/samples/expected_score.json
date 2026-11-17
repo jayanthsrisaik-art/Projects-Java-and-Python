@@ -1,0 +1,28 @@
+{
+  "n": 5,
+  "correct": 2,
+  "accuracy": 0.4,
+  "results": [
+    {
+      "id": "orders_in_year-2024-w0",
+      "correct": true
+    },
+    {
+      "id": "orders_in_year-2024-w1",
+      "correct": false
+    },
+    {
+      "id": "revenue_category_year-toys-2024-w0",
+      "correct": false
+    },
+    {
+      "id": "top_products_revenue_year-5-2025-w2",
+      "correct": true
+    },
+    {
+      "id": "monthly_orders_year-2023-w3",
+      "correct": false,
+      "error": "no such table: nowhere"
+    }
+  ]
+}
