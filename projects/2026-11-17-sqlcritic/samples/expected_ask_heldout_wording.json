@@ -1,0 +1,48 @@
+{
+  "question": "Break down 2024 sales across regions.",
+  "status": "answered",
+  "sql": "SELECT r.name AS region, COUNT(*) AS value FROM orders o JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY r.name",
+  "columns": [
+    "region",
+    "value"
+  ],
+  "rows": [
+    [
+      "East",
+      225
+    ],
+    [
+      "North",
+      437
+    ],
+    [
+      "South",
+      351
+    ],
+    [
+      "West",
+      356
+    ]
+  ],
+  "contract": {
+    "shape": "grouped",
+    "k": null,
+    "count_entity": null
+  },
+  "attempts": [
+    {
+      "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2024'",
+      "issues": [
+        {
+          "code": "column_count",
+          "message": "expected one row per group: a label column plus one numeric column, labels unique; got 1 columns (COUNT(*))"
+        }
+      ]
+    },
+    {
+      "sql": "SELECT r.name AS region, COUNT(*) AS value FROM orders o JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY r.name",
+      "issues": []
+    }
+  ],
+  "seconds": 0.012
+}

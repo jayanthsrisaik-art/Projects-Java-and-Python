@@ -1,0 +1,5 @@
+{"id": "orders_in_year-2024-w0", "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2024'", "note": "gold SQL"}
+{"id": "orders_in_year-2024-w1", "sql": "SELECT COUNT(*) FROM orders o JOIN order_items oi ON oi.order_id = o.order_id WHERE strftime('%Y', o.order_date) = '2024'", "note": "fan-out: counts order lines"}
+{"id": "revenue_category_year-toys-2024-w0", "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE p.category = 'toys' AND strftime('%Y', o.order_date) = '2024'", "note": "forgot completed-only rule"}
+{"id": "top_products_revenue_year-5-2025-w2", "sql": "SELECT SUM(oi.quantity * oi.unit_price) AS rev, p.name FROM order_items oi JOIN orders o ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE o.status = 'completed' AND strftime('%Y', o.order_date) = '2025' GROUP BY p.name ORDER BY rev DESC LIMIT 5", "note": "correct, different column order"}
+{"id": "monthly_orders_year-2023-w3", "sql": "SELECT month FROM nowhere", "note": "broken SQL"}

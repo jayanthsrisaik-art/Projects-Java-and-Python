@@ -1,0 +1,2064 @@
+{
+  "modes": {
+    "single": {
+      "dev": {
+        "n": 176,
+        "accuracy": 1.0,
+        "wrong_shown": 0.0,
+        "abstain_rate": 0.0,
+        "precision": 1.0,
+        "first_attempt_accuracy": 1.0,
+        "recovered_by_retry": 0,
+        "correct_first_then_rejected": 0,
+        "mean_attempts": 1.0
+      },
+      "test": {
+        "n": 176,
+        "accuracy": 0.1136,
+        "wrong_shown": 0.8864,
+        "abstain_rate": 0.0,
+        "precision": 0.1136,
+        "first_attempt_accuracy": 0.1136,
+        "recovered_by_retry": 0,
+        "correct_first_then_rejected": 0,
+        "mean_attempts": 1.0
+      }
+    },
+    "exec_retry": {
+      "dev": {
+        "n": 176,
+        "accuracy": 1.0,
+        "wrong_shown": 0.0,
+        "abstain_rate": 0.0,
+        "precision": 1.0,
+        "first_attempt_accuracy": 1.0,
+        "recovered_by_retry": 0,
+        "correct_first_then_rejected": 0,
+        "mean_attempts": 1.0
+      },
+      "test": {
+        "n": 176,
+        "accuracy": 0.1136,
+        "wrong_shown": 0.8864,
+        "abstain_rate": 0.0,
+        "precision": 0.1136,
+        "first_attempt_accuracy": 0.1136,
+        "recovered_by_retry": 0,
+        "correct_first_then_rejected": 0,
+        "mean_attempts": 1.0
+      }
+    },
+    "critic": {
+      "dev": {
+        "n": 176,
+        "accuracy": 1.0,
+        "wrong_shown": 0.0,
+        "abstain_rate": 0.0,
+        "precision": 1.0,
+        "first_attempt_accuracy": 1.0,
+        "recovered_by_retry": 0,
+        "correct_first_then_rejected": 0,
+        "mean_attempts": 1.0
+      },
+      "test": {
+        "n": 176,
+        "accuracy": 0.1307,
+        "wrong_shown": 0.8693,
+        "abstain_rate": 0.0,
+        "precision": 0.1307,
+        "first_attempt_accuracy": 0.1136,
+        "recovered_by_retry": 3,
+        "correct_first_then_rejected": 0,
+        "mean_attempts": 1.051
+      }
+    }
+  },
+  "contract_inference": {
+    "dev": {
+      "n": 176,
+      "accuracy": 1.0
+    },
+    "test": {
+      "n": 176,
+      "accuracy": 0.7955
+    }
+  },
+  "per_family": {
+    "single": {
+      "aov_segment": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "buyers_of_category": {
+        "dev": {
+          "n": 10,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 10,
+          "accuracy": 0.0,
+          "wrong_shown": 10
+        }
+      },
+      "cancel_share_region": {
+        "dev": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 8,
+          "accuracy": 0.0,
+          "wrong_shown": 8
+        }
+      },
+      "customers_in_region": {
+        "dev": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        }
+      },
+      "customers_without_orders": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "monthly_orders_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "orders_by_status_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.5,
+          "wrong_shown": 3
+        }
+      },
+      "orders_in_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        }
+      },
+      "products_over_price": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      },
+      "revenue_by_region_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.5,
+          "wrong_shown": 3
+        }
+      },
+      "revenue_category_year": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      },
+      "top_customers_orders": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "top_products_revenue_year": {
+        "dev": {
+          "n": 18,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 18,
+          "accuracy": 0.0,
+          "wrong_shown": 18
+        }
+      },
+      "units_category_year": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      }
+    },
+    "exec_retry": {
+      "aov_segment": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "buyers_of_category": {
+        "dev": {
+          "n": 10,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 10,
+          "accuracy": 0.0,
+          "wrong_shown": 10
+        }
+      },
+      "cancel_share_region": {
+        "dev": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 8,
+          "accuracy": 0.0,
+          "wrong_shown": 8
+        }
+      },
+      "customers_in_region": {
+        "dev": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        }
+      },
+      "customers_without_orders": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "monthly_orders_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "orders_by_status_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.5,
+          "wrong_shown": 3
+        }
+      },
+      "orders_in_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        }
+      },
+      "products_over_price": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      },
+      "revenue_by_region_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.5,
+          "wrong_shown": 3
+        }
+      },
+      "revenue_category_year": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      },
+      "top_customers_orders": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "top_products_revenue_year": {
+        "dev": {
+          "n": 18,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 18,
+          "accuracy": 0.0,
+          "wrong_shown": 18
+        }
+      },
+      "units_category_year": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      }
+    },
+    "critic": {
+      "aov_segment": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "buyers_of_category": {
+        "dev": {
+          "n": 10,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 10,
+          "accuracy": 0.0,
+          "wrong_shown": 10
+        }
+      },
+      "cancel_share_region": {
+        "dev": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 8,
+          "accuracy": 0.0,
+          "wrong_shown": 8
+        }
+      },
+      "customers_in_region": {
+        "dev": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 8,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        }
+      },
+      "customers_without_orders": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "monthly_orders_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.5,
+          "wrong_shown": 3
+        }
+      },
+      "orders_by_status_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.5,
+          "wrong_shown": 3
+        }
+      },
+      "orders_in_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        }
+      },
+      "products_over_price": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      },
+      "revenue_by_region_year": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.5,
+          "wrong_shown": 3
+        }
+      },
+      "revenue_category_year": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      },
+      "top_customers_orders": {
+        "dev": {
+          "n": 6,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 6,
+          "accuracy": 0.0,
+          "wrong_shown": 6
+        }
+      },
+      "top_products_revenue_year": {
+        "dev": {
+          "n": 18,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 18,
+          "accuracy": 0.0,
+          "wrong_shown": 18
+        }
+      },
+      "units_category_year": {
+        "dev": {
+          "n": 30,
+          "accuracy": 1.0,
+          "wrong_shown": 0
+        },
+        "test": {
+          "n": 30,
+          "accuracy": 0.0,
+          "wrong_shown": 30
+        }
+      }
+    }
+  },
+  "failures": {
+    "single": [
+      {
+        "id": "revenue_category_year-electronics-2023-w2",
+        "question": "Total electronics sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2023-w3",
+        "question": "What were electronics sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2024-w2",
+        "question": "Total electronics sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2024-w3",
+        "question": "What were electronics sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2025-w2",
+        "question": "Total electronics sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2025-w3",
+        "question": "What were electronics sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2023-w2",
+        "question": "Total furniture sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2023-w3",
+        "question": "What were furniture sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2024-w2",
+        "question": "Total furniture sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2024-w3",
+        "question": "What were furniture sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2025-w2",
+        "question": "Total furniture sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2025-w3",
+        "question": "What were furniture sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2023-w2",
+        "question": "Total grocery sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2023-w3",
+        "question": "What were grocery sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2024-w2",
+        "question": "Total grocery sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2024-w3",
+        "question": "What were grocery sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2025-w2",
+        "question": "Total grocery sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2025-w3",
+        "question": "What were grocery sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2023-w2",
+        "question": "Total apparel sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2023-w3",
+        "question": "What were apparel sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2024-w2",
+        "question": "Total apparel sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2024-w3",
+        "question": "What were apparel sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2025-w2",
+        "question": "Total apparel sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2025-w3",
+        "question": "What were apparel sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2023-w2",
+        "question": "Total toys sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2023-w3",
+        "question": "What were toys sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2024-w2",
+        "question": "Total toys sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2024-w3",
+        "question": "What were toys sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2025-w2",
+        "question": "Total toys sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2025-w3",
+        "question": "What were toys sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2023-w2",
+        "question": "Break down 2023 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2023'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2023'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2024-w2",
+        "question": "Break down 2024 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2024'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2024'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2025-w2",
+        "question": "Break down 2025 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2025'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2025'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2023-w2",
+        "question": "Which 3 products brought in the most sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2023-w3",
+        "question": "Name the 3 best-selling products by revenue in 2023.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2023' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2023' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2024-w2",
+        "question": "Which 3 products brought in the most sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2024-w3",
+        "question": "Name the 3 best-selling products by revenue in 2024.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2024' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2024' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2025-w2",
+        "question": "Which 3 products brought in the most sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2025-w3",
+        "question": "Name the 3 best-selling products by revenue in 2025.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2025' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2025' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-5-2023-w2",
+        "question": "Which 5 products brought in the most sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 5",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 5",
+            "issues": []
+          }
+        ]
+      }
+    ],
+    "exec_retry": [
+      {
+        "id": "revenue_category_year-electronics-2023-w2",
+        "question": "Total electronics sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2023-w3",
+        "question": "What were electronics sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2024-w2",
+        "question": "Total electronics sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2024-w3",
+        "question": "What were electronics sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2025-w2",
+        "question": "Total electronics sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2025-w3",
+        "question": "What were electronics sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2023-w2",
+        "question": "Total furniture sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2023-w3",
+        "question": "What were furniture sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2024-w2",
+        "question": "Total furniture sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2024-w3",
+        "question": "What were furniture sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2025-w2",
+        "question": "Total furniture sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2025-w3",
+        "question": "What were furniture sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2023-w2",
+        "question": "Total grocery sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2023-w3",
+        "question": "What were grocery sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2024-w2",
+        "question": "Total grocery sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2024-w3",
+        "question": "What were grocery sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2025-w2",
+        "question": "Total grocery sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2025-w3",
+        "question": "What were grocery sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2023-w2",
+        "question": "Total apparel sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2023-w3",
+        "question": "What were apparel sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2024-w2",
+        "question": "Total apparel sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2024-w3",
+        "question": "What were apparel sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2025-w2",
+        "question": "Total apparel sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2025-w3",
+        "question": "What were apparel sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2023-w2",
+        "question": "Total toys sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2023-w3",
+        "question": "What were toys sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2024-w2",
+        "question": "Total toys sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2024-w3",
+        "question": "What were toys sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2025-w2",
+        "question": "Total toys sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2025-w3",
+        "question": "What were toys sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2023-w2",
+        "question": "Break down 2023 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2023'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2023'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2024-w2",
+        "question": "Break down 2024 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2024'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2024'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2025-w2",
+        "question": "Break down 2025 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2025'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2025'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2023-w2",
+        "question": "Which 3 products brought in the most sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2023-w3",
+        "question": "Name the 3 best-selling products by revenue in 2023.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2023' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2023' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2024-w2",
+        "question": "Which 3 products brought in the most sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2024-w3",
+        "question": "Name the 3 best-selling products by revenue in 2024.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2024' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2024' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2025-w2",
+        "question": "Which 3 products brought in the most sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2025-w3",
+        "question": "Name the 3 best-selling products by revenue in 2025.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2025' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2025' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-5-2023-w2",
+        "question": "Which 5 products brought in the most sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 5",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 5",
+            "issues": []
+          }
+        ]
+      }
+    ],
+    "critic": [
+      {
+        "id": "revenue_category_year-electronics-2023-w2",
+        "question": "Total electronics sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2023-w3",
+        "question": "What were electronics sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2024-w2",
+        "question": "Total electronics sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2024-w3",
+        "question": "What were electronics sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2025-w2",
+        "question": "Total electronics sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-electronics-2025-w3",
+        "question": "What were electronics sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'electronics'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2023-w2",
+        "question": "Total furniture sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2023-w3",
+        "question": "What were furniture sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2024-w2",
+        "question": "Total furniture sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2024-w3",
+        "question": "What were furniture sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2025-w2",
+        "question": "Total furniture sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-furniture-2025-w3",
+        "question": "What were furniture sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'furniture'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2023-w2",
+        "question": "Total grocery sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2023-w3",
+        "question": "What were grocery sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2024-w2",
+        "question": "Total grocery sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2024-w3",
+        "question": "What were grocery sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2025-w2",
+        "question": "Total grocery sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-grocery-2025-w3",
+        "question": "What were grocery sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'grocery'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2023-w2",
+        "question": "Total apparel sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2023-w3",
+        "question": "What were apparel sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2024-w2",
+        "question": "Total apparel sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2024-w3",
+        "question": "What were apparel sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2025-w2",
+        "question": "Total apparel sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-apparel-2025-w3",
+        "question": "What were apparel sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'apparel'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2023-w2",
+        "question": "Total toys sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2023-w3",
+        "question": "What were toys sales for 2023?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2024-w2",
+        "question": "Total toys sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2024-w3",
+        "question": "What were toys sales for 2024?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2025-w2",
+        "question": "Total toys sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_category_year-toys-2025-w3",
+        "question": "What were toys sales for 2025?",
+        "status": "answered",
+        "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(DISTINCT o.order_id) FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' AND p.category = 'toys'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2023-w2",
+        "question": "Break down 2023 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT r.name AS region, COUNT(*) AS value FROM orders o JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY r.name",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2023'",
+            "issues": [
+              "column_count"
+            ]
+          },
+          {
+            "sql": "SELECT r.name AS region, COUNT(*) AS value FROM orders o JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY r.name",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2024-w2",
+        "question": "Break down 2024 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT r.name AS region, COUNT(*) AS value FROM orders o JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY r.name",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2024'",
+            "issues": [
+              "column_count"
+            ]
+          },
+          {
+            "sql": "SELECT r.name AS region, COUNT(*) AS value FROM orders o JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY r.name",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "revenue_by_region_year-2025-w2",
+        "question": "Break down 2025 sales across regions.",
+        "status": "answered",
+        "sql": "SELECT r.name AS region, COUNT(*) AS value FROM orders o JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2025' GROUP BY r.name",
+        "attempts": [
+          {
+            "sql": "SELECT COUNT(*) FROM orders o WHERE strftime('%Y', o.order_date) = '2025'",
+            "issues": [
+              "column_count"
+            ]
+          },
+          {
+            "sql": "SELECT r.name AS region, COUNT(*) AS value FROM orders o JOIN customers c ON c.customer_id = o.customer_id JOIN regions r ON r.region_id = c.region_id WHERE strftime('%Y', o.order_date) = '2025' GROUP BY r.name",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2023-w2",
+        "question": "Which 3 products brought in the most sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2023-w3",
+        "question": "Name the 3 best-selling products by revenue in 2023.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2023' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2023' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2024-w2",
+        "question": "Which 3 products brought in the most sales in 2024?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2024' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2024-w3",
+        "question": "Name the 3 best-selling products by revenue in 2024.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2024' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2024' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2025-w2",
+        "question": "Which 3 products brought in the most sales in 2025?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2025' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 3",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-3-2025-w3",
+        "question": "Name the 3 best-selling products by revenue in 2025.",
+        "status": "answered",
+        "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2025' AND o.status = 'completed'",
+        "attempts": [
+          {
+            "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON o.order_id = oi.order_id WHERE strftime('%Y', o.order_date) = '2025' AND o.status = 'completed'",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "id": "top_products_revenue_year-5-2023-w2",
+        "question": "Which 5 products brought in the most sales in 2023?",
+        "status": "answered",
+        "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 5",
+        "attempts": [
+          {
+            "sql": "SELECT p.name AS product, COUNT(DISTINCT o.order_id) AS value FROM orders o JOIN order_items oi ON o.order_id = oi.order_id JOIN products p ON p.product_id = oi.product_id WHERE strftime('%Y', o.order_date) = '2023' GROUP BY p.product_id, p.name ORDER BY value DESC LIMIT 5",
+            "issues": []
+          }
+        ]
+      }
+    ]
+  }
+}

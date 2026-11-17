@@ -1,0 +1,5 @@
+# Tested on Python 3.11.18 with these exact versions; ranges are the compatible series.
+langgraph>=1.2,<2        # tested 1.2.22 - agent graph orchestration
+sqlglot>=30.0,<31        # tested 30.33.0 - SQL parsing / qualification for the critic
+anthropic>=2.9,<3        # tested 2.9.0 - only used by --writer claude (live mode)
+pytest>=7.4,<10          # tested 9.2.0
