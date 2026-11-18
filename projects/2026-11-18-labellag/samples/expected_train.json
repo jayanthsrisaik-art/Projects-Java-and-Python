@@ -1,0 +1,8 @@
+{
+  "strategy": "ipw",
+  "cutoff": 250.0,
+  "train_rows": 21585,
+  "effective_positives": 119.8,
+  "mature_age_days": 71.0,
+  "ipw_max_weight": 2.142857142857143
+}
