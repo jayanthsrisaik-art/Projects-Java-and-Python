@@ -1,0 +1,33 @@
+{
+  "cutoff": 250.0,
+  "delay_curve": {
+    "amount_edges": [],
+    "n_frauds": [
+      60
+    ],
+    "F_at_days": {
+      "7": [
+        0.05
+      ],
+      "14": [
+        0.25
+      ],
+      "30": [
+        0.6167
+      ],
+      "60": [
+        0.8667
+      ],
+      "90": [
+        0.95
+      ]
+    }
+  },
+  "q90_days": 71.0,
+  "last30": {
+    "rows": 3541,
+    "reported_frauds": 9,
+    "mean_F": 0.2836,
+    "frauds_if_completed_ipw": 16.9
+  }
+}
