@@ -1,0 +1,19 @@
+{
+  "attack": {
+    "targets": 208,
+    "unique_reid": 0.0,
+    "mean_risk": 0.16031364468864456,
+    "max_risk": 0.2,
+    "risk_gt_0.2": 0.0,
+    "attr_disclosure": 0.0,
+    "false_unique": 0.0,
+    "endpoint_exposure": 0.0
+  },
+  "utility": {
+    "queries": 400,
+    "median_rel_error": 0.1399879690202271,
+    "mean_rel_error": 0.18961571042024553,
+    "p90_rel_error": 0.4182129722685836
+  },
+  "released_rows": 300
+}
