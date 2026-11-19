@@ -1,0 +1,68 @@
+{
+  "k": 5,
+  "l": 1,
+  "max_date_shift_days": 180,
+  "suppression_limit": 0.02,
+  "subject_table": "patients",
+  "subject_key": "patient_id",
+  "tables": {
+    "patients": {
+      "columns": {
+        "patient_id": {
+          "action": "token",
+          "domain": "patient"
+        },
+        "name": {
+          "action": "drop"
+        },
+        "email": {
+          "action": "drop"
+        },
+        "phone": {
+          "action": "drop"
+        },
+        "dob": {
+          "action": "qi",
+          "type": "date"
+        },
+        "sex": {
+          "action": "qi",
+          "type": "categorical"
+        },
+        "zip": {
+          "action": "qi",
+          "type": "zip"
+        },
+        "plan": {
+          "action": "keep"
+        },
+        "diagnosis": {
+          "action": "sensitive"
+        }
+      }
+    },
+    "encounters": {
+      "columns": {
+        "encounter_id": {
+          "action": "token",
+          "domain": "encounter"
+        },
+        "patient_id": {
+          "action": "token",
+          "domain": "patient"
+        },
+        "visit_date": {
+          "action": "date_shift",
+          "domain": "patient",
+          "by": "patient_id"
+        },
+        "cost": {
+          "action": "keep"
+        },
+        "notes": {
+          "action": "keep"
+        }
+      }
+    }
+  }
+}

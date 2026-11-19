@@ -1,0 +1,49 @@
+{
+  "method": "mondrian",
+  "policy_digest": "24e238439aaefdce",
+  "k_target": 5,
+  "l_target": 1,
+  "demo_key": true,
+  "subjects": 300,
+  "suppressed_subjects": 0,
+  "verified": {
+    "rows": 300,
+    "classes": 48,
+    "k_achieved": 5,
+    "l_achieved": 2
+  },
+  "class_stats": {
+    "classes": 48,
+    "min_class_size": 5,
+    "median_class_size": 6,
+    "min_distinct_sensitive": 2,
+    "suppressed": 0
+  },
+  "avg_ncp": 0.1365,
+  "full_domain_levels": null,
+  "tables": {
+    "patients": {
+      "rows_in": 300,
+      "rows_out": 300,
+      "columns_out": [
+        "patient_id",
+        "dob",
+        "sex",
+        "zip",
+        "plan",
+        "diagnosis"
+      ]
+    },
+    "encounters": {
+      "rows_in": 842,
+      "rows_out": 842,
+      "columns_out": [
+        "encounter_id",
+        "patient_id",
+        "visit_date",
+        "cost"
+      ]
+    }
+  },
+  "pii_findings": []
+}
