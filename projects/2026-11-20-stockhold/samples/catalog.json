@@ -1,0 +1,5 @@
+[
+  {"sku": "SNKR-01", "name": "Trailrunner low, launch colourway", "price_cents": 12900, "total": 25, "per_customer_limit": 2},
+  {"sku": "VNYL-07", "name": "Signed vinyl, numbered pressing", "price_cents": 4500, "total": 3, "per_customer_limit": 1},
+  {"sku": "KBD-65", "name": "65% keyboard kit, group-buy batch", "price_cents": 18900, "total": 10, "per_customer_limit": 1}
+]

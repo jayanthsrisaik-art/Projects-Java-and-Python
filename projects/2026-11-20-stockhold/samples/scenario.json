@@ -1,0 +1,29 @@
+{
+  "hold_ttl": 120,
+  "catalog": [
+    {"sku": "VNYL-07", "name": "Signed vinyl, numbered pressing", "price_cents": 4500, "total": 3, "per_customer_limit": 1}
+  ],
+  "steps": [
+    {"t": 0,   "op": "reserve", "customer": "ana",  "sku": "VNYL-07", "qty": 1, "key": "ana-intent-1", "note": "first shopper takes a hold"},
+    {"t": 1,   "op": "reserve", "customer": "ana",  "sku": "VNYL-07", "qty": 1, "key": "ana-intent-1", "note": "response was lost; client retries with the same key"},
+    {"t": 2,   "op": "reserve", "customer": "ana",  "sku": "VNYL-07", "qty": 1, "key": "ana-intent-2", "note": "a second intent breaks the per-customer limit"},
+    {"t": 3,   "op": "reserve", "customer": "ana",  "sku": "VNYL-07", "qty": 2, "key": "ana-intent-1", "note": "same key, different body"},
+    {"t": 5,   "op": "reserve", "customer": "ben",  "sku": "VNYL-07", "qty": 1, "key": "ben-intent-1"},
+    {"t": 6,   "op": "reserve", "customer": "cy",   "sku": "VNYL-07", "qty": 1, "key": "cy-intent-1"},
+    {"t": 7,   "op": "reserve", "customer": "dee",  "sku": "VNYL-07", "qty": 1, "key": "dee-intent-1", "note": "all 3 units are held"},
+    {"t": 10,  "op": "confirm", "customer": "ana",  "hold": "h_0001", "token": "tok_ok"},
+    {"t": 11,  "op": "confirm", "customer": "ana",  "hold": "h_0001", "token": "tok_ok", "note": "double-click on Pay"},
+    {"t": 20,  "op": "confirm", "customer": "ben",  "hold": "h_0002", "token": "tok_decline", "note": "declined card keeps the hold"},
+    {"t": 30,  "op": "confirm", "customer": "dee",  "hold": "h_0002", "token": "tok_ok", "note": "someone else's hold id"},
+    {"t": 40,  "op": "release", "customer": "cy",   "hold": "h_0003", "note": "cy changes their mind"},
+    {"t": 41,  "op": "reserve", "customer": "dee",  "sku": "VNYL-07", "qty": 1, "key": "dee-intent-2", "note": "released unit is back on sale"},
+    {"t": 125, "op": "product", "sku": "VNYL-07", "note": "ben's hold (t=5) expired at t=125"},
+    {"t": 126, "op": "confirm", "customer": "ben",  "hold": "h_0002", "token": "tok_ok", "note": "too late"},
+    {"t": 127, "op": "reserve", "customer": "eli",  "sku": "VNYL-07", "qty": 1, "key": "eli-intent-1"},
+    {"t": 130, "op": "confirm", "customer": "dee",  "hold": "h_0004", "token": "tok_ok"},
+    {"t": 131, "op": "confirm", "customer": "eli",  "hold": "h_0005", "token": "tok_ok"},
+    {"t": 132, "op": "reserve", "customer": "fay",  "sku": "VNYL-07", "qty": 1, "key": "fay-intent-1", "note": "sold out for good"},
+    {"t": 133, "op": "product", "sku": "VNYL-07"},
+    {"t": 134, "op": "invariants"}
+  ]
+}
