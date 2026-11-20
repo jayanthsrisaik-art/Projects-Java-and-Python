@@ -1,0 +1,21 @@
+t=  0 reserve ana  -> 201 id=h_0001 status=active qty=1  # first shopper takes a hold
+t=  1 reserve ana  -> 201 (replayed) id=h_0001 status=active qty=1  # response was lost; client retries with the same key
+t=  2 reserve ana  -> 409 error=limit_exceeded limit=1 already=1 message=limit is 1 per customer; you already hold or bought 1  # a second intent breaks the per-customer limit
+t=  3 reserve ana  -> 422 error=idempotency_key_reused message=this Idempotency-Key was already used for a different request  # same key, different body
+t=  5 reserve ben  -> 201 id=h_0002 status=active qty=1
+t=  6 reserve cy   -> 201 id=h_0003 status=active qty=1
+t=  7 reserve dee  -> 409 error=sold_out available=0 message=not enough stock available  # all 3 units are held
+t= 10 confirm ana  -> 201 id=o_0001 qty=1 amount_cents=4500 hold_id=h_0001
+t= 11 confirm ana  -> 200 (replayed) id=o_0001 qty=1 amount_cents=4500 hold_id=h_0001  # double-click on Pay
+t= 20 confirm ben  -> 402 error=payment_declined message=card_declined  # declined card keeps the hold
+t= 30 confirm dee  -> 404 error=hold_not_found message=no such hold for this customer  # someone else's hold id
+t= 40 release cy   -> 200 id=h_0003 status=released qty=1  # cy changes their mind
+t= 41 reserve dee  -> 201 id=h_0004 status=active qty=1  # released unit is back on sale
+t=125 product VNYL-07: total=3 sold=1 held=1 available=1  # ben's hold (t=5) expired at t=125
+t=126 confirm ben  -> 410 error=hold_expired message=the hold expired and its stock went back on sale  # too late
+t=127 reserve eli  -> 201 id=h_0005 status=active qty=1
+t=130 confirm dee  -> 201 id=o_0002 qty=1 amount_cents=4500 hold_id=h_0004
+t=131 confirm eli  -> 201 id=o_0003 qty=1 amount_cents=4500 hold_id=h_0005
+t=132 reserve fay  -> 409 error=sold_out available=0 message=not enough stock available  # sold out for good
+t=133 product VNYL-07: total=3 sold=3 held=0 available=0
+t=134 invariants: ok
