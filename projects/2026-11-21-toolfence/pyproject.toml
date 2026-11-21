@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolfence"
+version = "0.1.0"
+description = "Provenance-based guard against indirect prompt injection in tool-using LLM agents"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<10"]
+claude = ["anthropic>=2.12,<3"]
+
+[project.scripts]
+toolfence = "toolfence.cli:main"
+
+[tool.setuptools]
+packages = ["toolfence"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

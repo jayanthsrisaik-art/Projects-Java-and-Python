@@ -1,0 +1,2 @@
+# Optional: live Claude backend (python -m toolfence run <id> --model claude)
+anthropic>=2.12,<3
