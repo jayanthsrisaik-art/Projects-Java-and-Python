@@ -1,0 +1,690 @@
+{
+  "config": {
+    "households": 150,
+    "days": 56,
+    "start": "2026-01-05T00:00:00Z",
+    "cadence_s": 1800,
+    "jitter_s": 300,
+    "outages_per_meter": 3.0,
+    "outage_min_h": 2.5,
+    "outage_max_h": 72.0,
+    "misread_rate": 0.0006666666666666666,
+    "rollover_frac": 0.08,
+    "exchange_frac": 0.04,
+    "dup_rate": 0.02,
+    "trailing_frac": 0.05,
+    "max_arrival_delay_s": 21600,
+    "seeds": [
+      7,
+      11,
+      23
+    ]
+  },
+  "summary": {
+    "allocated_nmae": {
+      "uniform": {
+        "mean": 0.3741,
+        "min": 0.3603,
+        "max": 0.3857
+      },
+      "profile": {
+        "mean": 0.2612,
+        "min": 0.2341,
+        "max": 0.2838
+      },
+      "model": {
+        "mean": 0.2527,
+        "min": 0.228,
+        "max": 0.2754
+      },
+      "model_raw": {
+        "mean": 0.2622,
+        "min": 0.2384,
+        "max": 0.2816
+      }
+    },
+    "peak_hour_hit_rate": {
+      "uniform": {
+        "mean": 0.1428,
+        "min": 0.087,
+        "max": 0.1818
+      },
+      "profile": {
+        "mean": 0.4058,
+        "min": 0.383,
+        "max": 0.4432
+      },
+      "model": {
+        "mean": 0.4353,
+        "min": 0.4043,
+        "max": 0.4886
+      },
+      "model_raw": {
+        "mean": 0.4353,
+        "min": 0.4043,
+        "max": 0.4886
+      }
+    },
+    "gap_total_error": {
+      "uniform": {
+        "mean": 0.0009,
+        "min": 0.0009,
+        "max": 0.001
+      },
+      "profile": {
+        "mean": 0.0009,
+        "min": 0.0009,
+        "max": 0.0009
+      },
+      "model": {
+        "mean": 0.0009,
+        "min": 0.0009,
+        "max": 0.0009
+      },
+      "model_raw": {
+        "mean": 0.0926,
+        "min": 0.0819,
+        "max": 0.103
+      }
+    },
+    "estimated_nmae": {
+      "uniform": {
+        "mean": 0.2685,
+        "min": 0.2484,
+        "max": 0.2889
+      },
+      "profile": {
+        "mean": 0.2125,
+        "min": 0.1991,
+        "max": 0.2242
+      },
+      "model": {
+        "mean": 0.1852,
+        "min": 0.1551,
+        "max": 0.215
+      }
+    },
+    "nmae_by_gap_length": {
+      "uniform": {
+        "2-6h": {
+          "mean": 0.2059,
+          "min": 0.1991,
+          "max": 0.2188
+        },
+        "6-24h": {
+          "mean": 0.348,
+          "min": 0.3304,
+          "max": 0.3662
+        },
+        "24-80h": {
+          "mean": 0.3957,
+          "min": 0.376,
+          "max": 0.418
+        }
+      },
+      "profile": {
+        "2-6h": {
+          "mean": 0.1854,
+          "min": 0.1737,
+          "max": 0.1972
+        },
+        "6-24h": {
+          "mean": 0.2396,
+          "min": 0.2326,
+          "max": 0.253
+        },
+        "24-80h": {
+          "mean": 0.2743,
+          "min": 0.2381,
+          "max": 0.3094
+        }
+      },
+      "model": {
+        "2-6h": {
+          "mean": 0.1731,
+          "min": 0.1666,
+          "max": 0.1844
+        },
+        "6-24h": {
+          "mean": 0.2378,
+          "min": 0.2278,
+          "max": 0.2501
+        },
+        "24-80h": {
+          "mean": 0.2638,
+          "min": 0.2326,
+          "max": 0.2969
+        }
+      },
+      "model_raw": {
+        "2-6h": {
+          "mean": 0.2283,
+          "min": 0.196,
+          "max": 0.2581
+        },
+        "6-24h": {
+          "mean": 0.2587,
+          "min": 0.2483,
+          "max": 0.2725
+        },
+        "24-80h": {
+          "mean": 0.2657,
+          "min": 0.235,
+          "max": 0.2967
+        }
+      }
+    }
+  },
+  "runs": [
+    {
+      "seed": 7,
+      "readings_received": 390890,
+      "unique_readings": 383274,
+      "train_meters": 105,
+      "train_rows": 23903,
+      "detection": {
+        "misread": {
+          "true": 250,
+          "flagged": 250,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "rollover": {
+          "true": 16,
+          "flagged": 16,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "reset": {
+          "true": 5,
+          "flagged": 5,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "span_totals_test": {
+        "meters": 45,
+        "naive": {
+          "median_total_error_pct": 1468.06,
+          "meters_over_1pct": 40,
+          "max_total_error_pct": 11227.1,
+          "median_worst_hour_kwh": 19999.973,
+          "max_worst_hour_kwh": 89999.4
+        },
+        "meterfill": {
+          "median_total_error_pct": 0.0,
+          "meters_over_1pct": 0,
+          "max_total_error_pct": 0.0,
+          "median_worst_hour_kwh": 1.796,
+          "max_worst_hour_kwh": 6.1
+        }
+      },
+      "gap_allocation_test": {
+        "test_meters": 45,
+        "gaps_scored": 314,
+        "allocated": {
+          "uniform": {
+            "hours": 7237,
+            "nmae": 0.3603,
+            "mae_kwh": 0.6021,
+            "gap_total_error": 0.0009,
+            "peak_hour_hit_rate": 0.1818,
+            "peak_days": 88
+          },
+          "profile": {
+            "hours": 7237,
+            "nmae": 0.2341,
+            "mae_kwh": 0.3912,
+            "gap_total_error": 0.0009,
+            "peak_hour_hit_rate": 0.4432,
+            "peak_days": 88
+          },
+          "model": {
+            "hours": 7237,
+            "nmae": 0.228,
+            "mae_kwh": 0.381,
+            "gap_total_error": 0.0009,
+            "peak_hour_hit_rate": 0.4886,
+            "peak_days": 88
+          },
+          "model_raw": {
+            "hours": 7237,
+            "nmae": 0.2384,
+            "mae_kwh": 0.3984,
+            "gap_total_error": 0.0819,
+            "peak_hour_hit_rate": 0.4886,
+            "peak_days": 88
+          }
+        },
+        "by_gap_length": {
+          "uniform": {
+            "2-6h": {
+              "hours": 328,
+              "nmae": 0.2188,
+              "mae_kwh": 0.4153
+            },
+            "6-24h": {
+              "hours": 1981,
+              "nmae": 0.3475,
+              "mae_kwh": 0.5716
+            },
+            "24-80h": {
+              "hours": 4928,
+              "nmae": 0.376,
+              "mae_kwh": 0.6268
+            }
+          },
+          "profile": {
+            "2-6h": {
+              "hours": 328,
+              "nmae": 0.1852,
+              "mae_kwh": 0.3515
+            },
+            "6-24h": {
+              "hours": 1981,
+              "nmae": 0.2333,
+              "mae_kwh": 0.3836
+            },
+            "24-80h": {
+              "hours": 4928,
+              "nmae": 0.2381,
+              "mae_kwh": 0.397
+            }
+          },
+          "model": {
+            "2-6h": {
+              "hours": 328,
+              "nmae": 0.1682,
+              "mae_kwh": 0.3193
+            },
+            "6-24h": {
+              "hours": 1981,
+              "nmae": 0.2278,
+              "mae_kwh": 0.3746
+            },
+            "24-80h": {
+              "hours": 4928,
+              "nmae": 0.2326,
+              "mae_kwh": 0.3876
+            }
+          },
+          "model_raw": {
+            "2-6h": {
+              "hours": 328,
+              "nmae": 0.2308,
+              "mae_kwh": 0.4381
+            },
+            "6-24h": {
+              "hours": 1981,
+              "nmae": 0.2483,
+              "mae_kwh": 0.4085
+            },
+            "24-80h": {
+              "hours": 4928,
+              "nmae": 0.235,
+              "mae_kwh": 0.3918
+            }
+          }
+        },
+        "estimated": {
+          "uniform": {
+            "hours": 179,
+            "nmae": 0.2484,
+            "mae_kwh": 0.3446
+          },
+          "profile": {
+            "hours": 179,
+            "nmae": 0.2141,
+            "mae_kwh": 0.297
+          },
+          "model": {
+            "hours": 179,
+            "nmae": 0.1551,
+            "mae_kwh": 0.2151
+          }
+        }
+      },
+      "seconds": 19.0
+    },
+    {
+      "seed": 11,
+      "readings_received": 389656,
+      "unique_readings": 381957,
+      "train_meters": 105,
+      "train_rows": 23617,
+      "detection": {
+        "misread": {
+          "true": 252,
+          "flagged": 252,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "rollover": {
+          "true": 11,
+          "flagged": 11,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "reset": {
+          "true": 7,
+          "flagged": 7,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "span_totals_test": {
+        "meters": 45,
+        "naive": {
+          "median_total_error_pct": 2016.259,
+          "meters_over_1pct": 38,
+          "max_total_error_pct": 18932.1,
+          "median_worst_hour_kwh": 27463.27,
+          "max_worst_hour_kwh": 98000.0
+        },
+        "meterfill": {
+          "median_total_error_pct": 0.0,
+          "meters_over_1pct": 0,
+          "max_total_error_pct": 0.0,
+          "median_worst_hour_kwh": 1.728,
+          "max_worst_hour_kwh": 7.0
+        }
+      },
+      "gap_allocation_test": {
+        "test_meters": 45,
+        "gaps_scored": 312,
+        "allocated": {
+          "uniform": {
+            "hours": 7188,
+            "nmae": 0.3762,
+            "mae_kwh": 0.5522,
+            "gap_total_error": 0.0009,
+            "peak_hour_hit_rate": 0.087,
+            "peak_days": 92
+          },
+          "profile": {
+            "hours": 7188,
+            "nmae": 0.2657,
+            "mae_kwh": 0.3899,
+            "gap_total_error": 0.0009,
+            "peak_hour_hit_rate": 0.3913,
+            "peak_days": 92
+          },
+          "model": {
+            "hours": 7188,
+            "nmae": 0.2548,
+            "mae_kwh": 0.374,
+            "gap_total_error": 0.0009,
+            "peak_hour_hit_rate": 0.413,
+            "peak_days": 92
+          },
+          "model_raw": {
+            "hours": 7188,
+            "nmae": 0.2667,
+            "mae_kwh": 0.3915,
+            "gap_total_error": 0.093,
+            "peak_hour_hit_rate": 0.413,
+            "peak_days": 92
+          }
+        },
+        "by_gap_length": {
+          "uniform": {
+            "2-6h": {
+              "hours": 334,
+              "nmae": 0.1999,
+              "mae_kwh": 0.3323
+            },
+            "6-24h": {
+              "hours": 1872,
+              "nmae": 0.3662,
+              "mae_kwh": 0.5175
+            },
+            "24-80h": {
+              "hours": 4982,
+              "nmae": 0.3931,
+              "mae_kwh": 0.58
+            }
+          },
+          "profile": {
+            "2-6h": {
+              "hours": 334,
+              "nmae": 0.1972,
+              "mae_kwh": 0.3278
+            },
+            "6-24h": {
+              "hours": 1872,
+              "nmae": 0.253,
+              "mae_kwh": 0.3576
+            },
+            "24-80h": {
+              "hours": 4982,
+              "nmae": 0.2754,
+              "mae_kwh": 0.4063
+            }
+          },
+          "model": {
+            "2-6h": {
+              "hours": 334,
+              "nmae": 0.1844,
+              "mae_kwh": 0.3065
+            },
+            "6-24h": {
+              "hours": 1872,
+              "nmae": 0.2501,
+              "mae_kwh": 0.3535
+            },
+            "24-80h": {
+              "hours": 4982,
+              "nmae": 0.2618,
+              "mae_kwh": 0.3863
+            }
+          },
+          "model_raw": {
+            "2-6h": {
+              "hours": 334,
+              "nmae": 0.2581,
+              "mae_kwh": 0.429
+            },
+            "6-24h": {
+              "hours": 1872,
+              "nmae": 0.2725,
+              "mae_kwh": 0.385
+            },
+            "24-80h": {
+              "hours": 4982,
+              "nmae": 0.2653,
+              "mae_kwh": 0.3914
+            }
+          }
+        },
+        "estimated": {
+          "uniform": {
+            "hours": 172,
+            "nmae": 0.2683,
+            "mae_kwh": 0.6259
+          },
+          "profile": {
+            "hours": 172,
+            "nmae": 0.1991,
+            "mae_kwh": 0.4643
+          },
+          "model": {
+            "hours": 172,
+            "nmae": 0.1855,
+            "mae_kwh": 0.4326
+          }
+        }
+      },
+      "seconds": 16.9
+    },
+    {
+      "seed": 23,
+      "readings_received": 392094,
+      "unique_readings": 384241,
+      "train_meters": 105,
+      "train_rows": 24659,
+      "detection": {
+        "misread": {
+          "true": 269,
+          "flagged": 269,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "rollover": {
+          "true": 8,
+          "flagged": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "reset": {
+          "true": 2,
+          "flagged": 2,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "span_totals_test": {
+        "meters": 45,
+        "naive": {
+          "median_total_error_pct": 1940.884,
+          "meters_over_1pct": 38,
+          "max_total_error_pct": 10857.3,
+          "median_worst_hour_kwh": 28147.154,
+          "max_worst_hour_kwh": 87869.6
+        },
+        "meterfill": {
+          "median_total_error_pct": 0.0,
+          "meters_over_1pct": 0,
+          "max_total_error_pct": 0.1,
+          "median_worst_hour_kwh": 1.8,
+          "max_worst_hour_kwh": 6.5
+        }
+      },
+      "gap_allocation_test": {
+        "test_meters": 45,
+        "gaps_scored": 308,
+        "allocated": {
+          "uniform": {
+            "hours": 7125,
+            "nmae": 0.3857,
+            "mae_kwh": 0.5587,
+            "gap_total_error": 0.001,
+            "peak_hour_hit_rate": 0.1596,
+            "peak_days": 94
+          },
+          "profile": {
+            "hours": 7125,
+            "nmae": 0.2838,
+            "mae_kwh": 0.4111,
+            "gap_total_error": 0.0009,
+            "peak_hour_hit_rate": 0.383,
+            "peak_days": 94
+          },
+          "model": {
+            "hours": 7125,
+            "nmae": 0.2754,
+            "mae_kwh": 0.399,
+            "gap_total_error": 0.0009,
+            "peak_hour_hit_rate": 0.4043,
+            "peak_days": 94
+          },
+          "model_raw": {
+            "hours": 7125,
+            "nmae": 0.2816,
+            "mae_kwh": 0.4079,
+            "gap_total_error": 0.103,
+            "peak_hour_hit_rate": 0.4043,
+            "peak_days": 94
+          }
+        },
+        "by_gap_length": {
+          "uniform": {
+            "2-6h": {
+              "hours": 337,
+              "nmae": 0.1991,
+              "mae_kwh": 0.2879
+            },
+            "6-24h": {
+              "hours": 1760,
+              "nmae": 0.3304,
+              "mae_kwh": 0.4858
+            },
+            "24-80h": {
+              "hours": 5028,
+              "nmae": 0.418,
+              "mae_kwh": 0.6024
+            }
+          },
+          "profile": {
+            "2-6h": {
+              "hours": 337,
+              "nmae": 0.1737,
+              "mae_kwh": 0.2512
+            },
+            "6-24h": {
+              "hours": 1760,
+              "nmae": 0.2326,
+              "mae_kwh": 0.3421
+            },
+            "24-80h": {
+              "hours": 5028,
+              "nmae": 0.3094,
+              "mae_kwh": 0.446
+            }
+          },
+          "model": {
+            "2-6h": {
+              "hours": 337,
+              "nmae": 0.1666,
+              "mae_kwh": 0.2409
+            },
+            "6-24h": {
+              "hours": 1760,
+              "nmae": 0.2356,
+              "mae_kwh": 0.3464
+            },
+            "24-80h": {
+              "hours": 5028,
+              "nmae": 0.2969,
+              "mae_kwh": 0.428
+            }
+          },
+          "model_raw": {
+            "2-6h": {
+              "hours": 337,
+              "nmae": 0.196,
+              "mae_kwh": 0.2833
+            },
+            "6-24h": {
+              "hours": 1760,
+              "nmae": 0.2554,
+              "mae_kwh": 0.3755
+            },
+            "24-80h": {
+              "hours": 5028,
+              "nmae": 0.2967,
+              "mae_kwh": 0.4276
+            }
+          }
+        },
+        "estimated": {
+          "uniform": {
+            "hours": 208,
+            "nmae": 0.2889,
+            "mae_kwh": 0.3653
+          },
+          "profile": {
+            "hours": 208,
+            "nmae": 0.2242,
+            "mae_kwh": 0.2836
+          },
+          "model": {
+            "hours": 208,
+            "nmae": 0.215,
+            "mae_kwh": 0.2719
+          }
+        }
+      },
+      "seconds": 18.0
+    }
+  ]
+}

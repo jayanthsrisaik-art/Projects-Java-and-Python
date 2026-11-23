@@ -1,0 +1,765 @@
+{
+ "ingest": {
+  "received": 2519,
+  "inserted": 2470,
+  "duplicates": 49,
+  "conflicts": 0
+ },
+ "build": {
+  "method": "profile",
+  "window_start": "2026-01-05T00:00:00Z",
+  "window_hours": 240,
+  "weather_hours_interpolated": 0,
+  "meters": 6,
+  "hours": 1440,
+  "actual": 1215,
+  "allocated": 186,
+  "estimated": 39,
+  "misread": 17,
+  "rollover": 2,
+  "reset": 2,
+  "gap": 6
+ },
+ "issues": {
+  "MTR01000": [
+   {
+    "kind": "gap",
+    "start": "2026-01-05T19:29:48Z",
+    "end": "2026-01-07T16:02:02Z",
+    "value": 67.7
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-08T14:03:51Z",
+    "end": "2026-01-08T14:03:51Z",
+    "value": 33904.43
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-08T17:01:52Z",
+    "end": "2026-01-08T17:01:52Z",
+    "value": 93906.01
+   },
+   {
+    "kind": "unmetered",
+    "start": "2026-01-10T04:04:49Z",
+    "end": "2026-01-10T07:59:51Z",
+    "value": null
+   },
+   {
+    "kind": "reset",
+    "start": "2026-01-10T07:59:51Z",
+    "end": "2026-01-10T07:59:51Z",
+    "value": 0.08
+   },
+   {
+    "kind": "gap",
+    "start": "2026-01-10T23:31:25Z",
+    "end": "2026-01-11T21:31:48Z",
+    "value": 25.55
+   },
+   {
+    "kind": "gap",
+    "start": "2026-01-12T08:30:15Z",
+    "end": "2026-01-13T06:25:37Z",
+    "value": 42.24
+   }
+  ],
+  "MTR01001": [
+   {
+    "kind": "rollover",
+    "start": "2026-01-06T08:04:58Z",
+    "end": "2026-01-06T08:04:58Z",
+    "value": 0.06
+   },
+   {
+    "kind": "unmetered",
+    "start": "2026-01-09T05:31:09Z",
+    "end": "2026-01-09T08:34:22Z",
+    "value": null
+   },
+   {
+    "kind": "reset",
+    "start": "2026-01-09T08:34:22Z",
+    "end": "2026-01-09T08:34:22Z",
+    "value": 0.36
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-11T07:01:39Z",
+    "end": "2026-01-11T07:01:39Z",
+    "value": 20039.32
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-11T23:30:29Z",
+    "end": "2026-01-11T23:30:29Z",
+    "value": 4063.01
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-12T21:00:15Z",
+    "end": "2026-01-12T21:00:15Z",
+    "value": 91079.2
+   }
+  ],
+  "MTR01002": [
+   {
+    "kind": "misread",
+    "start": "2026-01-07T08:25:01Z",
+    "end": "2026-01-07T08:25:01Z",
+    "value": 23720.74
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-10T04:55:53Z",
+    "end": "2026-01-10T04:55:53Z",
+    "value": 73782.02
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-11T00:27:58Z",
+    "end": "2026-01-11T00:27:58Z",
+    "value": 38804.38
+   },
+   {
+    "kind": "gap",
+    "start": "2026-01-11T09:32:31Z",
+    "end": "2026-01-12T16:28:05Z",
+    "value": 26.61
+   }
+  ],
+  "MTR01003": [
+   {
+    "kind": "gap",
+    "start": "2026-01-05T06:25:36Z",
+    "end": "2026-01-07T05:27:37Z",
+    "value": 54.32
+   },
+   {
+    "kind": "rollover",
+    "start": "2026-01-09T10:33:01Z",
+    "end": "2026-01-09T10:33:01Z",
+    "value": 0.24
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-10T15:58:55Z",
+    "end": "2026-01-10T15:58:55Z",
+    "value": 99034.91
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-13T15:04:29Z",
+    "end": "2026-01-13T15:04:29Z",
+    "value": 40138.97
+   }
+  ],
+  "MTR01004": [
+   {
+    "kind": "misread",
+    "start": "2026-01-06T20:32:20Z",
+    "end": "2026-01-06T20:32:20Z",
+    "value": 53040.41
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-08T03:27:25Z",
+    "end": "2026-01-08T03:27:25Z",
+    "value": 95124.87
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-08T13:25:45Z",
+    "end": "2026-01-08T13:25:45Z",
+    "value": 95154.19
+   },
+   {
+    "kind": "gap",
+    "start": "2026-01-10T05:03:21Z",
+    "end": "2026-01-10T18:33:23Z",
+    "value": 41.4
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-13T14:25:06Z",
+    "end": "2026-01-13T14:25:06Z",
+    "value": 64537.85
+   }
+  ],
+  "MTR01005": [
+   {
+    "kind": "misread",
+    "start": "2026-01-12T07:29:18Z",
+    "end": "2026-01-12T07:29:18Z",
+    "value": 2650.8
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-12T16:01:40Z",
+    "end": "2026-01-12T16:01:40Z",
+    "value": 72660.69
+   },
+   {
+    "kind": "misread",
+    "start": "2026-01-12T20:55:21Z",
+    "end": "2026-01-12T20:55:21Z",
+    "value": 32667.14
+   }
+  ]
+ },
+ "daily_usage": {
+  "MTR01000": [
+   {
+    "start": "2026-01-05T00:00:00Z",
+    "kwh": 29.264,
+    "hours": {
+     "actual": 18,
+     "allocated": 5,
+     "estimated": 1
+    }
+   },
+   {
+    "start": "2026-01-06T00:00:00Z",
+    "kwh": 37.589,
+    "hours": {
+     "actual": 0,
+     "allocated": 24,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-07T00:00:00Z",
+    "kwh": 25.858,
+    "hours": {
+     "actual": 7,
+     "allocated": 17,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-08T00:00:00Z",
+    "kwh": 18.273,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-09T00:00:00Z",
+    "kwh": 33.821,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-10T00:00:00Z",
+    "kwh": 34.558,
+    "hours": {
+     "actual": 19,
+     "allocated": 1,
+     "estimated": 4
+    }
+   },
+   {
+    "start": "2026-01-11T00:00:00Z",
+    "kwh": 43.656,
+    "hours": {
+     "actual": 2,
+     "allocated": 22,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-12T00:00:00Z",
+    "kwh": 45.293,
+    "hours": {
+     "actual": 8,
+     "allocated": 16,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-13T00:00:00Z",
+    "kwh": 30.363,
+    "hours": {
+     "actual": 17,
+     "allocated": 7,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-14T00:00:00Z",
+    "kwh": 24.49,
+    "hours": {
+     "actual": 4,
+     "allocated": 0,
+     "estimated": 20
+    }
+   }
+  ],
+  "MTR01001": [
+   {
+    "start": "2026-01-05T00:00:00Z",
+    "kwh": 19.412,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   },
+   {
+    "start": "2026-01-06T00:00:00Z",
+    "kwh": 20.97,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-07T00:00:00Z",
+    "kwh": 19.092,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-08T00:00:00Z",
+    "kwh": 18.937,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-09T00:00:00Z",
+    "kwh": 18.336,
+    "hours": {
+     "actual": 20,
+     "allocated": 0,
+     "estimated": 4
+    }
+   },
+   {
+    "start": "2026-01-10T00:00:00Z",
+    "kwh": 22.79,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-11T00:00:00Z",
+    "kwh": 27.294,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-12T00:00:00Z",
+    "kwh": 18.69,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-13T00:00:00Z",
+    "kwh": 18.2,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-14T00:00:00Z",
+    "kwh": 21.732,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   }
+  ],
+  "MTR01002": [
+   {
+    "start": "2026-01-05T00:00:00Z",
+    "kwh": 19.5,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   },
+   {
+    "start": "2026-01-06T00:00:00Z",
+    "kwh": 24.581,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-07T00:00:00Z",
+    "kwh": 17.498,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-08T00:00:00Z",
+    "kwh": 23.51,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-09T00:00:00Z",
+    "kwh": 19.798,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-10T00:00:00Z",
+    "kwh": 26.641,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-11T00:00:00Z",
+    "kwh": 25.468,
+    "hours": {
+     "actual": 9,
+     "allocated": 15,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-12T00:00:00Z",
+    "kwh": 18.475,
+    "hours": {
+     "actual": 7,
+     "allocated": 17,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-13T00:00:00Z",
+    "kwh": 21.141,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-14T00:00:00Z",
+    "kwh": 20.51,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   }
+  ],
+  "MTR01003": [
+   {
+    "start": "2026-01-05T00:00:00Z",
+    "kwh": 27.643,
+    "hours": {
+     "actual": 5,
+     "allocated": 18,
+     "estimated": 1
+    }
+   },
+   {
+    "start": "2026-01-06T00:00:00Z",
+    "kwh": 27.699,
+    "hours": {
+     "actual": 0,
+     "allocated": 24,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-07T00:00:00Z",
+    "kwh": 27.802,
+    "hours": {
+     "actual": 18,
+     "allocated": 6,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-08T00:00:00Z",
+    "kwh": 29.075,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-09T00:00:00Z",
+    "kwh": 29.826,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-10T00:00:00Z",
+    "kwh": 35.114,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-11T00:00:00Z",
+    "kwh": 38.33,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-12T00:00:00Z",
+    "kwh": 32.098,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-13T00:00:00Z",
+    "kwh": 31.326,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-14T00:00:00Z",
+    "kwh": 37.866,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   }
+  ],
+  "MTR01004": [
+   {
+    "start": "2026-01-05T00:00:00Z",
+    "kwh": 67.797,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   },
+   {
+    "start": "2026-01-06T00:00:00Z",
+    "kwh": 85.27,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-07T00:00:00Z",
+    "kwh": 64.991,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-08T00:00:00Z",
+    "kwh": 72.579,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-09T00:00:00Z",
+    "kwh": 72.422,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-10T00:00:00Z",
+    "kwh": 73.778,
+    "hours": {
+     "actual": 10,
+     "allocated": 14,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-11T00:00:00Z",
+    "kwh": 72.944,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-12T00:00:00Z",
+    "kwh": 85.038,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-13T00:00:00Z",
+    "kwh": 98.034,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-14T00:00:00Z",
+    "kwh": 91.639,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   }
+  ],
+  "MTR01005": [
+   {
+    "start": "2026-01-05T00:00:00Z",
+    "kwh": 22.597,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   },
+   {
+    "start": "2026-01-06T00:00:00Z",
+    "kwh": 20.203,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-07T00:00:00Z",
+    "kwh": 20.36,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-08T00:00:00Z",
+    "kwh": 23.308,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-09T00:00:00Z",
+    "kwh": 21.881,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-10T00:00:00Z",
+    "kwh": 21.248,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-11T00:00:00Z",
+    "kwh": 22.066,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-12T00:00:00Z",
+    "kwh": 23.129,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-13T00:00:00Z",
+    "kwh": 22.474,
+    "hours": {
+     "actual": 24,
+     "allocated": 0,
+     "estimated": 0
+    }
+   },
+   {
+    "start": "2026-01-14T00:00:00Z",
+    "kwh": 22.829,
+    "hours": {
+     "actual": 23,
+     "allocated": 0,
+     "estimated": 1
+    }
+   }
+  ]
+ }
+}
