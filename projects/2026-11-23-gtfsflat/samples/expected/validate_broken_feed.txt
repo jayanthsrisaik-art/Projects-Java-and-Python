@@ -1,0 +1,11 @@
+ERROR   calendar.txt:3 [inverted_range] service 'BAD': start_date after end_date
+ERROR   calendar_dates.txt:3 [duplicate_key] service 'WKDY' has more than one exception on 2026-11-02
+ERROR   trips.txt:3 [unknown_service] trip 'USES_BAD_CAL': unknown service_id 'BAD'
+ERROR   trips.txt:4 [unknown_route] trip 'BAD_ROUTE': unknown route_id 'NOPE'
+ERROR   stop_times.txt:11 [unknown_trip] unknown trip_id 'GHOST'
+WARNING stop_times.txt:3 [half_timepoint] trip 'GOOD' seq 2: only one of arrival/departure given; copied to the other
+ERROR   stop_times.txt:6 [time_travel] trip 'TIME_TRAVEL': seq 2 arrives before seq 1 departs
+ERROR   stop_times.txt:7 [bad_time] trip 'BAD_TIME': not a GTFS time: '9:5:00'
+ERROR   stop_times.txt:8 [unknown_stop] trip 'BAD_TIME': unknown stop_id 'ZZZ'
+ERROR   stop_times.txt:10 [missing_endpoint_time] trip 'NO_END': first and last stop must have times (seq 2)
+9 error(s), 1 warning(s); 2 trips usable, 5 quarantined

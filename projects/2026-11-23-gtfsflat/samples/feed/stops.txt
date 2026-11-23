@@ -1,0 +1,5 @@
+stop_id,stop_name,stop_lat,stop_lon
+A,Main St,40.7000,-74.0000
+B,Mill Rd,40.7050,-74.0050
+C,Harbor,40.7100,-74.0100
+D,Airport,40.7200,-74.0200

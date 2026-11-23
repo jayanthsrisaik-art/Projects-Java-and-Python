@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_type
+L1,A,1,Harbor Local,3
+OWL,A,N,Night Owl,3
+SH,A,S,Airport Shuttle,3

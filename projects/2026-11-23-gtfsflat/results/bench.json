@@ -1,0 +1,932 @@
+[
+ {
+  "seed": 0,
+  "window": "spring",
+  "service_dates": 29,
+  "trip_instances": 2234,
+  "stop_events": 20946,
+  "sql_build_s": 0.097,
+  "oracle_s": 0.084,
+  "sql_vs_oracle": {
+   "expected": 20946,
+   "produced": 20946,
+   "exact": 20946,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 20946,
+    "produced": 20886,
+    "exact": 20886,
+    "wrong_time": 0,
+    "missing": 60,
+    "extra": 0
+   },
+   "wrap_24h": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20028,
+    "wrong_time": 918,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20897,
+    "wrong_time": 49,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 46
+   },
+   "ignore_frequencies": {
+    "expected": 20946,
+    "produced": 16664,
+    "exact": 16506,
+    "wrong_time": 0,
+    "missing": 4440,
+    "extra": 158
+   },
+   "naive_all": {
+    "expected": 20946,
+    "produced": 16604,
+    "exact": 15512,
+    "wrong_time": 934,
+    "missing": 4500,
+    "extra": 158
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 495,
+    "day": 1505
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 95,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 6,
+     "day": 4
+    },
+    "wrap_24h": {
+     "night": 29,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 10,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 164
+    },
+    "naive_all": {
+     "night": 29,
+     "day": 168
+    }
+   }
+  }
+ },
+ {
+  "seed": 0,
+  "window": "fall",
+  "service_dates": 85,
+  "trip_instances": 6549,
+  "stop_events": 61371,
+  "sql_build_s": 0.229,
+  "oracle_s": 0.25,
+  "sql_vs_oracle": {
+   "expected": 61371,
+   "produced": 61371,
+   "exact": 61371,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 61371,
+    "produced": 62658,
+    "exact": 61122,
+    "wrong_time": 0,
+    "missing": 249,
+    "extra": 1536
+   },
+   "wrap_24h": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 58693,
+    "wrong_time": 2678,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 61321,
+    "wrong_time": 50,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 30
+   },
+   "ignore_frequencies": {
+    "expected": 61371,
+    "produced": 48669,
+    "exact": 48201,
+    "wrong_time": 0,
+    "missing": 13170,
+    "extra": 468
+   },
+   "naive_all": {
+    "expected": 61371,
+    "produced": 49812,
+    "exact": 45274,
+    "wrong_time": 2678,
+    "missing": 13419,
+    "extra": 1860
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 550,
+    "day": 1450
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 99,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 3,
+     "day": 13
+    },
+    "wrap_24h": {
+     "night": 20,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 4,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 145
+    },
+    "naive_all": {
+     "night": 21,
+     "day": 158
+    }
+   }
+  }
+ },
+ {
+  "seed": 1,
+  "window": "spring",
+  "service_dates": 29,
+  "trip_instances": 2234,
+  "stop_events": 20946,
+  "sql_build_s": 0.087,
+  "oracle_s": 0.078,
+  "sql_vs_oracle": {
+   "expected": 20946,
+   "produced": 20946,
+   "exact": 20946,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 20946,
+    "produced": 20886,
+    "exact": 20886,
+    "wrong_time": 0,
+    "missing": 60,
+    "extra": 0
+   },
+   "wrap_24h": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20018,
+    "wrong_time": 928,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20895,
+    "wrong_time": 51,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 46
+   },
+   "ignore_frequencies": {
+    "expected": 20946,
+    "produced": 16664,
+    "exact": 16506,
+    "wrong_time": 0,
+    "missing": 4440,
+    "extra": 158
+   },
+   "naive_all": {
+    "expected": 20946,
+    "produced": 16604,
+    "exact": 15502,
+    "wrong_time": 944,
+    "missing": 4500,
+    "extra": 158
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 475,
+    "day": 1525
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 96,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 2,
+     "day": 1
+    },
+    "wrap_24h": {
+     "night": 18,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 8,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 153
+    },
+    "naive_all": {
+     "night": 18,
+     "day": 154
+    }
+   }
+  }
+ },
+ {
+  "seed": 1,
+  "window": "fall",
+  "service_dates": 85,
+  "trip_instances": 6549,
+  "stop_events": 61371,
+  "sql_build_s": 0.223,
+  "oracle_s": 0.297,
+  "sql_vs_oracle": {
+   "expected": 61371,
+   "produced": 61371,
+   "exact": 61371,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 61371,
+    "produced": 62658,
+    "exact": 61122,
+    "wrong_time": 0,
+    "missing": 249,
+    "extra": 1536
+   },
+   "wrap_24h": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 58664,
+    "wrong_time": 2707,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 61319,
+    "wrong_time": 52,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 32
+   },
+   "ignore_frequencies": {
+    "expected": 61371,
+    "produced": 48669,
+    "exact": 48201,
+    "wrong_time": 0,
+    "missing": 13170,
+    "extra": 468
+   },
+   "naive_all": {
+    "expected": 61371,
+    "produced": 49812,
+    "exact": 45243,
+    "wrong_time": 2709,
+    "missing": 13419,
+    "extra": 1860
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 478,
+    "day": 1522
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 85,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 5,
+     "day": 37
+    },
+    "wrap_24h": {
+     "night": 18,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 3,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 163
+    },
+    "naive_all": {
+     "night": 22,
+     "day": 194
+    }
+   }
+  }
+ },
+ {
+  "seed": 2,
+  "window": "spring",
+  "service_dates": 29,
+  "trip_instances": 2234,
+  "stop_events": 20946,
+  "sql_build_s": 0.095,
+  "oracle_s": 0.105,
+  "sql_vs_oracle": {
+   "expected": 20946,
+   "produced": 20946,
+   "exact": 20946,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 20946,
+    "produced": 20886,
+    "exact": 20886,
+    "wrong_time": 0,
+    "missing": 60,
+    "extra": 0
+   },
+   "wrap_24h": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20004,
+    "wrong_time": 942,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20895,
+    "wrong_time": 51,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 46
+   },
+   "ignore_frequencies": {
+    "expected": 20946,
+    "produced": 16664,
+    "exact": 16506,
+    "wrong_time": 0,
+    "missing": 4440,
+    "extra": 158
+   },
+   "naive_all": {
+    "expected": 20946,
+    "produced": 16604,
+    "exact": 15488,
+    "wrong_time": 958,
+    "missing": 4500,
+    "extra": 158
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 497,
+    "day": 1503
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 62,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 1,
+     "day": 0
+    },
+    "wrap_24h": {
+     "night": 17,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 11,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 100
+    },
+    "naive_all": {
+     "night": 14,
+     "day": 100
+    }
+   }
+  }
+ },
+ {
+  "seed": 2,
+  "window": "fall",
+  "service_dates": 85,
+  "trip_instances": 6549,
+  "stop_events": 61371,
+  "sql_build_s": 0.241,
+  "oracle_s": 0.263,
+  "sql_vs_oracle": {
+   "expected": 61371,
+   "produced": 61371,
+   "exact": 61371,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 61371,
+    "produced": 62658,
+    "exact": 61122,
+    "wrong_time": 0,
+    "missing": 249,
+    "extra": 1536
+   },
+   "wrap_24h": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 58622,
+    "wrong_time": 2749,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 61320,
+    "wrong_time": 51,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 30
+   },
+   "ignore_frequencies": {
+    "expected": 61371,
+    "produced": 48669,
+    "exact": 48201,
+    "wrong_time": 0,
+    "missing": 13170,
+    "extra": 468
+   },
+   "naive_all": {
+    "expected": 61371,
+    "produced": 49812,
+    "exact": 45203,
+    "wrong_time": 2749,
+    "missing": 13419,
+    "extra": 1860
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 485,
+    "day": 1515
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 64,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 3,
+     "day": 20
+    },
+    "wrap_24h": {
+     "night": 9,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 2,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 117
+    },
+    "naive_all": {
+     "night": 9,
+     "day": 137
+    }
+   }
+  }
+ },
+ {
+  "seed": 3,
+  "window": "spring",
+  "service_dates": 29,
+  "trip_instances": 2234,
+  "stop_events": 20946,
+  "sql_build_s": 0.125,
+  "oracle_s": 0.131,
+  "sql_vs_oracle": {
+   "expected": 20946,
+   "produced": 20946,
+   "exact": 20946,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 20946,
+    "produced": 20886,
+    "exact": 20886,
+    "wrong_time": 0,
+    "missing": 60,
+    "extra": 0
+   },
+   "wrap_24h": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20018,
+    "wrong_time": 928,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20895,
+    "wrong_time": 51,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 47
+   },
+   "ignore_frequencies": {
+    "expected": 20946,
+    "produced": 16664,
+    "exact": 16506,
+    "wrong_time": 0,
+    "missing": 4440,
+    "extra": 158
+   },
+   "naive_all": {
+    "expected": 20946,
+    "produced": 16604,
+    "exact": 15501,
+    "wrong_time": 945,
+    "missing": 4500,
+    "extra": 158
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 488,
+    "day": 1512
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 69,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 4,
+     "day": 1
+    },
+    "wrap_24h": {
+     "night": 18,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 7,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 128
+    },
+    "naive_all": {
+     "night": 16,
+     "day": 129
+    }
+   }
+  }
+ },
+ {
+  "seed": 3,
+  "window": "fall",
+  "service_dates": 85,
+  "trip_instances": 6549,
+  "stop_events": 61371,
+  "sql_build_s": 0.213,
+  "oracle_s": 0.267,
+  "sql_vs_oracle": {
+   "expected": 61371,
+   "produced": 61371,
+   "exact": 61371,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 61371,
+    "produced": 62658,
+    "exact": 61122,
+    "wrong_time": 0,
+    "missing": 249,
+    "extra": 1536
+   },
+   "wrap_24h": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 58664,
+    "wrong_time": 2707,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 61319,
+    "wrong_time": 52,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 31
+   },
+   "ignore_frequencies": {
+    "expected": 61371,
+    "produced": 48669,
+    "exact": 48201,
+    "wrong_time": 0,
+    "missing": 13170,
+    "extra": 468
+   },
+   "naive_all": {
+    "expected": 61371,
+    "produced": 49812,
+    "exact": 45244,
+    "wrong_time": 2708,
+    "missing": 13419,
+    "extra": 1860
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 542,
+    "day": 1458
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 65,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 1,
+     "day": 26
+    },
+    "wrap_24h": {
+     "night": 9,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 2,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 104
+    },
+    "naive_all": {
+     "night": 9,
+     "day": 129
+    }
+   }
+  }
+ },
+ {
+  "seed": 4,
+  "window": "spring",
+  "service_dates": 29,
+  "trip_instances": 2234,
+  "stop_events": 20946,
+  "sql_build_s": 0.104,
+  "oracle_s": 0.09,
+  "sql_vs_oracle": {
+   "expected": 20946,
+   "produced": 20946,
+   "exact": 20946,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 20946,
+    "produced": 20886,
+    "exact": 20886,
+    "wrong_time": 0,
+    "missing": 60,
+    "extra": 0
+   },
+   "wrap_24h": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20004,
+    "wrong_time": 942,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 20946,
+    "produced": 20946,
+    "exact": 20894,
+    "wrong_time": 52,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 48
+   },
+   "ignore_frequencies": {
+    "expected": 20946,
+    "produced": 16664,
+    "exact": 16506,
+    "wrong_time": 0,
+    "missing": 4440,
+    "extra": 158
+   },
+   "naive_all": {
+    "expected": 20946,
+    "produced": 16604,
+    "exact": 15486,
+    "wrong_time": 960,
+    "missing": 4500,
+    "extra": 158
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 493,
+    "day": 1507
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 63,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 1,
+     "day": 4
+    },
+    "wrap_24h": {
+     "night": 9,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 3,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 181
+    },
+    "naive_all": {
+     "night": 10,
+     "day": 185
+    }
+   }
+  }
+ },
+ {
+  "seed": 4,
+  "window": "fall",
+  "service_dates": 85,
+  "trip_instances": 6549,
+  "stop_events": 61371,
+  "sql_build_s": 0.26,
+  "oracle_s": 0.285,
+  "sql_vs_oracle": {
+   "expected": 61371,
+   "produced": 61371,
+   "exact": 61371,
+   "wrong_time": 0,
+   "missing": 0,
+   "extra": 0
+  },
+  "variants": {
+   "ignore_exceptions": {
+    "expected": 61371,
+    "produced": 62658,
+    "exact": 61122,
+    "wrong_time": 0,
+    "missing": 249,
+    "extra": 1536
+   },
+   "wrap_24h": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 58622,
+    "wrong_time": 2749,
+    "missing": 0,
+    "extra": 0
+   },
+   "wallclock": {
+    "expected": 61371,
+    "produced": 61371,
+    "exact": 61319,
+    "wrong_time": 52,
+    "missing": 0,
+    "extra": 0,
+    "wrong_time_on_dst_days": 31
+   },
+   "ignore_frequencies": {
+    "expected": 61371,
+    "produced": 48669,
+    "exact": 48201,
+    "wrong_time": 0,
+    "missing": 13170,
+    "extra": 468
+   },
+   "naive_all": {
+    "expected": 61371,
+    "produced": 49812,
+    "exact": 45202,
+    "wrong_time": 2750,
+    "missing": 13419,
+    "extra": 1860
+   }
+  },
+  "board": {
+   "queries": {
+    "night": 488,
+    "day": 1512
+   },
+   "sql_board_vs_truth_mismatches": 0,
+   "wrong": {
+    "board_same_service_date_only": {
+     "night": 63,
+     "day": 0
+    },
+    "ignore_exceptions": {
+     "night": 6,
+     "day": 34
+    },
+    "wrap_24h": {
+     "night": 14,
+     "day": 0
+    },
+    "wallclock": {
+     "night": 3,
+     "day": 0
+    },
+    "ignore_frequencies": {
+     "night": 0,
+     "day": 143
+    },
+    "naive_all": {
+     "night": 16,
+     "day": 172
+    }
+   }
+  }
+ }
+]

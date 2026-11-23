@@ -1,0 +1,4 @@
+# Runtime: Python >= 3.10 standard library only (sqlite3, zoneinfo, csv, argparse). Tested on 3.11.18.
+# Windows / systems without an IANA tz database also need:  tzdata>=2024.1
+# Tests:
+pytest>=7.4,<10

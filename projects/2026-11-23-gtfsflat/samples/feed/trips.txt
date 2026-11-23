@@ -1,0 +1,5 @@
+route_id,service_id,trip_id,trip_headsign,direction_id
+L1,WKND,L1_1,Harbor,0
+OWL,WKND,OWL_LATE,Harbor,0
+OWL,WKND,OWL_EARLY,Airport,0
+SH,WKDY,SH_T,Airport,0

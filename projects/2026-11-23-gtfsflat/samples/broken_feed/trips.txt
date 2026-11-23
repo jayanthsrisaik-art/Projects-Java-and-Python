@@ -1,0 +1,8 @@
+route_id,service_id,trip_id,trip_headsign,direction_id
+L1,WKDY,GOOD,Harbor,0
+L1,BAD,USES_BAD_CAL,Harbor,0
+NOPE,WKDY,BAD_ROUTE,Harbor,0
+L1,WKDY,TIME_TRAVEL,Harbor,0
+L1,WKDY,BAD_TIME,Harbor,0
+L1,WKDY,NO_END,Harbor,0
+SH,WKDY,SH_T,Airport,0
