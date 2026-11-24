@@ -1,0 +1,30 @@
+{
+  "crdt": {
+    "converged": true,
+    "errors": [],
+    "pending": {
+      "laptop": 0,
+      "phone": 0,
+      "tablet": 0
+    },
+    "texts": {
+      "laptop": "TODO shopping: oatmilk, bread",
+      "phone": "TODO shopping: oatmilk, bread",
+      "tablet": "TODO shopping: oatmilk, bread"
+    }
+  },
+  "naive": {
+    "converged": false,
+    "errors": [],
+    "pending": {
+      "laptop": 0,
+      "phone": 0,
+      "tablet": 0
+    },
+    "texts": {
+      "laptop": "TODO shopping: oatmilk, bread",
+      "phone": "TODO shopping: oatmilk, bread",
+      "tablet": "TODO shoppoatggs, milk, bread"
+    }
+  }
+}

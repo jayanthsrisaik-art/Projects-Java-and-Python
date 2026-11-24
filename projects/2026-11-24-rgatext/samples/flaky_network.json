@@ -1,0 +1,19 @@
+{
+  "description": "Three replicas; deliveries arrive shuffled, duplicated and in partial batches before a final sync.",
+  "replicas": ["laptop", "phone", "tablet"],
+  "steps": [
+    {"edit": "laptop", "insert": [0, "shopping: eggs, milk"]},
+    {"send": {"from": "laptop", "to": "phone", "shuffle_seed": 7, "duplicate": true}},
+    {"edit": "phone", "insert": [20, ", bread"]},
+    {"edit": "laptop", "delete": [10, 6]},
+    {"edit": "laptop", "insert": [10, "oat"]},
+    {"send": {"from": "phone", "to": "tablet", "shuffle_seed": 3, "limit": 9}},
+    {"edit": "tablet", "insert": [0, "TODO "]},
+    {"send": {"from": "laptop", "to": "tablet", "shuffle_seed": 11, "duplicate": true}},
+    {"send": {"from": "phone", "to": "tablet", "shuffle_seed": 5}},
+    {"sync": ["laptop", "phone"]},
+    {"sync": ["phone", "tablet"]},
+    {"sync": ["laptop", "tablet"]},
+    {"sync": ["laptop", "phone"]}
+  ]
+}

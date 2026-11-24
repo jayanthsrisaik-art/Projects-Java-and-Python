@@ -1,0 +1,12 @@
+{
+  "description": "Alice and Bob start from the same line, then edit offline at the same time and sync.",
+  "replicas": ["alice", "bob"],
+  "steps": [
+    {"edit": "alice", "insert": [0, "Meet at noon."]},
+    {"sync": ["alice", "bob"]},
+    {"edit": "alice", "insert": [8, "the cafe "]},
+    {"edit": "bob", "insert": [8, "the park "]},
+    {"edit": "bob", "delete": [0, 5]},
+    {"sync": ["alice", "bob"]}
+  ]
+}

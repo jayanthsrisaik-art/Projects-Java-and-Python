@@ -1,0 +1,31 @@
+{"kind":"ins","rep":"alice","seq":1,"id":[1,"alice"],"origin":[0,""],"ch":"A"}
+{"kind":"ins","rep":"alice","seq":2,"id":[2,"alice"],"origin":[1,"alice"],"ch":"g"}
+{"kind":"ins","rep":"alice","seq":3,"id":[3,"alice"],"origin":[2,"alice"],"ch":"e"}
+{"kind":"ins","rep":"alice","seq":4,"id":[4,"alice"],"origin":[3,"alice"],"ch":"n"}
+{"kind":"ins","rep":"alice","seq":5,"id":[5,"alice"],"origin":[4,"alice"],"ch":"d"}
+{"kind":"ins","rep":"alice","seq":6,"id":[6,"alice"],"origin":[5,"alice"],"ch":"a"}
+{"kind":"ins","rep":"alice","seq":7,"id":[7,"alice"],"origin":[6,"alice"],"ch":":"}
+{"kind":"ins","rep":"alice","seq":8,"id":[8,"alice"],"origin":[7,"alice"],"ch":" "}
+{"kind":"ins","rep":"alice","seq":9,"id":[9,"alice"],"origin":[8,"alice"],"ch":"b"}
+{"kind":"ins","rep":"alice","seq":10,"id":[10,"alice"],"origin":[9,"alice"],"ch":"u"}
+{"kind":"ins","rep":"alice","seq":11,"id":[11,"alice"],"origin":[10,"alice"],"ch":"d"}
+{"kind":"ins","rep":"alice","seq":12,"id":[12,"alice"],"origin":[11,"alice"],"ch":"g"}
+{"kind":"ins","rep":"alice","seq":13,"id":[13,"alice"],"origin":[12,"alice"],"ch":"e"}
+{"kind":"ins","rep":"alice","seq":14,"id":[14,"alice"],"origin":[13,"alice"],"ch":"t"}
+{"kind":"ins","rep":"alice","seq":15,"id":[15,"alice"],"origin":[14,"alice"],"ch":","}
+{"kind":"ins","rep":"alice","seq":16,"id":[16,"alice"],"origin":[15,"alice"],"ch":" "}
+{"kind":"ins","rep":"alice","seq":17,"id":[17,"alice"],"origin":[16,"alice"],"ch":"h"}
+{"kind":"ins","rep":"alice","seq":18,"id":[18,"alice"],"origin":[17,"alice"],"ch":"i"}
+{"kind":"ins","rep":"alice","seq":19,"id":[19,"alice"],"origin":[18,"alice"],"ch":"r"}
+{"kind":"ins","rep":"alice","seq":20,"id":[20,"alice"],"origin":[19,"alice"],"ch":"i"}
+{"kind":"ins","rep":"alice","seq":21,"id":[21,"alice"],"origin":[20,"alice"],"ch":"n"}
+{"kind":"ins","rep":"alice","seq":22,"id":[22,"alice"],"origin":[21,"alice"],"ch":"g"}
+{"kind":"ins","rep":"alice","seq":23,"id":[23,"alice"],"origin":[22,"alice"],"ch":","}
+{"kind":"ins","rep":"alice","seq":24,"id":[24,"alice"],"origin":[23,"alice"],"ch":" "}
+{"kind":"ins","rep":"alice","seq":25,"id":[25,"alice"],"origin":[24,"alice"],"ch":"r"}
+{"kind":"ins","rep":"alice","seq":26,"id":[26,"alice"],"origin":[25,"alice"],"ch":"o"}
+{"kind":"ins","rep":"alice","seq":27,"id":[27,"alice"],"origin":[26,"alice"],"ch":"a"}
+{"kind":"ins","rep":"alice","seq":28,"id":[28,"alice"],"origin":[27,"alice"],"ch":"d"}
+{"kind":"ins","rep":"alice","seq":29,"id":[29,"alice"],"origin":[28,"alice"],"ch":"m"}
+{"kind":"ins","rep":"alice","seq":30,"id":[30,"alice"],"origin":[29,"alice"],"ch":"a"}
+{"kind":"ins","rep":"alice","seq":31,"id":[31,"alice"],"origin":[30,"alice"],"ch":"p"}

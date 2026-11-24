@@ -1,0 +1,26 @@
+{
+  "crdt": {
+    "converged": true,
+    "errors": [],
+    "pending": {
+      "alice": 0,
+      "bob": 0
+    },
+    "texts": {
+      "alice": "at the park the cafe noon.",
+      "bob": "at the park the cafe noon."
+    }
+  },
+  "naive": {
+    "converged": false,
+    "errors": [],
+    "pending": {
+      "alice": 0,
+      "bob": 0
+    },
+    "texts": {
+      "alice": "at the park the cafe noon.",
+      "bob": "at the pthe cafe ark noon."
+    }
+  }
+}
