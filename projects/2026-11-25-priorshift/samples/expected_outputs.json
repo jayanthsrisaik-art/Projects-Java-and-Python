@@ -1,0 +1,162 @@
+{
+  "model": {
+    "seed": 0,
+    "factor": 2
+  },
+  "batch_form_b": {
+    "n": 300,
+    "method": "em",
+    "smoothed": true,
+    "train_priors": [
+      0.1002,
+      0.1002,
+      0.098,
+      0.1024,
+      0.1002,
+      0.1002,
+      0.1002,
+      0.1002,
+      0.098,
+      0.1002
+    ],
+    "estimated_priors": [
+      0.3087,
+      0.2711,
+      0.2288,
+      0.186,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0055,
+      0.0
+    ],
+    "shift_test": {
+      "statistic": 440.03,
+      "df": 9,
+      "p_value": 3.87e-89,
+      "tv_distance": 0.5936,
+      "shifted": true
+    },
+    "adapted": true,
+    "predicted_counts_before": [
+      91,
+      70,
+      69,
+      55,
+      0,
+      0,
+      0,
+      0,
+      9,
+      6
+    ],
+    "predicted_counts_after": [
+      92,
+      81,
+      71,
+      54,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "check_with_labels": {
+      "true_priors": [
+        0.3167,
+        0.28,
+        0.23,
+        0.1733,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "prior_tv_error": 0.0181,
+      "accuracy_before": 0.9133,
+      "accuracy_after": 0.9567
+    }
+  },
+  "batch_balanced": {
+    "n": 300,
+    "method": "em",
+    "smoothed": true,
+    "train_priors": [
+      0.1002,
+      0.1002,
+      0.098,
+      0.1024,
+      0.1002,
+      0.1002,
+      0.1002,
+      0.1002,
+      0.098,
+      0.1002
+    ],
+    "estimated_priors": [
+      0.0925,
+      0.0631,
+      0.0739,
+      0.1102,
+      0.1086,
+      0.1081,
+      0.0947,
+      0.1117,
+      0.1428,
+      0.0943
+    ],
+    "shift_test": {
+      "statistic": 7.49,
+      "df": 9,
+      "p_value": 0.586,
+      "tv_distance": 0.0804,
+      "shifted": false
+    },
+    "adapted": false,
+    "predicted_counts_before": [
+      28,
+      23,
+      22,
+      33,
+      34,
+      36,
+      27,
+      33,
+      33,
+      31
+    ],
+    "predicted_counts_after": [
+      28,
+      23,
+      22,
+      33,
+      34,
+      36,
+      27,
+      33,
+      33,
+      31
+    ],
+    "check_with_labels": {
+      "true_priors": [
+        0.0933,
+        0.0767,
+        0.08,
+        0.0933,
+        0.12,
+        0.1,
+        0.0867,
+        0.1167,
+        0.1333,
+        0.1
+      ],
+      "prior_tv_error": 0.0425,
+      "accuracy_before": 0.9067,
+      "accuracy_after": 0.9067
+    }
+  }
+}
